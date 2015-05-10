@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/TEIschema.rng" type="application/xml" 
+    schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <teiHeader>
+        <fileDesc>
+            <!-- mentions de titre -->
+            <titleStmt>
+                <title type="main">Le Petit Thalamus de Montpellier</title>
+                <title type="sub"
+                    >Édition critique électronique du manuscrit AA9 des Archives Municipales de Montpellier dit « Le Petit Thalamus », une édition électronique</title>
+                <principal>
+                    <persName>
+                        <forename>Vincent</forename>
+                        <surname>Challet</surname>
+                    </persName>
+                    <orgName>Université Paul-Valéry, Montpellier III</orgName>
+                </principal>
+                <respStmt>
+                    <resp>Étude des décors des différents manuscrits</resp>
+                    <persName>
+                        <forename>Béatrice</forename>
+                        <surname>Beys</surname>
+                    </persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Étude codicologique</resp>
+                    <persName>
+                        <forename>Pierre</forename>
+                        <surname>Chastang</surname>
+                    </persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Transcription</resp>
+                    <persName>
+                        <forename>Gérard</forename>
+                        <surname>Gouiran</surname>
+                    </persName>
+                    <orgName>Université Paul-Valéry, Montpellier III</orgName>
+                </respStmt>
+                <respStmt>
+                    <resp>Collation des manuscrits</resp>
+                    <persName>
+                        <forename>Gilda</forename>
+                        <surname>Caïti-Russo</surname>
+                    </persName>
+                    <orgName>Université Paul-Valéry, Montpellier III</orgName>
+                </respStmt>
+                <respStmt>
+                    <resp>Traduction</resp>
+                    <persName>
+                        <forename>Philippe</forename>
+                        <surname>Martel</surname>
+                    </persName>
+                    <orgName>Université Paul-Valéry, Montpellier III</orgName>
+                </respStmt>
+                <respStmt>
+                    <resp>Étude juridique</resp>
+                    <persName>
+                        <forename>Yves</forename>
+                        <surname>Mausen</surname>
+                    </persName>
+                    <orgName>Université Montpellier I</orgName>
+                </respStmt>
+                <respStmt>
+                    <resp>Étude linguistique</resp>
+                    <persName>
+                        <forename>Hervé</forename>
+                        <surname>Lieutard</surname>
+                    </persName>
+                    <orgName>Université Paul-Valéry, Montpellier III</orgName>
+                </respStmt>
+                <respStmt>
+                    <resp>Étude historique</resp>
+                    <persName>
+                        <forename>Daniel</forename>
+                        <surname>Le Blévec</surname>
+                    </persName>
+                    <orgName>Université Paul-Valéry, Montpellier III</orgName>
+                </respStmt>
+                <respStmt>
+                    <resp>Numérisation, balisage électronique du texte</resp>
+                    <persName>
+                        <forename>Gilda</forename>
+                        <surname>Caïti-Russo</surname>
+                    </persName>
+                    <orgName>Université Paul-Valéry, Montpellier III</orgName>
+                </respStmt>
+                <respStmt>
+                    <resp>Numérisation</resp>
+                    <name>tata</name>
+                    <name>toto</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Numérisation, balisage électronique du texte</resp>
+                    <persName>
+                        <forename>Marco</forename>
+                        <surname>Grimaldi</surname>
+                    </persName>
+                    <orgName>Université Paul-Valéry, Montpellier III</orgName>
+                </respStmt>
+                <respStmt>
+                    <resp>Conseil pour la modélisation et le balisage, réalisation du site Web provisoire</resp>
+                    <persName>
+                        <forename>Florence</forename>
+                        <surname>Clavaud</surname>
+                    </persName>
+                    <orgName>École nationale des chartes</orgName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName>Pas connu pour le moment</orgName>
+                    <date>2014</date>
+                </publisher>
+            </publicationStmt>
+            <sourceDesc>
+                <listWit>
+                    <head>Description des sources</head>
+                    <witness xml:id="AA9">
+                        <msDesc>
+                            <msIdentifier>
+                                <placeName>Montpellier</placeName>
+                                <country>France</country>
+                                <settlement>Hérault</settlement>
+                                <institution>Archives Municipales</institution>
+                                <idno>AA 9</idno>
+                                <msName>Petit Thalamus</msName>
+                            </msIdentifier>
+                            <physDesc>
+                                <handDesc>
+                                    <handNote xml:id="h1" scope="major"
+                                        >description de la première main</handNote>
+                                    <handNote xml:id="h2" scope="minor"
+                                        >description de la deuxième main</handNote>
+                                    <handNote xml:id="h3" scope="minor"
+                                        >troisième main</handNote>
+                                </handDesc>
+                            </physDesc>
+                        </msDesc>
+                        <title>Petit Thalamus</title>
+                        <date>v. 1334 - 1604</date>
+                    </witness>
+                    <!-- L'édition concerne pour l'instant les chroniques occitanes, aux f.  70v°-246v° -->
+                    <witness>
+                        <msDesc>
+                            <msIdentifier>
+                                <placeName>Paris</placeName>
+                                <country>France</country>
+                                <institution>Bnf</institution>
+                                <idno>ms. fr. 11795</idno>
+                            </msIdentifier>
+                            <msContents>
+                                <textLang>occitan</textLang>
+                            </msContents>
+                            <history>
+                                <origin>Document de production consulaire, etc.</origin>
+                                <provenance>La provenance si tran</provenance>
+                            </history>
+                        </msDesc>
+                    </witness>
+                    <witness>Petit Thalamus (1261), Paris, BnF, ms. nouv. acq. fr. 4337 (Foucault)</witness>
+                    <witness>Petit Thalamus (XIIIe s.), Bruxelles, Bibl. royale, ms. 7082</witness>
+                    <witness>Petit Thalamus (fin XIIIe s.), Nîmes, Bibl. mun., ms. 254 (Aubais)</witness>
+                    <witness>Petit Thalamus (mi-XIVe s.), Montpellier, Bibl. interuniversitaire, section médecine, H 119 (Bouhier)</witness>
+                    <witness>Grand Thalamus, Montpellier, Archives Municipales, AA4 (1221-1789), recueil factice au sein duquel sont insérés deux séquences différentes : 1) Fol. 84-87 : listes consulaires et annales en latin 2) Fol. 87 v°-91 v° : listes consulaires et annales en occitan</witness>
+                    <witness>J 339, n° 23, Archives Nationales, Paris : fragments de Petit Thalamus (20 feuillets) en latin comportant les listes consulaires de 1204 à 1253, les coutumes et divers statuts.</witness>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="occ">occitan</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2012" who="eee">...</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic xml:id="image1" url="image.jpg" width="800px"
+                height="180px"/>
+            <zone xml:id="zone1" lrx="11" lry="12" ulx="20" uly="30"/>
+            <zone xml:id="zone2" lrx="11" lry="23" ulx="30" uly="23"/>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="transcription">
+                <fw>
+                    <num type="folio">lxx v°</num>
+                </fw>
+                <div type="year">
+                    <p>L’an <date when="1088"
+                        >mlxxxviii</date>, los crestians prezeron Barsalona1.</p>
+                </div>
+                <div type="year">
+                    <p>L’an <date when="1099"
+                            >mlxxxxix</date>2, los Francezes prezeron Jerusalem, pueys lo perderon l’an <date
+                            when="1103">mciiii</date>.</p>
+                </div>
+                <div type="year">
+                    <p>L’an <date when="1114"
+                        >mcxiiii</date>, lo rey d’Aragon en Jacme pres Malhorca3.</p>
+                </div>
+                <div type="year">
+                    <p>L’an <date when="1148"
+                        >mcxlviii</date>4, lo comte de Prohensa pres Almaria5.</p>
+                </div>
+                <div type="year">
+                    <p>L’an <date when="1141"
+                        >mcxli</date>, valian en Montpellier x favas i denier.</p>
+                </div>
+                <div type="year">
+                    <p>L’an <date when="1149"
+                        >mcxlix</date>, lo dich comte pres Tortoza de Sarrazis6.</p>
+                </div>
+                <div type="year">
+                    <p>L’an <date when="1156"
+                        >mclvi</date>, lo dich comte mori en Prohensa.</p>
+                </div>
+                <div type="year">
+                    <p>L’an <date when="1182"
+                        >mclxxxii</date>, a xiii setembre, fo eclipsi del solelh de jorns7.</p>
+                </div>
+                <div type="year">
+                    <p>L’an <date when="1186"
+                            >mcxxxvi</date>, en abril, mori MO Alfons, <persName>rey d’Aragon8 a Perpinhan</persName>, lo comte de Rodes az Amelhau l’an meteys9 et en octobre, lo comte R. de Toloza pres per molher la regina Johana10.</p>
+                </div>
+                <div type="year">
+                    <p>L’an mclxxxix, en aost, foron fatz los miracles de Nostra Dona de Taulas.</p>
+                </div>
+                <div type="year">
+                    <p>En mars, mori Richart, rey d’Angleterra, l’an mclxxxix11.</p>
+                </div>
+                <div type="year">
+                    <p>L’an mcciii, en setembre, mori MO G. de Montpellier et lo vescomte de Bezes pres sa filha per molher l’an meteys12.</p>
+                </div>
+                <div type="year">
+                    <p>L’an mcciiii, lo rey d’Aragon pres per molher madona Maria de Montpellier en julh.</p>
+                </div>
+
+                <pb facs="/ThalamusMontpellier/fol71.jpg"/>
+                <fw>
+                    <num type="folio">LXXI</num>
+                </fw>
+
+                <addSpan spanTo="#encre001" place="marginTop" hand="#h2"/>
+                <div type="year" xml:id="a1192">
+                    <p>13L’<date>an mclxxxxii, a xii jorns de febrier</date>, anet a Dieu MO Placentin, lo cal fo lo premier doctor que jamays legi en Montpellier, et fo sebelit en lo cemeteri de Sant Bertholmieu pres de la capella de Sant Cleofas de part deforas.</p>
+                </div>
+                <anchor xml:id="encre001"/>
+
+                <div type="year" xml:id="a1204">
+                    <p>
+                        <hi rend="biggerRed"
+                            >Aysso es lo comessamen del cossolat.</hi>
+                    </p>
+                    <p><hi rend="redInitial"
+                        >A</hi>nno dominice Incarnationis millesimo ducen-
+                        <lb/>tesimo quarto, foron cossols : n’Austorc 
+                        <lb/>d’Orlhac, en Regort, en Pons Audeguier, en 
+                        <lb/>Peyre Lobet, Johan Lucian, Pons d’Anhana, en Luchas Pol-
+                        <lb/>verel, en R’. Benereg, B. de la Gleyza, Berenguier Aymeric, 
+                        <lb/>Bertran Gili, en Peyre de Bizancas. E fon bayle en Peyre de Bi-
+                        <lb/>zancas en aquel an.</p>
+                </div>
+                <div type="year" xml:id="a1205">
+                    <p><date><hi rend="blueInitial"
+                            >A</hi>nno dominice Incarnationis millesimo ducentesimo vO</date>, fo-
+                        <lb/>ron cossols : en Peyre Fabre, en Peyre Raynaut, en G. 
+                        <lb/>Bocados, en Peyre de Monbeliart, Pons Raymon, B’ Cap-
+                        <lb/>demalh, G. Capdebuou, en Bonamic, G. Roscel, G. 
+                        <lb/>de Lunel, Oth Cayrel – e mori en Peyre de Montbeliart 
+                        <lb/>e fon en son luoc Huc de Rofiac. E fon bayle en Johan 
+                        <lb/>Lucian.</p>
+                </div>
+                <div type="year" xml:id="a1206">
+                    <p><date><hi rend="redInitial"
+                            >A</hi>nno dominice Incarnationis mOccOviO</date>, foron cossols : en 
+                        <lb/>R,. de Caors, Peyre Daude, G. Gras, Randols Bonifazi, 
+                        <lb/>Johan Andrieu, Johan Ros, Steve Albert, Gui Bergonhon, 
+                        <lb/>Peyre Fraynes, B’. de Montanhac, Daude de Fanx, Peyre Blegi-
+                        <lb/>er. Fon bayle en Johan d’Orlhac.</p>
+                </div>
+                <div type="year" xml:id="a1207">
+                    <p><date><hi rend="blueInitial"
+                            >A</hi>nno dominice Incarnationis mOccOviiO</date>, foron cossols :
+                        <lb/>en Johan de la Caza, Steve Tavernier, Bertran Metge, 
+                        <lb/>en Gr’. Raymon de Gordon, B’. Gres, Johan Bocados, Raynaut 
+                        <lb/>Estornel, Girart Talon, G. de Venranegues, en Sal-
+                        <lb/>vayre, Peyre Porcel, Peyre Baudilh. Fon bayle en G. Capde-
+                        <lb/>buou.</p>
+                    <addSpan spanTo="#encre002"/>
+                    <div>
+                        <p>Et aquel an, a i de febrier, nasquet MO Jacme filh de MO Peyre, rey d’Aragon3.</p>
+                    </div>
+                    <anchor xml:id="encre002"/>
+                </div>
+                <div type="year" xml:id="a1208">
+                    <p><hi rend="redInitial"
+                            >E</hi>n l’<date>an de mO et ccOviii</date>, foron cossols : en Johan 
+                        <pb
+                            n="71v"/>
+                        <lb/>d’Orlhac, G. de Campgris, R’. Capdebuou, Peyre Lobet, Johan 
+                        <lb/>Lucian, R’. Gautier, en B. Carbonel, n’Eymeric Po-
+                        <lb/>li, Steve Doycha, R’. Dyeulofes, Johan Botet, R’. de Mayrueygs.
+                        <lb/>Bayle, Raynaut Estornel.</p>
+                </div>
+                <div type="year" xml:id="a1209">
+                    <p><hi rend="blueInitial"
+                        >E</hi>n l’<date>an de mccix</date>, foron cossols : en Peyre Bellian, G. de 
+                        <lb/>Grabels, n’Autorc d’Orlhac, Huc de Montbeliart, 
+                        <lb/>B’. Capdebuou, G. d’Orcas, R’. Ebrart, en Regort, Daude 
+                        <lb/>de Rocenhac, Peyre de Bizancas, en Blanc, G. del Plantier. Bay-
+                        <lb/>le, en Johan Lucian.</p>
+                    <addSpan spanTo="encre003"/>
+                    <div>
+                        <p>En1 aquest an, lo jorn de Sancta Magdalena, lo duc de Borgonha, lo comte de Nivers e∙l comte de Sant Paul prezeron Bezes et auciron tota la gent.</p>
+                    </div>
+                    <anchor xml:id="encre003"/>
+                </div>
+                <div type="year" xml:id="a1210">
+                    <p><hi rend="redInitial"
+                        >E</hi>n l’<date>an de mccx</date>, foron cossols : en Lucas Polverel, 
+                        <lb/>en Johan Bocados, en Peyre Gazanhayre, Girart Ta-
+                        <lb/>on, Pons R’, Peyre Salvayre, Bertran de Venranegues, R’ 
+                        <lb/>Carbonel, <persName ref="#pers001">B. de Montanhac</persName>, G. de Lunel, R’ San Tiberi, B’. 
+                        <lb/>Mazelier – e mori en Peyre Gazanhayre e fon en son luoc 
+                        <lb/>n’Est’ Johan. E fon bayle en Johan de la Caza.</p>
+                </div>
+                <div type="year" xml:id="a1211">
+                    <p><hi rend="blueInitial"
+                        >E</hi>n l’<date>an de mccxi</date>, foron cossols : en Peyre Daude, en Peyre 
+                        <lb/>Lobet, en Johan Lucian, R’. Capdebuou, Johan d’Orlhac, Pons 
+                        <lb/>Adalguier, G. d’Azilhan, G. Roscel, Ar2. Poli, Johan de Clapiers, 
+                        <lb/>R’. Benezeg, Johan Vaca. Bayle, en B’. Capdebuou.</p>
+                </div>
+                <div type="year" xml:id="a1212">
+                    <p><hi rend="redInitial"
+                        >E</hi>n l’<date>an de mccxii</date>, foron cossols : en G. de Conchas, 
+                        <lb/>Hermengaut d’Azilhan, Huc de Montbeliart, G. de 
+                        <lb/>Cavanac, en Regort, R’. Ebrart, en Garrel, Johan de Latas, 
+                        <lb/>R’. de Bezers, Peyre de Seneuquieyras, Steve de Servian, Durant 
+                        <lb/>de Gres. Bayle, en Capdebuou.
+                        <lb/>En3 aquest an, lo premier jorn de julh, fo preza Calatrava et Beda.</p>
+                </div>
+                <div type="year" xml:id="a1213">
+                    <p>En l’<date>an de mccxiii</date>, foron cossols : Peyre Raynaut, B. 
+                        <lb/>Gres, Peyre de Caranta, G. Dorchas, G. de Lunel, R’. Gau-
+                        
+                        <pb/>
+                        <fw><num type="folio" n="72">lxxii</num></fw>
+                        <lb/>tier, Peyre Guiraut, B. Doycha, Peyre de Sumena, G. Johan, Peyre de Bi-
+                        <lb/>zancas, R’. de San Tiberi. E fon bayle en Johan Lucian. 
+                        <lb/>En4 aquest an, en abril, mori a Roma madona Maria, regina d’Aragon ; et puoys, a xiii setembre, mori a Murel MO Peyre, rey d’Aragon5 ; et en setembre, lo comte R. de Toloza pres Toloza, et era amb el lo comte de Foys ; et en julh, mori lo comte de Montfort a Toloza.</p>
+                </div>
+                <div type="year" xml:id="a1214">
+                    <p>En l’<date>an de mccxiiii</date>, foron cossols : en Peyre Lucian, B. de 
+                        <lb/>Ribauta, Peyre Bellian, Peyre de Ginhac, G. Tahon, Peyre Franc, 
+                        <lb/>Durant Mazelier, Luchas Polverel, R’. de Posquieyras, <lb/>
+                        G. Borel, B. Raols, Johan Ros. E fon bayle en Peyre Lobet.</p>
+                </div>
+                <div type="year" xml:id="a1215">
+                    <p>En l’<date>an de mccxv</date>, foron cossols : Johan Lucian, R’.
+                        <lb/>Atbran, R’ Benezeg, B. Capdebuou, Peyre Ymbert de 
+                        <lb/>Montanhac, R’. de Foyshac, G. del Plantier, Peyre Salvayre, 
+                        <lb/>B’. de Bezers, Daude de Fanx, Huc Laures. Bayle, en Johan Bocados.</p>
+                </div>
+                <div type="year" xml:id="a1216">
+                    <p>En l’<date>an de mccxvi</date>, foron cossols : en Peyre Lobet, Steve de Con-
+                        <lb/>chas, Johan d’Orlhac, Steve de Candalhanegues, Johan de San Ti-
+                        <lb/>beri, G. Peyronet, Johan Blanc, Fermin Borzes, Daude Boca-
+                        <lb/>dos, Huc de la Porta, G. de Lunel, R’. de San Tiberi – e mori en 
+                        <lb/>Peyre Lobet e fon en son luoc G. Rotbert, drapier. E fon bay-
+                        <lb/>le en B. Capdebuou.</p>
+                </div>
+                <div type="year" xml:id="a1217">
+                    <p>En l’<date>an de mccxvii</date>, foron cossols : en B’. d’Azilhan, 
+                        <lb/>G. de Conchas, G. Fustier, G. Cordoanier, G. de 
+                        <lb/>Montarberon, Pons de Caranta, B’. Mazelier, Vezian 
+                        <lb/>Bigorra, en Regort, n’Andrieu de Congienhas, R’. de 
+                        <lb/>Mozere, Peyre de Bizancas – e mori6 e fon en son luoc en B’. del Forn. 
+                        <lb/>E fon pres adoncs lo castel de Madieyras ; e fon bayle 
+                        <lb/>en G. d’Arilhan. En7 aquest an, lo comte de Montfort pres Bernis et pendet 
+                        <lb/>motz del pobol.</p>
+                </div>
+                <div xml:id="a1218">
+                    <p>En l’<date>an de mccxviii</date>, foron cossols : en Johan 
+                        <lb/>Bocados, n’Ermengaut d’Arilhan, Jacme Lombart, 
+                        <lb/>G. Roscel, R’. Prohensal, Pons Guiraut, G. del Plantier,
+                    <lb/><gap
+                            reason="sampling"/>
+                        <pb/>
+                        <fw><num type="folio" n="72v">LXXII v</num></fw>
+                    </p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <note xml:id="note1088">
+                    <p>La date est corrompue mais il s’agit clairement d’une allusion au pillage de Barcelone par Al-Mansûr, [de son vrai nom Muhammad Ibn Abi Aamir], qui gouverna Al-Andalus au nom du calife Hisham II. Il s’empara de Barcelone en 985.</p>
+                    <p>Vairantes : Le ms de Bruxelles (fol. 13), le H 119 (fol. LXXXII) et le ms fr 11795 (fol. LXI v°) citent nommément « l’Almassor ».</p>
+                </note>
+                <note xml:id="note1099">
+                    <p>Prise de Jérusalem par les chrétiens à l’issue de la première croisade. Il est en revanche difficile de savoir à quoi fait allusion la date de la perte de Jérusalem en 1104. Il est possible que la date soit très corrompue et renvoie soit à la prise de la ville par Saladin le 3 octobre 1187, soit à la reprise par les Turcs qui eut lieu le 11 juillet 1244 après que la ville eut été remise à l’empereur Frédéric II en 1229.</p>
+                    <p>Variantes : Le H 119 précise que la perte de Jérusalem eut lieu le 8 juillet 1104 (fol. LXXXII). Le ms fr 14507 donne pourtant la date de 1187 pour la perte de Jérusalem même s’il la place au mois de juillet (fol. 47 v°).</p>
+                </note>
+                <note xml:id="note1114">
+                    <p>Il s’agit de l’expédition menée en 1114-1115 et qui aboutit à la prise d’Ibiza et Majorque. Menée sous la direction de Raimon Berenguier iii (1082-1131), comte de Barcelone, et non sous celle de Jaume d’Aragon, elle vit la participation de Guilhem V, seigneur de Montpellier, ce qui explique cette mention. Ces îles ayant été très vite reprises par les Musulmans, il y a ici une confusion entre cette première expédition et celle menée plus tard par Jacques le Conquérant en 1229 et qui aboutit à la reconquête définitive de Majorque. Variantes : Ni le ms de Bruxelles, ni le H 119, ni le ms fr 11795 ne font cette confusion.</p>
+                </note>
+                <note xml:id="x1148">
+                    <p>prise d’Almeria qui eut lieu le 17 octobre 1147 et fut l’œuvre conjointe d’Alfonso VII de Castille (1105-1157) et de Ramon Berenguer iv (1113-1162) comte de Barcelone et de Provence. Guilhem VI, seigneur de Montpellier, participa à la prise d’Almeria.</p>
+                    <p>Variantes : Le ms de Bruxelles (fol. 13) et le H 119 (fol. LXXXII) datent cette prise du mois de septembre comme le ms fr 11795 qui évoque le comte de Barcelone (fol. LXVI v°).</p>
+                </note>
+                <note xml:id="x1141">
+                    <p>Le sens de cette mention est plus explicite dans les manuscrits qui précisent que cette cherté est à mettre en relation avec le siège de Montpellier par Guilhem VI. Ce seigneur avait en effet été chassé de la ville par un mouvement de type communal et avait du se réfugier à Lattes. Il ne put entrer de nouveau en possession de Montpellier qu’en 1143 à la suite d’un long siège pour lequel il avait reçu le renfort du comte de Barcelone, Ramon Berenguer IV qui, après la prise de la ville, fit bâtir une tour. Il n’est pas sans intérêt de constater que ces événements ne sont nullement mentionnés ici. </p>
+                    <p>Variantes : Voici la version livrée par le H 119 : « En l’an de M e C XLI giteron los homes de Montpelier en G. de Montpelier de la vila et s’en anet a Latas, e duret la batalha ii ans. E.l coms de Barsalona rendet li la vila, per assetge. Et adonc valian X favas I denier. E.l coms de Barsalona basti la torre de Montpelier » (fol. LXXXII).</p>
+                </note>
+                <note xml:id="note1149">
+                    <p>prise de Tortose par Ramon Berenguer IV, comte de Barcelone, comte régent de Provence. Guilhem VI participa à la prise de Tortose. Dès 1136, il avait reçu en fief de la part du comte de Barcelone un tiers de cette ville en prévision de cette conquête : le texte de cette donation daté du 28 décembre 1136 est édité par A. Germain, Liber instrumentorum memoralium : Cartulaire des Guilhems de Montpellier, Société Archéologique de Montpellier, Montpellier, 1884-1886, fascicule 2, p. 284-285. Guilhem VI légua dans son testament cette part à son fils puîné Guilhem qui prit le nom de Guilhem de Tortosa.</p>
+                    <p>Variantes : Le ms de Bruxelles date cette prise du mois de janvier</p>
+                </note>
+            </div>
+            <note xml:id="note001"/>
+            <div>
+                <listPerson>
+                    <head>Index nominum</head>
+                    <person xml:id="pers001">
+                        <persName>
+                            <forename sort="1">Prénom</forename>
+                            <surname sort="2">Nom</surname>
+                        </persName>
+                        <birth when="2013-06-19">10 juin 2013</birth>
+                        <death when="1970">dateDécès</death>
+                        <floruit from="1920" to="1930">périodeActivité</floruit>
+                        <occupation from="2012" to="2013">Plombier</occupation>
+                        <idno type="isni">0000 0001 1026 0947</idno>
+                    </person>
+                    <person>
+                        
+                    </person>
+                </listPerson>
+                <listPlace>
+                    <place xml:id="lieu001">
+                        <placeName>
+                            <country>Pays</country>
+                            <region>Région</region>
+                            <settlement>Ville</settlement>
+                        </placeName>
+                        <location>
+                            <country>Pays</country>
+                            <region>Région</region>
+                            <settlement>Ville</settlement>
+                        </location>
+                        <desc>description du lieu</desc>
+                    </place>
+                </listPlace>
+            </div>
+        </back>
+    </text>
+</TEI>
