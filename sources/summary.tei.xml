@@ -3,8 +3,9 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Sommaire</title>
+        <title>Programme de la formation</title>
         <author>Lou Burnard</author>
+        <author>Emamnuel Chateau</author>
       </titleStmt>
       <publicationStmt>
         <publisher>MEET</publisher>
@@ -15,37 +16,69 @@
     </fileDesc>
     <revisionDesc>
       <change>
-        <date>2015-01-20</date>
-        <name>Lou re-englished</name>
-      </change>
-      <change>
-        <date>$LastChangedDate: 2012-01-25 01:25:41 +0100 (Wed, 25 Jan 2012) $.</date>
-        <name>$LastChangedBy: Marjorie $</name>
-      </change>
-      <change>
-        <date>$LastChangedDate: 2008-07-15 17:25:41 +0100 (Tue, 15 Jul 2008) $.</date>
-        <name>$LastChangedBy: lou $</name>
-        <note>$LastChangedRevision: 3014 $</note>
+        <date>2015-05-10</date>
+        <name>Emmanuel Chateau creation</name>
       </change>
     </revisionDesc>
   </teiHeader>
   <text>
     <body>
-      <div>
-        <head>Remarques</head>
-        <p>Public hétérogène, mélanger</p>
-      </div>
       <div rend="slide">
-        <head>Déroulé</head>
-        <p><graphic url="../Graphics/whatistei.png" height="50%"/></p>
-        <list>
-          <item>Introduction de la formation</item>
-          <item>Tour de table et répartition des groupes</item>
-        </list>
-        <list>
-          <item>Exposé introductif</item>
-          <item>Prise en main d’oXygen</item>
-        </list>
+        <div xml:lang="fr">
+          <head>Programme d’ensemble</head>
+          <list>
+            <item>Introduction de la formation</item>
+            <item>L’encodage en XML</item>
+            <item>La Text Encoding Initiative</item>
+            <item>L’organisation de la TEI</item>
+            <item>L’en-tête TEI</item>
+            <item>La description des sources manuscrites</item>
+            <item>L’encodage des variantes</item>
+            <item>Personnaliser la TEI</item>
+            <item>Naviguer dans ses documents avec XPath</item>
+            <item>Transformer ses documents avec XSLT</item>
+          </list>
+        </div>
+      </div>
+      
+      <div rend="slide">
+        <div xml:lang="fr">
+          <head>1<hi rend="superscript">ère</hi> journée</head>
+          <list>
+            <item>Introduction de la formation</item>
+            <item>Tour de table et répartition des groupes</item>
+            <item>Encoder des textes avec XML</item>
+            <item>
+              <list>
+                <head>TP 1</head>
+                <item><label>Ex. 1</label> Découverte d’oXygen</item>
+                <item><label>Ex. 2</label> Production d’un premier document XML</item>
+                <item><label>Ex. 3</label> Conversion d’un fichier MSWord en TEI</item>
+              </list></item>
+            <item>La Text Encoding Initiative (TEI)</item>
+          </list>
+        </div>
+      </div>
+      
+      <div rend="slide">
+        <div xml:lang="fr">
+          <head>2<hi rend="superscript">ème</hi> journée</head>
+          <list>
+            <item>L’organisation de la TEI (Guidelines, et Spécification technique)</item>
+            <item>L’en-tête TEI</item>
+            <item>Traitement des sources manuscrites</item>
+            <item>Traitement des variantes</item>
+          </list>
+        </div>
+      </div>
+      
+      <div rend="slide">
+        <div xml:lang="fr">
+          <head>3<hi rend="superscript">ème</hi> journée</head>
+          <list>
+            <item/>
+          </list>
+        </div>
       </div>
 
     </body>
