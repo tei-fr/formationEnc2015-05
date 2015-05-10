@@ -14,7 +14,7 @@ Attention ! ce répertoire contient des sous-modules
 - exemples/ exemples
 - images/ contenus graphiques
 - ressources/ matériel d’accompagnement
-- schema/ schémas des présentations (sous-module git)
+- schema/ schémas distribués dans la formation
 - exercices/ contient les dossiers de travaux pratiques
 - sources/ sources des présentations
 - xsl/ transformations xslt
