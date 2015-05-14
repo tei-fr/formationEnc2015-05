@@ -1,20 +1,28 @@
 <?xml version="1.0"?>
+<?xml-model href="schema/trunk/teitalks.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title><hi>What is the Text Encoding Initiative?</hi><lb/>(and how did it get to be that
+        <title xml:lang="en"><hi>What is the Text Encoding Initiative?</hi><lb/>(and how did it get to be that
           way?)</title>
+        <title xml:lang="fr"><hi>Histoire de la TEI</hi><lb/>un cas d'étude dans l'évolution des méthodes et pratiques scientifiques dans les SHS</title>
+        
         <author>Lou Burnard</author>
       </titleStmt>
       <publicationStmt>
-        <publisher>MEET</publisher>
+        <publisher>Lou Burnard Consulting</publisher>
+        
       </publicationStmt>
       <sourceDesc>
         <p>This is the master version of an original document.</p>
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
+      <change>
+        <date>2015-05-15</date>
+        <name>Lou polyglotted</name>
+      </change>
       <change>
         <date>2015-01-20</date>
         <name>Lou re-englished</name>
@@ -786,7 +794,7 @@ working to keep them in synch *--></item>
         </list>
       </div>
       <!--
-<div rend="slide">
+<div xml:lang="en">
 <head>P3, P4, P5</head>
 <p><list >
 <item>P3, aka <emph>The Big Green Books</emph> first published in
@@ -800,7 +808,7 @@ working to keep them in synch *--></item>
       compatibility with P3 but transition aids will be provided.</item></list>
     </p>
 </div>
-<div rend="slide">
+<div xml:lang="en">
 <head>P4: The XML Edition</head>
 <list><item>Unlike P3, it is itself expressed (and processed) using XML</item>
 <item>Its DTD can be configured as SGML or as XML</item>
@@ -827,7 +835,7 @@ working to keep them in synch *--></item>
         </list>
         <p>Evangelization and training as above</p>
       </div>
-      <div rend="slide">
+      <div xml:lang="en">
         <head>Character set issues</head>
         <p><list>
             <item>Unicode only?</item>
@@ -837,7 +845,7 @@ working to keep them in synch *--></item>
           </list>
         </p>
       </div>
-      <div rend="slide">
+      <div xml:lang="en">
         <head>Core issues</head>
         <p>(See forthcoming EDW76 <emph>Editors' summary of proposed revisions</emph>)<list>
             <item>An expandable list</item>
@@ -876,6 +884,16 @@ working to keep them in synch *--></item>
         </list>
         <p>And some things may be ruthlessly excised…</p>
       </div>
+      <div xml:lang="fr">
+        <head>Et en l'occurrence...</head>
+        <p>Des grands efforts sur... <list>
+            <item> les entités nommées </item>
+            <item>les <soCalled>facsimilés numériques</soCalled></item>
+            <item>la représentation physique des documents pour l'édition génétique</item>
+          </list></p>
+        <p rend="box">Evolutions générées et gerées par les communautés scientifiques
+          interessées</p>
+      </div>
       <div xml:lang="en">
         <head>Major development areas in practice</head>
         <p>New community groups worked on <list>
@@ -887,15 +905,31 @@ working to keep them in synch *--></item>
         <p rend="box">Developments spearheaded and elaborated by self-selecting groups of
           experts</p>
       </div>
-      
-      <div xml:lang="fr"><head>TEI organigramme (aujourdhui)</head>
-        <figure><graphic height="80%" url="../images/tei-community.png"/></figure>
+      <div xml:lang="fr">
+        <head>TEI organigramme (aujourdhui)</head>
+        <figure>
+          <graphic height="80%" url="../images/tei-community.png"/>
+        </figure>
       </div>
       <div xml:lang="en">
         <head>TEI organization (today)</head>
         <figure>
           <graphic height="80%" url="../Graphics/tei-community.png"/>
         </figure>
+      </div>
+      <div xml:lang="fr">
+        <head>TEI n'est plus un projet de recherche</head>
+        <list>
+          <item>Un projet basé sur la communauté</item>
+          <item>Conseil scientifique au centre, ses membres élus par (et responsable devant les)
+            membres payants du consortium, gérant les propositions de la communauté</item>
+        </list>
+        <!--<table><row>
+          <cell><figure><graphic url="../Graphics/2005-0517-kyoto-council.png" height="60%"/>
+          </figure></cell>
+          <cell><figure><graphic url="../Graphics/2009-04-council-lyon.png" height="60%"/>
+          </figure></cell>
+        </row></table>-->
       </div>
       <div xml:lang="en">
         <head>The TEI is no longer a research project</head>
@@ -917,7 +951,19 @@ working to keep them in synch *--></item>
           </row>
         </table>
       </div>
-      <div rend="slide">
+      <div xml:lang="fr">
+        <head>Les non-enjeux de la TEI</head>
+        <p>A l'origine, la TEI ne s'intéressait pas à... <list>
+            <item>le web (ça n'existait pas)</item>
+            <item>la mise en page (tex, scribe...)</item>
+            <item>l'intégration des pages-images/facsimilés numerisés</item>
+            <item>la représentations des faits ou des objets (les bases de données)</item>
+            <item>la production des logiciels</item>
+          </list></p>
+        <p rend="box">seul : les metadonnées, les textes, les analyses textuelles et
+          linguistiques!</p>
+      </div>
+      <div xml:lang="en">
         <head>What's <hi rend="italic">not</hi> TEI?</head>
         <p>Originally, the TEI ruled out of consideration...<list>
             <item>the web (it didn't yet exist)</item>
@@ -929,7 +975,20 @@ working to keep them in synch *--></item>
         <p rend="box">its original focus (metadata, text, textual and linguistic analysis) has now
           expanded to include all of the above</p>
       </div>
-      <div rend="slide">
+      <div xml:lang="fr">
+        <head>Le paysage actuel de la TEI </head>
+        <list>
+          <item>Structuration basique des textes continus</item>
+          <item>Transcription diplomatique, images, multimédia, annotations...</item>
+          <item>Données formelles : dates, noms de lieux ou de personnes...</item>
+          <item>Données paratextuelles et "meta"</item>
+          <item>Analyses linguistiques à tout niveau (y compris l'oral)</item>
+          <item>Documentation de balisage</item>
+          <item>Et cetera: voir <ptr target="http://www.tei-c.org/P5/Guidelines/"/></item>
+        </list>
+        <p>... une encyclopédie du balisage </p>
+      </div>
+      <div xml:lang="en">
         <head>The current TEI landscape </head>
         <list>
           <item>Basic organization of continuous texts</item>
@@ -943,11 +1002,28 @@ working to keep them in synch *--></item>
         </list>
         <p>... in short, a new kind of Encyclopaedia!</p>
       </div>
+      <div xml:lang="fr">
+        <head>Un standard existe pour qu'on s'y conforme, non ?</head>
+        <figure>
+          <graphic url="../images/1991-TEI-commandments.png" height="70%"/>
+        </figure>
+      </div>
       <div xml:lang="en">
         <head>A standard exists for the sake of conformance, right?</head>
         <figure>
           <graphic url="../Graphics/1991-TEI-commandments.png" height="70%"/>
         </figure>
+      </div>
+      <div xml:lang="fr">
+        <head>L'esprit TEI</head>
+        <p>Qu'est-ce que cela veut dire : «être conforme» à la TEI ?</p>
+        <list>
+          <item>une pratique de balisage consensuelle</item>
+          <item>un lexique commun</item>
+          <item>un respect de l'autonomie</item>
+        </list>
+        <p>La standardisation ne doit pas signifier «fais comme moi»; elle veut dire «explique-moi
+          ce que tu fais. »</p>
       </div>
       <div xml:lang="en">
         <head>The TEI spirit</head>
@@ -959,6 +1035,16 @@ working to keep them in synch *--></item>
         </list>
         <p>Standardisation should not mean «do what I do» but rather «explain your decisions in
           terms I can understand »</p>
+      </div>
+      <div xml:lang="fr">
+        <head>... d'où les variations TEI</head>
+        <p>Par exemple : éléments pour description bibliographique : On a le choix entre <list>
+            <item><gi>bibl</gi> qui contient n'importe quel mélange de composants bibliographiques
+              ... ou aucun</item>
+            <item><gi>biblStruct</gi> qui contient une sélection prédéfinie d'éléments, strictement
+              structurés</item>
+          </list>
+        </p>
       </div>
       <div xml:lang="en">
         <head>... leading to the many flavours of TEI</head>
@@ -1180,12 +1266,31 @@ working to keep them in synch *--></item>
         </list>
         <p rend="box">http://www.tei-c.org/Roma/</p>
       </div>
+      <div xml:lang="fr">
+        <head>Pourquoi s'intéresser toujours à la TEI ?</head>
+        <p>Deux raisons pour lesquelles les standards échouent: <list>
+            <item>ils sont basés sur une théorie pas encore mûre</item>
+            <item>"not invented here": la communauté envisagée est trop diverse ou fragmentée</item>
+          </list>
+        </p>
+      </div>
       <div xml:lang="en">
         <head>Why is the TEI still of interest?</head>
         <p>There are two reasons why standards fail : <list>
             <item>they are based on an immature theory</item>
             <item>"not invented here": the user community is fragmented or diverse</item>
           </list>
+        </p>
+      </div>
+      <div xml:lang="fr">
+        <head>Comment faire mûrir une théorie ?</head>
+        <p>Dans son TEI ODD, on peut: <list>
+            <item>limiter les valeurs possibles d'un attribut plus ou moins strictement</item>
+            <item>proposer des règles "schematron" sur le contenu (p.e. co-dependency)</item>
+            <item>enlever quelques éléments facultatifs</item>
+            <item>ajouter de nouveaux éléments, labellisés dans votre propre espace de noms</item>
+          </list></p>
+        <p rend="box">Donc on peut évoluer et tester sa théorie, en restant toujours TEI-conforme.
         </p>
       </div>
       <div xml:lang="en">
@@ -1219,6 +1324,21 @@ working to keep them in synch *--></item>
             signification. </item>
         </list>
       </div>-->
+      <div xml:lang="fr">
+        <head>Not Invented Here?</head>
+        <list>
+          <item>TEI P5 a des possibilités très extensives pour l'I18N...</item>
+          <item>TEI héberge volontairement d'autres espaces de noms</item>
+          <item>Donc on peut se servir des autres schémas existants: <list>
+              <item>SVG pour les graphiques</item>
+              <item>MathML pour les maths</item>
+              <item>DCMI pour les metadonnées</item>
+              <item>....</item>
+            </list></item>
+          <item>La définition d'un élément TEI peut inclure (s'il y en a) son mapping avec d'autres
+            ontologies, formalisé par un élément <gi>equiv</gi> (equivalent)</item>
+        </list>
+      </div>
       <div xml:lang="en">
         <head>Not Invented Here?</head>
         <list>
@@ -1234,6 +1354,18 @@ working to keep them in synch *--></item>
               <gi>equiv</gi>element</item>
         </list>
       </div>
+      <div xml:lang="fr">
+        <head>L'évolution darwinienne, ça marche...</head>
+        <list>
+          <item>faites vos modifications dans votre espace de nom</item>
+          <item>documentez-les dans un ODD</item>
+          <item>faites discuter vos propositions sur la liste TEI-L, ou dans un SIG !</item>
+          <item>proposez les modifications efficaces au Conseil Scientifique de la TEI, en faisant
+            une "feature request" sur sourceforge</item>
+          <item>Il y a une version nouvelle de TEI P5 deux fois par an...</item>
+        </list>
+        <p rend="box">Oh, and don't forget to join the Consortium!</p>
+      </div>
       <div xml:lang="en">
         <head>Darwinism works ...</head>
         <list>
@@ -1245,6 +1377,22 @@ working to keep them in synch *--></item>
           <item>There's a new version of TEI P5 roughly twice a year ...</item>
         </list>
         <p rend="box">Oh, and don't forget to join the Consortium!</p>
+      </div>
+      <div xml:lang="fr">
+        <head>Pour en savoir plus</head>
+        <list>
+          <item><ptr target="http://www.tei-c.org"/></item>
+          <item><ptr target="http://tei.sf.net"/></item>
+          <item><ptr target="http://listserv.brown.edu/archives/cgi-bin/wa?SUBED1=tei-l&amp;A=1"
+            /></item>
+        </list>
+        <p>plus, quelques références francophones: <list>
+            <item>tei-fr@cru.fr</item>
+            <item>http://meet.tge-adonis.fr</item>
+            <item>http://lespetitescases.net/index102/</item>
+            <item>http://www.culture.gouv.fr/culture/dglf/riofi/tei.htm</item>
+            <item>http://artist.inist.fr/article.php3?id_article=122"/></item>
+          </list></p>
       </div>
       <div xml:lang="en">
         <head>Some vital links</head>
