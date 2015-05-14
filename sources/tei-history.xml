@@ -1,4 +1,4 @@
-<?xml version="1.0"?> 
+<?xml version="1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0">
   <teiHeader>
     <fileDesc>
@@ -6,7 +6,6 @@
         <title><hi>What is the Text Encoding Initiative?</hi><lb/>(and how did it get to be that
           way?)</title>
         <author>Lou Burnard</author>
-
       </titleStmt>
       <publicationStmt>
         <publisher>MEET</publisher>
@@ -33,7 +32,7 @@
   </teiHeader>
   <text>
     <body>
-      <div rend="slide">
+      <div xml:lang="en">
         <head>What is the TEI?</head>
         <p><graphic url="../Graphics/whatistei.png" height="50%"/></p>
         <list>
@@ -43,8 +42,18 @@
           <item>a community... a way of thinking... a shared perception</item>
         </list>
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>Vous souvenez-vous de l'an 1987 ?</head>
+        <p>La Text Encoding Initiative est née dans un monde très différent... <list rend="pause">
+            <item rend="pause">le world wide web n'existait pas</item>
+            <item rend="pause">le tunnel sous la manche était en construction</item>
+            <item rend="pause">un état nommé l'Union Soviétique venait de lancer une station
+              spatiale appelée "Mir" .. et de subir un désastre à Tchernobyl</item>
+            <item rend="pause">l'informatique sérieuse s'effectuait uniquement sur les grosses
+              machines "mainframes" </item>
+          </list></p>
+      </div>
+      <div xml:lang="en">
         <head>Do you remember 1987 ?</head>
         <p>The Text Encoding Initiative was born into a very different world... <list rend="pause">
             <item rend="pause">The world wide web did not exist</item>
@@ -53,13 +62,24 @@
               "Mir" .. and suffered a terrible disaster at Chernobyl </item>
             <item rend="pause">Records of the year: <hi>Raising Hell</hi> (Run DMC) and
                 <hi>Graceland</hi> (Paul Simon)</item>
-
             <item rend="pause">and any serious computing was done on what we called "mainframes"
             </item>
           </list></p>
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>...mais aussi dans un monde un peu familier...</head>
+        <list>
+          <item>Les disciplines "linguistique de corpus" et "intelligence artificielle" avaient
+            établi la nécessité de travailler avec des ressources numérisées et à grande échelle </item>
+          <item>Des avancées en traitement de texte commençaient à avoir un effet sur la
+            lexicographie et les systèmes de gestion documentaire (TeX, Scribe, tRoff..)</item>
+          <item>L' Internet existait, et les théories sur comment en profiter d'une manière
+              <q>hypertextuelle</q> abondaient </item>
+          <item>On confrontait déjà les problèmes de pérennisation des données et d'incompatabilités
+            technologiques (ex. les CD).</item>
+        </list>
+      </div>
+      <div xml:lang="en">
         <head>... though some of it looks quite familiar ...</head>
         <list>
           <item>Such disciplines as "corpus linguistics" and "artificial intelligence" were already
@@ -73,8 +93,20 @@
             compatibility as new technologies such as CD emerged</item>
         </list>
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>Naissance de la Text Encoding Initiative</head>
+        <list>
+          <item>printemps 1987: En Europe, des réunions sur la possibilité de standardisation des
+            données et sources historiques (J.P. Genet, M. Thaller)</item>
+          <item>automne 1987: Aux Etats-Unis, la NEH finance une réunion internationale sur la
+            possibilité de définir des "text encoding guidelines"</item>
+        </list>
+        <figure>
+          <graphic height="55%" url="../images/1987-11-vassar.png"/>
+          <head>Vassar College, Poughkeepsie</head>
+        </figure>
+      </div>
+      <div xml:lang="en">
         <head>Origins of the Text Encoding Initiative</head>
         <list>
           <item>Spring 1987: European workshops on standardisation of historical data (J.P. Genet, M
@@ -87,10 +119,7 @@
           <head>Vassar College, Poughkeepsie</head>
         </figure>
       </div>
-
-
-      <!--
-      <div>
+      <div xml:lang="fr">
         <head>La question qui s'impose :</head>
         <list>
           <item>Donc, la TEI est <emph>très ancienne</emph>!</item>
@@ -99,9 +128,8 @@
           <item>Les technologies informatiques qui survivent plus de 5 ans sont assez rares... </item>
           <item><hi>Pourquoi et comment la TEI a-t-elle survécu plus de 30 ans ?</hi></item>
         </list>
-      </div>-->
-
-      <div>
+      </div>
+      <div xml:lang="en">
         <head>Today's question:</head>
         <list>
           <item>So the TEI is <emph>very old</emph>!</item>
@@ -112,13 +140,25 @@
           <item>Why is it still here, and how has it survived?</item>
         </list>
       </div>
-
-
-
-
-      <div rend="slide">
+      <div xml:lang="fr">
+        <head>Les enjeux de la TEI</head>
+        <p>Reconnaissant les possibilités démotiques du numérique... l'initiative <hi>«Text Encoding
+            for Interchange»</hi> s'est donnée comme mission : </p>
+        <list>
+          <item>de faciliter la <hi>création</hi>, l’<hi>échange</hi>, et l’<hi>intégration</hi> des
+            données textuelles informatisées <list>
+              <item>pour toute sorte de texte</item>
+              <item>dans toutes les langues </item>
+              <item>de toute origine temporelle ou culturelle</item>
+            </list></item>
+          <item>La TEI s'adresse également ...<list>
+              <item>aux débutants, cherchant des solutions bien connues et consensuelles</item>
+              <item>aux experts, cherchant à créer de nouvelles solutions</item>
+            </list></item>
+        </list>
+      </div>
+      <div xml:lang="en">
         <head>The TEI mission</head>
-
         <p>Recognising the demotic potential of the digital the TEI (<hi>«Text Encoding for
             Interchange»</hi>) defined its mission as follows : </p>
         <list>
@@ -134,7 +174,7 @@
             </list></item>
         </list>
       </div>
-      <div>
+      <!-- <div xml:lang="en">
         <head>Its original design goals</head>
         <list>
           <item>provide <hi>recommendations</hi> derived from the existing consensus, where this
@@ -144,10 +184,16 @@
         </list>
         <p rend="box">The TEI was not designed to provide a complete answer "out of the box"</p>
       </div>
-
-
-
-      <div>
+-->
+      <div xml:lang="fr">
+        <head>Pourquoi tout cet effort?</head>
+        <figure>
+          <graphic url="../images/babel.jpg" height="65%"/>
+        </figure>
+        <p>Parce qu'on s'est aperçu qu'on risquait une nouvelle confusion de langues avec l'arrivée
+          de l'informatique dans la représentation des données textuelles !</p>
+      </div>
+      <div xml:lang="en">
         <head>Why was this considered necessary ?</head>
         <figure>
           <graphic url="../Graphics/babel.jpg" height="65%"/>
@@ -155,11 +201,31 @@
         <p>The rise and rise of mutually incompatible data formats, hand in hand with the evolution
           of new technologies !</p>
       </div>
-
-
-      <div>
+      <div xml:lang="fr">
+        <head>Phases de la TEI</head>
+        <list type="gloss">
+          <label>1988 - 1990</label>
+          <item>Développement cycle 1: Production de TEI P1 (consultation avec une cinquantaine
+            d'experts mondiaux) </item>
+          <label>1990 - 1992</label>
+          <item>Développement cycle 2: production des fascicules TEI P2 (en consultation avec
+            plusieurs groupes de travail... un ensemble de quelques centaines d'experts)</item>
+          <label>1993 - 1994</label>
+          <item>Intégration des fascicules P2 comme TEI P3: la version "finale"</item>
+          <label>1995 - 1999</label>
+          <item>Promotion et prise en main (pas financée!)</item>
+          <label>2000 </label>
+          <item><hi>Etablissement du Consortium TEI</hi></item>
+          <label>2001 - 2003</label>
+          <item>Conversion de P3 en XML (TEI P4), lancement d'une révision complète qui apparaîtra
+            comme TEI P5</item>
+          <label>2003 - ? </label>
+          <item>TEI P5 sur sourceforge; des révisions régulières jusqu'à présent (on est à la
+            version 2.7.0)</item>
+        </list>
+      </div>
+      <div xml:lang="en">
         <head>A TEI time line</head>
-
         <list type="gloss">
           <label>1988 - 1990</label>
           <item>Development cycle 1: Production of TEI P1</item>
@@ -179,8 +245,20 @@
             2014) </item>
         </list>
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>1988: Un temps de transition, et d'évolution</head>
+        <list>
+          <item>Les <q>Humanities Computing</q> était en train de se créer, comme
+            "interdiscipline"</item>
+          <item>les informaticiens et les gens des SHS se regardaient (avec un peu de
+            méfiance)</item>
+          <item>dans quelques centres informatiques universitaires on s'est aperçu qu'il fallait
+            faire de la recherche pour maintenir les services au niveau souhaité</item>
+          <item>dans quelques centres de recherches on s'est aperçu des possibilités impressionantes
+            de l'informatique...</item>
+        </list>
+      </div>
+      <div xml:lang="en">
         <head>1988 - 1992 : a period of transition</head>
         <list>
           <item><q>Humanities Computing</q> was beginning to invent itself, as a kind of
@@ -194,8 +272,30 @@
         </list>
         <p rend="box">A fruitful synergy between researcher and engineer...</p>
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>Les <soCalled>experts</soCalled> dans quelles domaines?</head>
+        <list type="unordered">
+          <item> ceux qui s'intéressaient à la création des corpus numérisés pour : <list>
+              <item> linguistique de corpus</item>
+              <item>fonds littéraires, études stylistiques etc. </item>
+              <item>édition scientifique (cfr. systèmes bureautiques naissants)</item>
+            </list></item>
+          <item>ceux qui s'occupaient de la recherche linguistique: <list>
+              <item>lexicologie et lexicographie </item>
+              <item>systèmes de "compréhension" artificielle</item>
+              <item>systèmes de génération de langue naturelle</item>
+            </list>
+          </item>
+          <item>ceux qui voulaient expérimenter l'application du numérique a l'édition et à la
+            diffusion des sources littéraires ou historiques</item>
+          <item>ceux qui s'occupaient du catalogage et de la documentation des ressources
+            numérisées... <list>
+              <item>aux bibliothèques universitaires</item>
+              <item>aux archives numerisées des sciences sociales</item>
+            </list></item>
+        </list>
+      </div>
+      <div xml:lang="en">
         <head>Which research areas in particular ?</head>
         <list type="unordered">
           <item> those concerned with the creation and analysis of machine-tractable text, for <list>
@@ -218,17 +318,32 @@
             </list></item>
         </list>
       </div>
-
-      <div>
+      <div xml:lang="fr">
         <head>The Poughkeepsie Principles</head>
         <figure>
           <graphic height="80%" url="../Graphics/poughkeepsieprinciples.png"/>
         </figure>
         <p><ptr target="http://www.tei-c.org/Vault/ED/edp01.htm"/></p>
       </div>
-   
-
-      <div>
+      <div xml:lang="en">
+        <head>The Poughkeepsie Principles</head>
+        <figure>
+          <graphic height="80%" url="../Graphics/poughkeepsieprinciples.png"/>
+        </figure>
+        <p><ptr target="http://www.tei-c.org/Vault/ED/edp01.htm"/></p>
+      </div>
+      <div xml:lang="fr">
+        <head>TEI jadis...</head>
+        <list>
+          <item>Un projet de recherche</item>
+          <item>Au centre, deux éditeurs et un comité de pilotage, gérant les propositions d'un
+            ensemble des comités d'experts/groupes de travail</item>
+        </list>
+        <figure>
+          <graphic url="../images/1990-05-editors.jpg" height="70%"/>
+        </figure>
+      </div>
+      <div xml:lang="en">
         <head>TEI then ...</head>
         <list>
           <item>Organized as a research project</item>
@@ -239,7 +354,24 @@
           <graphic url="../Graphics/1990-05-editors.jpg" height="70%"/>
         </figure>
       </div>
-      <div>
+      <div xml:lang="fr">
+        <head>Organisation de la TEI (1991)</head>
+        <figure rend="center">
+          <graphic url="../Graphics/tei-structure-1991.png" height="90%"/>
+        </figure>
+        <cb/>
+        <p>Les travaux de la TEI ont été pris en main par les deux <soCalled>editors</soCalled> et
+          par quatre <soCalled>working committees</soCalled>
+          <list>
+            <item>Documentation : bibliothécaires/archivistes</item>
+            <item>Metalanguage : informaticiens</item>
+            <item>Text Analysis and Interpretation : linguistes théoriques</item>
+            <item>Text Representation : ... la reste </item>
+          </list>
+        </p>
+        <p rend="box">Opposition analyse/representation</p>
+      </div>
+      <div xml:lang="en">
         <head>TEI organization (1991)</head>
         <figure>
           <graphic url="../Graphics/tei-structure-1991.png" height="90%"/>
@@ -255,50 +387,58 @@
         </p>
         <p rend="box">Analysis vs. representation </p>
       </div>
-
-      <div>
+      <div xml:lang="fr">
         <head>Text Documentation</head>
-
+        <figure>
+          <graphic url="../images/td-mission.png"/>
+        </figure>
+        <p>Comment décrire une ressource numerisée, afin de la faire figurer correctement et avec
+          utilité dans les catalogues des BU ?</p>
+        <p>Ils ont inventé : le TEI Header comme <soCalled>source d'information unique</soCalled>,
+          analogue numérique du page de titre classique</p>
+        <p rend="block">Opposition métadonnées obligatoires standardisées/besoins de répondre aux
+          besoins des chercheurs (dans un domaine inexploré...)</p>
+      </div>
+      <div xml:lang="en">
+        <head>Text Documentation</head>
         <figure>
           <graphic url="../Graphics/td-mission.png"/>
         </figure>
-
         <list>
           <item>How should a digital resource be described so that it can appear in the library
             catalogue ? </item>
           <item>They invented the <hi>TEI Header</hi>, originally as a primary source of
             information, the digital analogue of a book's title page </item>
         </list>
-        <p rend="block">Standardised bibliographic metadata versus research needs... an as yet unexplored field
-        </p>
+        <p rend="block">Standardised bibliographic metadata versus research needs... an as yet
+          unexplored field </p>
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>Metalanguage</head>
+        <figure>
+          <graphic url="../images/ml-mission.png"/>
+        </figure>
+        <p>Il s'est décidé très vite d'adopter le norme ISO SGML -- pourvu que ce dernier serve à
+          répondre aux besoins de modélisation exprimés par les chercheurs. </p>
+        <p>Dès le début, la TEI modélise un système de balisage indépendamment de sa realisation
+          dans une syntaxe concrete.</p>
+        <p rend="box">Voir http://www.tei-c.org/Vault/ED/edw05.txt</p>
+      </div>
+      <div xml:lang="en">
         <head>Metalanguage</head>
         <figure>
           <graphic url="../Graphics/ml-mission.png"/>
         </figure>
         <list>
           <item>How should the Guidelines be expressed? </item>
-          <item>The ISO standard SGML was the only game in town but it was explicitly
-            subordinated to the needs of research</item>
+          <item>The ISO standard SGML was the only game in town but it was explicitly subordinated
+            to the needs of research</item>
           <item>Since the beginning, the TEI model has been expressed independently of any
             particular concrete syntax </item>
         </list>
-        <!--<p>Coordonné par Frank Tompa et ensuite par David Barnard, informaticiens canadiens, ce
-          comité était chargé de proposer et de valider un système d'expression pour les
-          recommendations de la TEI.</p>
-        <p>Il s'est décidé très vite d'adopter le norme ISO SGML -\- pourvu que ce dernier serve à
-          répondre aux besoins de modélisation exprimés par les chercheurs. </p>
-        <p>Mais, par conséquent, dès le début, la TEI modélise un système de balisage indépendamment
-          de sa realisation dans une syntaxe concrete.</p>-->
         <p rend="box">See http://www.tei-c.org/Vault/ED/edw05.txt</p>
       </div>
-
-      <!-- link to modelling paper here? -->
-
-
-      <div>
+      <div xml:lang="en">
         <head>Text Representation</head>
         <figure>
           <graphic url="../Graphics/tr-mission.png"/>
@@ -308,7 +448,18 @@
         <p>Their mission : to identify and find names for the <soCalled>significant
             particularities</soCalled> of written texts of all periods.</p>
       </div>
-      <div>
+      <div xml:lang="fr">
+        <head>Text Representation</head>
+        <figure>
+          <graphic url="../images/tr-mission.png"/>
+        </figure>
+        <p>Coordonné par un linguiste de corpus (Stig Johansson), ce comité était constitué de gens
+          que l'on appellerait aujourd'hui des <soCalled>digital humanists</soCalled></p>
+        <p>Sa mission: identifier et donner les noms aux <soCalled>particularités
+            signifiantes</soCalled>
+        </p>
+      </div>
+      <div xml:lang="en">
         <head>Significant particularities</head>
         <list>
           <item>text organization, structure, and reference systems (paragraphs, lists...)</item>
@@ -320,21 +471,56 @@
         </list>
         <p rend="box">What is text <hi>really</hi>? </p>
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>Particularités signifiantes des textes écrits</head>
+        <list>
+          <item>structuration et référencement (paragraphs, lists...)</item>
+          <item>variations de mise en forme considérées d'importance</item>
+          <item>ponctuation, usage des caractères, etc.</item>
+          <item>annotations et liens hypertextuels</item>
+          <item>variations éditoriales (correction, ajouts, etc.)</item>
+          <item> ... </item>
+        </list>
+        <p rend="box">What is text <hi>really</hi>? </p>
+      </div>
+      <div xml:lang="fr">
+        <head>Analysis and Interpretation</head>
+        <figure>
+          <graphic url="../images/ai-mission.png"/>
+        </figure>
+        <p>Coordonné par un linguiste théorique (Terry Langendoen), ce comité était constitué de
+          gens que l'on appelerait aujourd'hui les <soCalled>linguistes
+          computationels</soCalled></p>
+        <p>Sa mission ambitieuse : identifier et représenter toute la gamme des analyses
+          linguistiques et littéraires.</p>
+      </div>
+      <div xml:lang="en">
         <head>Analysis and Interpretation</head>
         <figure>
           <graphic url="../Graphics/ai-mission.png"/>
         </figure>
-
         <p>Chaired by a theoretical linguist (Terry Langendoen), the members of this commitee were
           all what we now call <soCalled>computational linguists</soCalled></p>
         <p>Their mission : to identify and represent every kind of linguistic <emph>and</emph>
           literary analysis</p>
-
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>Analyses linguistiques</head>
+        <p>Voir http://www.tei-c.org.uk/Vault/AI/air03.txt... <list>
+            <item>Underspecification, uncertainty, multiple hierarchies...</item>
+            <item>Phonology and prosody</item>
+            <item>Morphology and word-level tagging</item>
+            <item>Higher level syntactic analysis</item>
+            <item>Structural ambiguity</item>
+            <item>Anaphora and Deixis</item>
+            <item>Idioms</item>
+            <item>Figures of speech (not for this cycle)</item>
+            <item>etc. etc.</item>
+          </list>
+        </p>
+        <p>On propose des sous-comités...</p>
+      </div>
+      <div xml:lang="en">
         <head>The range of linguistic analysis</head>
         <p>See http://www.tei-c.org.uk/Vault/AI/air03.txt... <list>
             <item>Underspecification, uncertainty, multiple hierarchies...</item>
@@ -349,11 +535,23 @@
           </list>
         </p>
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>L'impératif EAGLES</head>
+        <p>En Europe il y avait un fort désir de la standardisation des ressources numériques,
+          associé à un financement majeur pour les systèmes d'<soCalled>ingéniérie
+            linguistique</soCalled> à l'époque. <list>
+            <item> l'affaire Eurotra</item>
+            <item> une convergence d'intérêts scientifiques/commerciaux </item>
+            <item> l'établissement des industries dites langagières </item>
+          </list>
+        </p>
+        <p>Malheureusement une énumération complète des concepts linguistiques n'est pas tellement
+          évidente...</p>
+      </div>
+      <div xml:lang="en">
         <head>The EAGLES imperative</head>
-        <p>A strong desire for standardisation of linguistic resources as part of the pressure
-          to improve <soCalled>language engineering</soCalled> systems <list>
+        <p>A strong desire for standardisation of linguistic resources as part of the pressure to
+          improve <soCalled>language engineering</soCalled> systems <list>
             <item> The EUROTRA affair</item>
             <item> An unusual convergence of government-funded commercial and research interests </item>
             <item> development of the socalled language industries </item>
@@ -361,30 +559,55 @@
         </p>
         <p>Sadly, a complete description of linguistic concepts remains elusive </p>
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>Structures de traits</head>
+        <p>Au lieu de cela, la TEI propose un "meta-modèle" pour décrire n'importe quelle espèce
+          d'annotation linguistique... et de les rendre mutuellement compréhensible, voire
+          unifiable</p>
+        <p>Ce modèle opère à deux niveaux: <list>
+            <item><hi>représentation</hi> de l'analyse comme un lot de traits, typés, structurés, et
+              linéarisés en XML</item>
+            <item>définition d'un <hi>système de traits</hi>, représentant les contraintes sur les
+              valeurs intégrées, et les règles à suivre pour les interpréter, surtout du point de
+              vue d'une grammaire d'unification</item>
+          </list>
+        </p>
+      </div>
+      <div xml:lang="en">
         <head>Feature structures</head>
         <p>Rather than a single standard set of linguistic descriptors, the TEI proposed a kind of
           "meta-model" which could be used to represent any kind of linguistic annotation. Such
           representations could be used to make systems mutually comprehensible or even unifiable. </p>
         <p>A two level model : <list>
-            <item>representation of the analysis as a bundle of  <term>typed feature structures
+            <item>representation of the analysis as a bundle of <term>typed feature structures
               </term> linearised in XML </item>
             <item>definition of a <term>feature system</term>, specifying constraints on the
               components and composition of such feature structures, aimed to support definition of
               a unification grammar. </item>
           </list>
         </p>
-
-
         <!--<p>D. Terence Langendoen and Gary F. Simons. <title>Rationale for the TEI
 Recommendations for Feature-Structure Markup</title> in N. Ide. and
 J. Veronis, eds. <title>The Text Encoding Initiative: Background and
 Contexts</title>, special triple issue of <title>Computers and the Humanities</title>, 29:3,
 1995, 191-209. </p>-->
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>Travaux de mutualisation</head>
+        <p>On a très vite compris qu'il y avait beaucoup de chevauchements parmi ces travaux. Les
+          deux TEI Editors essayaient de participer aux débats de chaque comité, et d'appliquer,
+          aussi rigoureusement que possible, le célèbre <hi>rasoir d'Ockham</hi>.</p>
+        <p>Neanmoins, la TEI propose plusieurs systèmes de représentation pour : <list>
+            <item>la segmentation linguistique</item>
+            <item>les annotations interpretives (à plusieurs niveaux) avec des codes</item>
+            <item>la documentation des codes interprétives</item>
+            <item>des balisages effectués en ligne, et également en "standoff"</item>
+            <item>...</item>
+          </list>
+        </p>
+        <p rend="box">(Encore une raison d'éviter l'usage de TEI All)</p>
+      </div>
+      <div xml:lang="en">
         <head>Knocking their heads together</head>
         <p>The work of these commitees often overlapped. The two TEI editors had the job of applying
             <term>Ockham's razor</term> to their outputs, as vigorously as possible... </p>
@@ -398,33 +621,84 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
         </p>
         <p rend="box">(This is another reason for not using TEI All!) </p>
       </div>
-
-      <div>
-        <head>From P1 to P3</head>
-        <figure><graphic url="../Graphics/tei-p1-cover.png" height="90%"/></figure><cb/>
-        <list><item>Nearly 1000 copies of P1 ("Proposals 1") were distributed between 1991-1992</item><item>
-        With additional funding from the <!--NEH in the--> US, <!--the Language Engineering programme in
-          the -->EU, and Canada <!--the Canadian SSHRC--> the second phase of the TEI began  </item><item>
-        The resulting extensive additional recommendations were reviewed at
-          the first "TEI Technical Review Meeting", held at Eynsham Hall (near Oxford) in May 1993. </item></list>
+      <div xml:lang="fr">
+        <head>De P1 à P3</head>
+        <figure>
+          <graphic url="../images/tei-p1-cover.png" height="90%"/>
+        </figure>
+        <cb/>
+        <list>
+          <item>P1 a été distribué en c. mille exemplaires imprimés en 1991-1992. </item>
+          <item>Avec des financements supplémentaire aux Etats-Unis, en Europe, et au Canada, une
+            deuxieme phase de développement et de validation est entretenue </item>
+          <item> Les commentaires et les propositions qui en ressortaient ont été considérés
+            ensemble à un premier "TEI Technical Review Meeting", qui a eu lieu à Eynsham Hall (près
+            d'Oxford) en mai 1993. </item>
+        </list>
         <!-- photo of eynsham hall? <graphic url="../Graphics/1993_0513_01.jpg"/></figure>-->
       </div>
-
-      <div>
-        <head>1994 : P3</head>
-
-        
-
+      <div xml:lang="en">
+        <head>From P1 to P3</head>
         <figure>
-            <graphic height="80%" url="../Graphics/1994_0516_02.jpg"/>
-          </figure>
-    <cb/>
-       <list><item>April 1994:  TEI (P3) announced at ALLC-ACH conference Paris </item><item>
-          May: the "Green Books" appear at SGML94, Montreux. </item><item>
-        Dec 1994, first "TEI Metaworkshop" held,  in Chicago.  </item></list>
+          <graphic url="../Graphics/tei-p1-cover.png" height="90%"/>
+        </figure>
+        <cb/>
+        <list>
+          <item>Nearly 1000 copies of P1 ("Proposals 1") were distributed between 1991-1992</item>
+          <item> With additional funding from the <!--NEH in the--> US,
+            <!--the Language Engineering programme in
+          the -->EU, and Canada
+            <!--the Canadian SSHRC--> the second phase of the TEI began </item>
+          <item> The resulting extensive additional recommendations were reviewed at the first "TEI
+            Technical Review Meeting", held at Eynsham Hall (near Oxford) in May 1993. </item>
+        </list>
+        <!-- photo of eynsham hall? <graphic url="../Graphics/1993_0513_01.jpg"/></figure>-->
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>1994 : P3</head>
+        <figure>
+          <graphic height="40%" url="../images/1994_0516_02.jpg"/>
+        </figure>
+        <cb/>
+        <list>
+          <item>avril : TEI P3 est annonce au colloque ALLC-ACH à Paris </item>
+          <item>mai : Les <soCalled>green books</soCalled> apparaissent enfin au colloque
+            international SGML à Montreux</item>
+          <item>déc : Le premier <soCalled>TEI Metaworkshop</soCalled> a lieu à Chicago</item>
+        </list>
+      </div>
+      <div xml:lang="en">
+        <head>1994 : P3</head>
+        <figure>
+          <graphic height="80%" url="../Graphics/1994_0516_02.jpg"/>
+        </figure>
+        <cb/>
+        <list>
+          <item>April 1994: TEI (P3) announced at ALLC-ACH conference Paris </item>
+          <item> May: the "Green Books" appear at SGML94, Montreux. </item>
+          <item> Dec 1994, first "TEI Metaworkshop" held, in Chicago. </item>
+        </list>
+      </div>
+      <div xml:lang="fr">
+        <head>1994-1999</head>
+        <p>L'adoption de la TEI, et l'influence de ses idées est difficile à tracer, parce qu'elle
+          est devenue une partie de l'écosystème informatique qui était en état très rapide
+          d'évolution à cette époque. </p>
+        <!--<p>TEI etait adopte par plusieurs grand projets de bibliotheque nunmerique (notamment à plusieurs universites americains</p>-->
+        <list>
+          <item>En 1996, Michael Sperberg McQueen, l'éditeur principal de la TEI, était nommé
+            co-editeur du standard W3C XML</item>
+          <item>En 1997, le dixième anniversaire de la TEI était célébré par un colloque à Brown
+            University</item>
+          <item>En 1998, une réunion organisée par le DLF à Washington parlait déja de migrer la TEI
+            de SGML en XML.</item>
+          <item>En 1999 apparaissait une version de P3 légèrement révisée avec des corrections, et
+            un ajout (la balise <gi>ab</gi>, à savoir)</item>
+        </list>
+        <p rend="box">Who owns the output of an international collaborative research project? Who
+          has the right and duty to maintain it?</p>
+      </div>
+      <div xml:lang="en">
         <head>1994-1999</head>
         <p>The adoption of the TEI and the influence of its ideas are difficult to trace, because it
           so rapidly became an invisible part of the research infrastructure. Some key events : </p>
@@ -442,12 +716,28 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
         <p rend="box">Who owns the output of an international collaborative research project? Who
           has the right and duty to maintain it?</p>
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>2000 : Naissance du TEI Consortium</head>
+        <p>Suite à des travaux sérieux de la part de plusieurs utilisateurs de la TEI (notamment à
+          Londres, Virginia, Brown, Oxford, Bergen...) le TEI Consortium a été établi comme
+          "association à but non lucratif" en 2000. </p>
+        <p>Enjeux du consortium (à part les détails bureaucratiques) : <list>
+            <item>de garantir l'entretien du système TEI</item>
+            <item>de mettre en place des mises à jour urgentes: <list>
+                <item>version XML</item>
+                <item>élargissement des sujets traités</item>
+              </list></item>
+            <item>définir un modèle économique et scientifique qui permette une pérennité aux
+              efforts de la communauté TEI</item>
+          </list>
+        </p>
+        <p rend="box">http://www.ariadne.ac.uk/issue24/tei/</p>
+      </div>
+      <div xml:lang="en">
         <head>2000 : Birth of the TEI Consortium</head>
         <p>After much work by some key users of the TEI (notably DH centres in London, Virginia,
-          Brown, Oxford, and Bergen) the TEI Consortium was incorporated as a not-for-profit membership
-          association in December 2000. </p>
+          Brown, Oxford, and Bergen) the TEI Consortium was incorporated as a not-for-profit
+          membership association in December 2000. </p>
         <p>Goals of the consortium (apart from establishing its own existence) <list>
             <item>ensure the maintenance of the TEI system</item>
             <item>implement the most urgent revisions: <list>
@@ -460,8 +750,17 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
         </p>
         <p rend="box">http://www.ariadne.ac.uk/issue24/tei/</p>
       </div>
-
-      <div>
+      <div xml:lang="fr">
+        <head>2001 : Première réunion annuelle des membres du TEI Consortium (à Pise)</head>
+        <list>
+          <item>voir <ptr target="http://www.tei-c.org/Membership/Meetings/2001/index.xml"/></item>
+          <item>Intervention de Michael Sperberg McQueen : The TEI is Dead : Long Live the
+            TEI</item>
+          <item>Intervention technique de Syd Bauman et Lou Burnard sur la feuille de route pour
+            P5</item>
+        </list>
+      </div>
+      <div xml:lang="en">
         <head>2001 : first annual meeting of the TEI Consortium (in Pisa)</head>
         <list>
           <item>TEI P4 announced and distributed</item>
@@ -470,26 +769,22 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
           <item> Syd Bauman et Lou Burnard described the workplan for P5</item>
         </list>
       </div>
-
-      <div>
+      <div xml:lang="en">
         <head>Some things we did right</head>
         <p rend="box">(MSM, nov 2001)</p>
         <list>
-            <item>the TEI interchange format (&amp;rarr; XML)</item>
-            <item>the TEI extended pointer syntax (good 80/20 point; &amp;rarr; XPointer,
-              XPath)</item>
-            <item>TEI linking (&amp;rarr; XLink)</item>
-            <item>the pizza model</item>
-            <item>DTDs are not written but generated
-              <!--* the Odd system / the general idea of generating a DTD from
+          <item>the TEI interchange format (&amp;rarr; XML)</item>
+          <item>the TEI extended pointer syntax (good 80/20 point; &amp;rarr; XPointer,
+            XPath)</item>
+          <item>TEI linking (&amp;rarr; XLink)</item>
+          <item>the pizza model</item>
+          <item>DTDs are not written but generated
+            <!--* the Odd system / the general idea of generating a DTD from
 the documentation, rather than developing the two separately and
 working to keep them in synch *--></item>
-            <item>work to earn community buy-in*</item>
-          </list>
+          <item>work to earn community buy-in*</item>
+        </list>
       </div>
-
-
-
       <!--
 <div rend="slide">
 <head>P3, P4, P5</head>
@@ -516,12 +811,9 @@ working to keep them in synch *--></item>
      &ldots; and in print</p>   </div>
 
 -->
-
-      <div>
+      <div xml:lang="en">
         <head>2001 : The TEI P5 Workplan</head>
-
         <p rend="box">(LB, Nov. 2001)</p>
-
         <p>Work Is Needed In These Areas... </p>
         <list type="ordered">
           <item>Character set issues</item>
@@ -535,7 +827,6 @@ working to keep them in synch *--></item>
         </list>
         <p>Evangelization and training as above</p>
       </div>
-
       <div rend="slide">
         <head>Character set issues</head>
         <p><list>
@@ -563,14 +854,13 @@ working to keep them in synch *--></item>
           </list>
         </p>
       </div>
-
-      <div>
+      <div xml:lang="en">
         <head>And so ... </head>
         <figure>
           <graphic url="../Graphics/teiconchg.png"/>
         </figure>
       </div>
-      <div>
+      <div xml:lang="en">
         <head>What's new in TEI P5?</head>
         <list>
           <item>authoring and tag documentation </item>
@@ -586,9 +876,7 @@ working to keep them in synch *--></item>
         </list>
         <p>And some things may be ruthlessly excised…</p>
       </div>
-
-
-      <div>
+      <div xml:lang="en">
         <head>Major development areas in practice</head>
         <p>New community groups worked on <list>
             <item>named entities for e.g. <soCalled>personographies</soCalled></item>
@@ -599,15 +887,17 @@ working to keep them in synch *--></item>
         <p rend="box">Developments spearheaded and elaborated by self-selecting groups of
           experts</p>
       </div>
-
-      <div>
+      
+      <div xml:lang="fr"><head>TEI organigramme (aujourdhui)</head>
+        <figure><graphic height="80%" url="../images/tei-community.png"/></figure>
+      </div>
+      <div xml:lang="en">
         <head>TEI organization (today)</head>
         <figure>
           <graphic height="80%" url="../Graphics/tei-community.png"/>
         </figure>
       </div>
-
-      <div>
+      <div xml:lang="en">
         <head>The TEI is no longer a research project</head>
         <list>
           <item>A community-driven effort</item>
@@ -615,7 +905,6 @@ working to keep them in synch *--></item>
           <item>Elected membership</item>
           <item>Responsible to paying members of the Consortium</item>
           <item>Participation for both personal and institutional members</item>
-
         </list>
         <table>
           <row>
@@ -628,10 +917,6 @@ working to keep them in synch *--></item>
           </row>
         </table>
       </div>
-
-
-
-
       <div rend="slide">
         <head>What's <hi rend="italic">not</hi> TEI?</head>
         <p>Originally, the TEI ruled out of consideration...<list>
@@ -644,8 +929,6 @@ working to keep them in synch *--></item>
         <p rend="box">its original focus (metadata, text, textual and linguistic analysis) has now
           expanded to include all of the above</p>
       </div>
-
-
       <div rend="slide">
         <head>The current TEI landscape </head>
         <list>
@@ -660,17 +943,13 @@ working to keep them in synch *--></item>
         </list>
         <p>... in short, a new kind of Encyclopaedia!</p>
       </div>
-
-
-      <div>
+      <div xml:lang="en">
         <head>A standard exists for the sake of conformance, right?</head>
         <figure>
           <graphic url="../Graphics/1991-TEI-commandments.png" height="70%"/>
         </figure>
       </div>
-
-
-      <div>
+      <div xml:lang="en">
         <head>The TEI spirit</head>
         <p>But what does it mean to be conformant to the TEI ?</p>
         <list>
@@ -681,22 +960,18 @@ working to keep them in synch *--></item>
         <p>Standardisation should not mean «do what I do» but rather «explain your decisions in
           terms I can understand »</p>
       </div>
-
-
-      <div>
+      <div xml:lang="en">
         <head>... leading to the many flavours of TEI</head>
         <p>Suppose you want to encode a bibliographic description. The TEI makes you choose between :<list>
             <item><gi>bibl</gi> (contains any combination of bibliographic elements and text, or
               just text)</item>
             <item><gi>biblStruct</gi> (contains a highly constrained set of bibliographic elements
               and no text)</item>
-          <item>(and other things...) </item>
+            <item>(and other things...) </item>
           </list>
         </p>
-
       </div>
-
-      <div>
+      <div xml:lang="en">
         <head><gi>bibl</gi>: </head>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <bibl>Blain, Clements and Grundy: Feminist Companion to Literature in English (Yale,
@@ -712,8 +987,7 @@ working to keep them in synch *--></item>
             <title type="main">Vocabulary</title></bibl>
         </egXML>
       </div>
-
-      <div>
+      <div xml:lang="en">
         <head><gi>biblStruct</gi>:</head>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <biblStruct type="incollection">
@@ -737,12 +1011,9 @@ working to keep them in synch *--></item>
           </biblStruct>
         </egXML>
       </div>
+      <!-- 
 
-
-
-     <!-- 
-
-      <div>
+      <div xml:lang="en">
         <head>There is no single &#x201C;TEI dtd&#x201D;</head>
 
         <list type="unordered">
@@ -756,7 +1027,7 @@ working to keep them in synch *--></item>
         </list>
       </div>
 
-      <div>
+      <div xml:lang="en">
         <head>Architecture TEI</head>
         <figure rend="center">
           <graphic url="../Graphics/class-system-FR.png" height="80%"/>
@@ -764,8 +1035,7 @@ working to keep them in synch *--></item>
       </div>
 
 -->
-
-      <div>
+      <div xml:lang="en">
         <head>The TEI Architecture</head>
         <list type="unordered">
           <item> TEI is a <emph>modular</emph> system. You use it to create an encoding system that
@@ -799,7 +1069,7 @@ working to keep them in synch *--></item>
         </list>
       </div>-->
       </div>
-      <div>
+      <div xml:lang="en">
         <head>TEI modules</head>
         <table xml:id="tab-mods">
           <row>
@@ -896,7 +1166,7 @@ working to keep them in synch *--></item>
           </row>
         </table>
       </div>
-      <div>
+      <div xml:lang="en">
         <head>How do you choose?</head>
         <list>
           <item>Take the lot ! (not a very smart choice)</item>
@@ -904,25 +1174,21 @@ working to keep them in synch *--></item>
           <item>Roll your own -- according to your specific project needs</item>
         </list>
         <p>Yes, this means that you have to know about all the possibilities ...</p>
-
         <list type="gloss">
           <label>Roma</label>
           <item>an online tool for helping in this task</item>
         </list>
         <p rend="box">http://www.tei-c.org/Roma/</p>
       </div>
-
-      <div>
+      <div xml:lang="en">
         <head>Why is the TEI still of interest?</head>
-
         <p>There are two reasons why standards fail : <list>
             <item>they are based on an immature theory</item>
             <item>"not invented here": the user community is fragmented or diverse</item>
           </list>
         </p>
       </div>
-
-      <div>
+      <div xml:lang="en">
         <head>How does one test a theory ?</head>
         <p>A TEI customisation can : <list>
             <item>control the possible values of attributes</item>
@@ -934,8 +1200,7 @@ working to keep them in synch *--></item>
         <p rend="box">These mechanisms make it easy to test new ideas while remaining TEI
           conformant. </p>
       </div>
-
-      <!-- <div>
+      <!-- <div xml:lang="en">
         <head>Addition d'éléments</head>
         <p>Un schema ressemble à une grammaire, déjà existante. Comment serait-il possible d'ajouter
           des termes nouveaux? </p>
@@ -954,8 +1219,7 @@ working to keep them in synch *--></item>
             signification. </item>
         </list>
       </div>-->
-
-      <div>
+      <div xml:lang="en">
         <head>Not Invented Here?</head>
         <list>
           <item>TEI P5 includes many I18N features ...</item>
@@ -964,20 +1228,13 @@ working to keep them in synch *--></item>
               <item>SVG for graphics</item>
               <item>MathML for maths</item>
               <item>MEI for music</item>
-
               <item>....</item>
             </list></item>
           <item>A TEI element definition may specify its equivalent in some other ontology using the
               <gi>equiv</gi>element</item>
         </list>
       </div>
-
-
-
-
-
-
-      <div>
+      <div xml:lang="en">
         <head>Darwinism works ...</head>
         <list>
           <item>Customize the TEI using your own namespace</item>
@@ -989,10 +1246,7 @@ working to keep them in synch *--></item>
         </list>
         <p rend="box">Oh, and don't forget to join the Consortium!</p>
       </div>
-
-
-
-      <div>
+      <div xml:lang="en">
         <head>Some vital links</head>
         <list>
           <item><ptr target="http://www.tei-c.org"/></item>
@@ -1000,12 +1254,7 @@ working to keep them in synch *--></item>
           <item><ptr target="http://listserv.brown.edu/archives/cgi-bin/wa?SUBED1=tei-l&amp;A=1"
             /></item>
         </list>
-        
-
-
       </div>
-
-
     </body>
   </text>
 </TEI>

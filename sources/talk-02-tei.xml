@@ -40,7 +40,7 @@ les réflexions sur la matérialité des textes qu’ils impliquent?
 -->
       <div>
         <figure>
-          <graphic url="../Graphics/taiwan-1.jpg" height="85%"/>
+          <graphic url="../images/taiwan-1.jpg" height="85%"/>
           <head>Extraits du soutra "Cœur" (Tripitaka), <lb/>
             <seg xml:lang="zh-TW"
             >法鼓山</seg> (Montagne du Tambour du Dharma: Dharma Drum Mountain), Taiwan, 2009</head>
@@ -49,7 +49,7 @@ les réflexions sur la matérialité des textes qu’ils impliquent?
       <div>
         <head>La TEI, elle est partout...</head>
         <figure>
-          <graphic url="../Graphics/taiwan-2.jpg" height="80%"/>
+          <graphic url="../images/taiwan-2.jpg" height="80%"/>
         </figure>
       </div>
       <div>
@@ -66,7 +66,7 @@ les réflexions sur la matérialité des textes qu’ils impliquent?
       </div>
       <div>
         <head>Qu’est-ce que la Text Encoding Initiative (TEI) ?</head>
-        <p><graphic url="../Graphics/whatistei.png" height="50%"/></p>
+        <p><graphic url="../images/whatistei.png" height="50%"/></p>
         <list>
           <item>Une organisation, une institution ?</item>
           <item>un <soCalled>club</soCalled>, une mode, une religion ?</item>
@@ -138,13 +138,13 @@ les réflexions sur la matérialité des textes qu’ils impliquent?
       <div>
         <head>La TEI jadis ... </head>
         <figure rend="center">
-          <graphic url="../Graphics/tei-structure-1991.png" height="90%"/>
+          <graphic url="../images/tei-structure-1991.png" height="90%"/>
         </figure>
       </div>
       <div>
         <head>... et ses produits</head>
         <figure>
-          <graphic url="../Graphics/theGuidelines.jpg"/>
+          <graphic url="../images/theGuidelines.jpg"/>
         </figure>
       </div>
       <div>
@@ -175,7 +175,7 @@ les réflexions sur la matérialité des textes qu’ils impliquent?
       <div>
         <head>Organisation de la TEI</head>
         <figure>
-          <graphic height="80%" url="../Graphics/tei-community.png"/>
+          <graphic height="80%" url="../images/tei-community.png"/>
         </figure>
       </div>
       <div rend="slide">
