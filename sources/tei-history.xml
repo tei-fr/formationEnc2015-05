@@ -42,7 +42,7 @@
     <body>
       <div xml:lang="en">
         <head>What is the TEI?</head>
-        <p><graphic url="../Graphics/whatistei.png" height="50%"/></p>
+        <p><graphic url="../images/whatistei.png" height="50%"/></p>
         <list>
           <item>an organization or an institution?</item>
           <item>a club or a religion or a fashion?</item>
@@ -329,7 +329,7 @@
       <div xml:lang="fr">
         <head>The Poughkeepsie Principles</head>
         <figure>
-          <graphic height="80%" url="../Graphics/poughkeepsieprinciples.png"/>
+          <graphic height="80%" url="../images/poughkeepsieprinciples.png"/>
         </figure>
         <p><ptr target="http://www.tei-c.org/Vault/ED/edp01.htm"/></p>
       </div>
@@ -365,7 +365,7 @@
       <div xml:lang="fr">
         <head>Organisation de la TEI (1991)</head>
         <figure rend="center">
-          <graphic url="../Graphics/tei-structure-1991.png" height="90%"/>
+          <graphic url="../images/tei-structure-1991.png" height="90%"/>
         </figure>
         <cb/>
         <p>Les travaux de la TEI ont été pris en main par les deux <soCalled>editors</soCalled> et
@@ -584,7 +584,7 @@
       <div xml:lang="en">
         <head>Feature structures</head>
         <p>Rather than a single standard set of linguistic descriptors, the TEI proposed a kind of
-          "meta-model" which could be used to represent any kind of linguistic annotation. Such
+          <term>meta-model</term> which could be used to represent any kind of linguistic annotation. Such
           representations could be used to make systems mutually comprehensible or even unifiable. </p>
         <p>A two level model : <list>
             <item>representation of the analysis as a bundle of <term>typed feature structures
@@ -609,7 +609,7 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
             <item>la segmentation linguistique</item>
             <item>les annotations interpretives (à plusieurs niveaux) avec des codes</item>
             <item>la documentation des codes interprétives</item>
-            <item>des balisages effectués en ligne, et également en "standoff"</item>
+            <item>des balisages effectués en ligne, et également en <soCalled>standoff</soCalled></item>
             <item>...</item>
           </list>
         </p>
@@ -636,12 +636,12 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
         </figure>
         <cb/>
         <list>
-          <item>P1 a été distribué en c. mille exemplaires imprimés en 1991-1992. </item>
+          <item>P1 est distribué en c. mille exemplaires imprimés en 1991-1992. </item>
           <item>Avec des financements supplémentaire aux Etats-Unis, en Europe, et au Canada, une
             deuxieme phase de développement et de validation est entretenue </item>
-          <item> Les commentaires et les propositions qui en ressortaient ont été considérés
-            ensemble à un premier "TEI Technical Review Meeting", qui a eu lieu à Eynsham Hall (près
-            d'Oxford) en mai 1993. </item>
+          <item>Les commentaires et les propositions qui en ressortent sont considérés
+            ensemble à un premier <soCalled>TEI Technical Review Meeting</soCalled> <!--, qui a eu lieu à Eynsham Hall (près
+            d'Oxford) --> en mai 1993. </item>
         </list>
         <!-- photo of eynsham hall? <graphic url="../Graphics/1993_0513_01.jpg"/></figure>-->
       </div>
@@ -728,7 +728,7 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
         <head>2000 : Naissance du TEI Consortium</head>
         <p>Suite à des travaux sérieux de la part de plusieurs utilisateurs de la TEI (notamment à
           Londres, Virginia, Brown, Oxford, Bergen...) le TEI Consortium a été établi comme
-          "association à but non lucratif" en 2000. </p>
+         association à but non lucratif en 2000. </p>
         <p>Enjeux du consortium (à part les détails bureaucratiques) : <list>
             <item>de garantir l'entretien du système TEI</item>
             <item>de mettre en place des mises à jour urgentes: <list>
@@ -1270,7 +1270,7 @@ working to keep them in synch *--></item>
         <head>Pourquoi s'intéresser toujours à la TEI ?</head>
         <p>Deux raisons pour lesquelles les standards échouent: <list>
             <item>ils sont basés sur une théorie pas encore mûre</item>
-            <item>"not invented here": la communauté envisagée est trop diverse ou fragmentée</item>
+            <item><soCalled>not invented here</soCalled> : la communauté envisagée est trop diverse ou fragmentée</item>
           </list>
         </p>
       </div>
@@ -1286,7 +1286,7 @@ working to keep them in synch *--></item>
         <head>Comment faire mûrir une théorie ?</head>
         <p>Dans son TEI ODD, on peut: <list>
             <item>limiter les valeurs possibles d'un attribut plus ou moins strictement</item>
-            <item>proposer des règles "schematron" sur le contenu (p.e. co-dependency)</item>
+            <item>proposer des règles Schematron sur le contenu (p.e. co-dependency)</item>
             <item>enlever quelques éléments facultatifs</item>
             <item>ajouter de nouveaux éléments, labellisés dans votre propre espace de noms</item>
           </list></p>
@@ -1391,7 +1391,7 @@ working to keep them in synch *--></item>
             <item>http://meet.tge-adonis.fr</item>
             <item>http://lespetitescases.net/index102/</item>
             <item>http://www.culture.gouv.fr/culture/dglf/riofi/tei.htm</item>
-            <item>http://artist.inist.fr/article.php3?id_article=122"/></item>
+            <item>http://artist.inist.fr/article.php3?id_article=122</item>
           </list></p>
       </div>
       <div xml:lang="en">

@@ -4,7 +4,10 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="xs tei"
     version="2.0">
-    <xsl:template match="//tei:*[@xml:lang='en']"/>
+   
+    <!-- junk everything that isn't in french -->
+    
+    <xsl:template match="//tei:*[@xml:lang!='fr']"/>
     
     <xsl:template match="*">
         <xsl:copy>
