@@ -216,26 +216,31 @@
               <code>CTRL-o</code>, ou cliquez l’icône dossier) et sélectionnez le fichier
               <ident>lacigale.docx</ident> dans votre dossier <ident>Travaux</ident> .</item>
           <item>Une fenêtre intitulée <ident>Navigateur d’Archives</ident> s’ouvre à gauche de
-            l’écran principal. La structure de l’archive docx y est affichée.</item></list>
-          <p><graphic url="../images/navigateur-1.png" height="5cm"/></p>
-         <list> <item>Cliquez sur la petite clef bleue à côté du dossier <ident>word</ident> pour voir ce
-            qu’il contient</item></list>
-          <p><graphic url="../images/navigateur-2.png" height="5cm"/></p>
-          <list><item>Sélectionnez le fichier <ident>document.xml</ident> et double-cliquez pour l’ouvrir
+            l’écran principal. La structure de l’archive docx y est affichée.</item>
+        </list>
+        <p><graphic url="../images/navigateur-1.png" height="5cm"/></p>
+        <list>
+          <item>Cliquez sur la petite clef bleue à côté du dossier <ident>word</ident> pour voir ce
+            qu’il contient</item>
+        </list>
+        <p><graphic url="../images/navigateur-2.png" height="5cm"/></p>
+        <list>
+          <item>Sélectionnez le fichier <ident>document.xml</ident> et double-cliquez pour l’ouvrir
             (peut prendre un peu de temps si le fichier est grand) </item>
           <!--<item><graphic url="document-word.png"/></item-->
           <item>Voilà : c’est un document XML, plein de balises, pour la plupart appartenant à un
             espace de noms définie par Microsoft. Convertissons-le !</item>
-       
           <item>Avec ce fichier <ident>document.xml</ident> ouvert dans l’écran principal,
             sélectionnez <ident>Transformation -> Configurer les Scénario(s) de
               Transformation</ident> du menu <ident>Document</ident>. Ou tapez
               <code>CTRL-MAJ-c</code>. Ou cliquez sur la petit icone clef à molette (celui-ci :
               <graphic url="../images/spanner.png" height="7mm"/>) </item>
           <item>oXygen vous présente les options de transformations disponibles pour ce document,
-            parmi lesquelles une transformation nommée DOCX TEI P5 devrait figurer. </item></list>
-          <p><graphic url="../images/configurer-1.png" height="7cm"/></p>
-         <list> <item>Cochez la case à côté et cliquez sur le bouton <ident>Appliquer associés</ident> au
+            parmi lesquelles une transformation nommée DOCX TEI P5 devrait figurer. </item>
+        </list>
+        <p><graphic url="../images/configurer-1.png" height="7cm"/></p>
+        <list>
+          <item>Cochez la case à côté et cliquez sur le bouton <ident>Appliquer associés</ident> au
             dessous. Une nouvelle fenêtre s’ouvre en bas pour l’affichage des messages concernant le
             processus de transformation: vous pouvez les ignorer sans problème.</item>
           <item>Dans l’écran principal, un document TEI-conforme s’affiche. Sélectionnez
@@ -245,10 +250,10 @@
           <!--item><graphic url="converted-1.png"/></item-->
           <item>L’attribut <att>rend</att> indique le nom du style Word utilisé dans cette portion
             du document original. Une transformation XSLT plus complexe pourrait donc s’en servir
-            pour effectuer une conversion plus intelligente.</item></list>
-        
-        <p>Si vous disposez d’autres documents Word docx, n’hésitez pas à essayer de les transformer
-          de la même manière!</p>
+            pour effectuer une conversion plus intelligente.</item>
+        </list></div><div>
+        <p>La question qui s'impose: quels balises devraient être utilisés pour representer les
+          aspects les plus signifiants et utiles du document ?</p>
       </div>
     </body>
   </text>

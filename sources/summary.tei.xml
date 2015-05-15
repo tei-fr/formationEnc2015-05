@@ -1,4 +1,4 @@
-<?xml version="1.0"?> 
+<?xml version="1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0">
   <teiHeader>
     <fileDesc>
@@ -40,26 +40,33 @@
           </list>
         </div>
       </div>
-      
       <div rend="slide">
         <div xml:lang="fr">
-          <head>1<hi rend="superscript">ère</hi> journée</head>
-          <list>
-            <item>Introduction de la formation  (10 mins) </item>
-            <item>Tour de table et répartition des groupes (20 mins) </item>
+          <head>Première journée</head>
+          <list type="gloss">
+            <label>09h-09h15</label>
+            <item>Introduction de la formation </item>
+            <label>09h15-10h</label>
+            <item>Tour de table et répartition des groupes </item>
+            <label>10h-10h45</label>
             <item><ref target="talk-01.xml">Initiation à l’encodage XML-TEI</ref> (45 mins)</item>
-            <item>
-              <list>
-                <head>Travaux pratiques </head>
-                <item><label>Ex. 1</label> Découverte d’oXygen</item>
-                <item><label>Ex. 2</label> Production d’un premier document XML</item>
-                <item><label>Ex. 3</label> Conversion d’un fichier MS Word en TEI</item>
-              </list></item>
-            <item>La Text Encoding Initiative (TEI)</item>
+            <label>10h45-11h15</label>
+            <item>pause</item>
+            <label>11h15-12h</label>
+            <item>TP : <ref target="ex-1-oxygen.xml">A la découverte d'oXygen</ref></item>
+            <label>12h-13h30</label>
+            <item>pause dejeuner</item>
+            <label>13h30-14h30</label>
+            <item>Possibilites de l'encodage XML TEI : des exemples actuels</item>
+            <label>14h30-15h15</label>
+            <item>TP : <ref target="ex-2-analyse.xml">Analyse des textes</ref></item>
+            <label>15h15-15h45</label>
+            <item>pause</item>
+            <label>15h45-16h30</label>
+            <item>Histoire et evolution de la Text Encoding Initiative (TEI)</item>
           </list>
         </div>
       </div>
-      
       <div rend="slide">
         <div xml:lang="fr">
           <head>2<hi rend="superscript">ème</hi> journée</head>
@@ -71,7 +78,6 @@
           </list>
         </div>
       </div>
-      
       <div rend="slide">
         <div xml:lang="fr">
           <head>3<hi rend="superscript">ème</hi> journée</head>
@@ -80,7 +86,6 @@
           </list>
         </div>
       </div>
-
     </body>
   </text>
 </TEI>
