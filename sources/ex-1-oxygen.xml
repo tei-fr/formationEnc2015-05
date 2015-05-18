@@ -252,8 +252,8 @@
             du document original. Une transformation XSLT plus complexe pourrait donc s’en servir
             pour effectuer une conversion plus intelligente.</item>
         </list></div><div>
-        <p>La question qui s'impose: quels balises devraient être utilisés pour representer les
-          aspects les plus signifiants et utiles du document ?</p>
+        <p>La question qui s'impose: quels balises devraient être disponible pour une représentation efficace des
+          aspects les plus signifiants  du document ?</p>
       </div>
     </body>
   </text>
