@@ -266,7 +266,7 @@
         <p>à ne pas oublier <hi>TEI</hi>, la <emph>Text Encoding Initiative</emph></p>
       </div>
       <div xml:lang="fr">
-        <head>XML: ce que c’est et pourquoi on devrait le connaitre</head>
+        <head>XML: ce que c’est et pourquoi on devrait le connaître</head>
         <list>
           <item>XML est une manière de représenter les <hi>données structurées</hi> sous forme de
             chaîne de caractères</item>
@@ -311,7 +311,8 @@
       </div>
       <div xml:lang="fr">
         <head>Syntaxe XML</head>
-        <p>Un document XML contient:- <list>
+        <p>Un document XML contient : 
+          <list>
             <item>des <term>éléments</term>, qui portent (facultativement) des
                 <term>attributs</term>, marqués par des <term>balises</term>
             </item>
