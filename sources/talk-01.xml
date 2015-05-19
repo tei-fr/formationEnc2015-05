@@ -284,6 +284,24 @@
             ressources diverses et polyglottes</item>
         </list>
       </div>
+      <div><head>XML en 4 points</head>
+        <list rend="numbered"><item>XML ne sert pas à afficher les données mais à les décrire<!--**. Seul, il ne fait rien. Appliqué à la représentation des textes, il permet de décrire notamment leur structure (livre, chapitre, paragraphe, phrase, mot, etc.)
+         --></item><item>Le nom des balises n’est pas prédéfini<!--** : on peut librement créer son propre vocabulaire
+         --></item><item>On peut utiliser une "grammaire" de balises<!--**, pour définir des contraintes ou s’assurer de la consistance de l’encodage
+       --></item><item>XML est auto-descriptif et lisible par l’homme<!--**. Un fichier XML n’est rien que du texte, on peut facilement prendre connaissance d’un corpus dans n’importe quel éditeur textuel
+        --> 
+          </item></list></div>
+      
+      <div><head>Exemple d'un document XML complet</head>
+        
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          &lt;?xml version="1.0"?>
+          <doc xmlns="http://example.org/namespace">
+            <p n="1">This is a paragraph.</p>
+            <p n="2">This paragraph mentions <placeName>Bristol</placeName>.</p>
+          </doc>
+        </egXML>   
+      </div>
       <div xml:lang="fr">
         <head>(Presque) tout ce qu’il faut savoir au sujet de XML, sur un seul transparent</head>
         <list>
@@ -292,7 +310,7 @@
               <term>contenu</term> et une <term>balise de fermeture</term></item>
           <item>Un élément peut d’ailleurs porter des <term>attributs</term>, chacun portant un
               <term>nom</term> et une <term>valeur</term></item>
-          <item>Un document XML est <emph>obligatoirement </emph>
+          <item>Un document XML est <emph>obligatoirement</emph>
             <soCalled>well formed</soCalled> (bien-formé) i.e. il doit suivre la syntaxe XML</item>
           <item>Un document bien-formé peut <emph>facultativement</emph> être <term>valide</term>
             i.e. il est conforme aux règles d’un <term>schéma</term> quelconque</item>
@@ -306,7 +324,7 @@
         </egXML>
       </div>
       <div xml:lang="fr">
-        <head>Un petit document XML </head>
+        <head>Encore un petit document XML </head>
         <p><graphic url="../images/cookbook.png" height="90%"/></p>
       </div>
       <div xml:lang="fr">
@@ -327,6 +345,7 @@
         </p>
         <p>C’est tout !</p>
       </div>
+     
       <div xml:lang="fr">
         <head>XML: règles du jeu</head>
         <list>
@@ -346,6 +365,17 @@
           <item>les noms sont liés avec un <term>namespace</term> (espace de noms)</item>
         </list>
       </div>
+      <!--
+      <div><head>Élément XML</head>
+     <p> <graphic url="../images/xml01.svg"/>
+    </p>  </div>
+      <div><head>Attribut XML</head>
+    <p>    <graphic url="../images/xml02.svg"/>
+   </p>   </div>
+      <div><head>balisage XML</head>
+   <p>     <graphic url="../images/xml00.svg"/>
+  </p>    </div>
+     -->
       <div xml:lang="fr">
         <head>Représentation d’une arborescence XML</head>
         <list>
