@@ -113,11 +113,12 @@
         </list>
       </div>
       <div xml:lang="fr">
-        <head>... et ses produits</head>
+        <head>... et ses produits (1)</head>
         <figure>
           <graphic url="../images/theGuidelines.jpg"/>
         </figure>
-        <cb/>
+      </div><div xml:lang="fr">  <head>... et ses produits (2)</head>
+        
         <figure>
           <graphic url="../images/theGuidelinesOnline.png"/>
         </figure>
