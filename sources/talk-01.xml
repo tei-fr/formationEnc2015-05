@@ -40,32 +40,25 @@
       <div xml:lang="fr">
         <head>La tournée numérique</head>
         <p>Les sciences humaines et sociales s’occupent surtout du <emph>texte</emph>... <list>
-            <item>(majoritairement non-numérique) les livres, les manuscrits, les fonds d’archive
-              ... </item>
-            <item>ainsi que d’autres manifestations culturelles/communicatives (de plus en plus
-              numérisées) par ex., les sons, les images, les cahiers de recherches, les tweets
-            </item>
+            <item>(majoritairement non-numérique) les livres, les manuscrits, les fonds d’archives ... </item>
+            <item>ainsi que d’autres manifestations culturelles/communicatives (de plus en plus numérisées) par ex., les sons, les images, les cahiers de recherches, les tweets </item>
           </list></p>
-        <p>Les <q>digital humanities</q> se préoccupent avec les outils et les techniques qui
-          permettent de manipuler d’une manière intégrée toutes ces manifestations, et donc de gérer
-          ce patrimoine de plus en plus signifiant.</p>
+        <p>Les <q>digital humanities</q> s’intéressent aux outils et aux techniques qui permettent de manipuler de manière intégrée toutes ces manifestations, et donc de gérer ce patrimoine de plus en plus signifiant.</p>
         <p rend="box">Le balisage (markup, encodage) est une composante incontournable de ces
           manipulations</p>
       </div>
       <div xml:lang="fr">
         <head>Texte et texte numérique</head>
-        <p>Un texte peut être considéré selon trois axes : <list>
-            <item>Un texte a une existence physique, ayant des <hi>traits visuels</hi> qu’on peut
-              (plus ou moins) transférer automatiquement d’une instance à une autre</item>
-            <item>Un texte possède des propriétés linguistiques et structurelles, qu’on ne peut
-              transcrire, traduire, ou transmettre qu’avec une compréhension humaine</item>
-            <item>Un texte présente des informations sur le monde réel, qu’on peut comprendre (ou
-              non) ou annoter, et qui nous permet de générer de nouveaux textes</item>
+        <p>Un texte peut être envisagé selon trois perspectives : <list>
+            <item>Un texte a une existence physique, ayant des <hi>traits visuels</hi> qu’on peut (plus ou moins) transférer automatiquement d’une instance à une autre</item>
+            <item>Un texte possède des propriétés linguistiques et structurelles, qu’on ne peut transcrire, traduire, ou transmettre qu’avec une compréhension humaine</item>
+            <item>Un texte présente des informations sur le monde réel, qu’on peut comprendre (ou non) ou annoter, et qui nous permet de générer de nouveaux textes</item>
           </list></p>
-        <p rend="box">Un balisage effectif devrait donc opérer dans tous ces trois axes.</p>
+        <p rend="box"
+          >Un balisage effectif devrait donc opérer dans ces trois directions.</p>
       </div>
       <div xml:lang="fr">
-        <head>Un text numérique peut être ... </head>
+        <head>Un text numérique peut être … </head>
         <p rend="box">un <q>substitut</q> (surrogate) représentant l’apparence d’un document
           existant</p>
         <figure>
@@ -74,14 +67,14 @@
       </div>
       <div xml:lang="fr">
         <head> ... ou bien </head>
-        <p rend="box">une représentation du contenu linguistique, et structure, avec annotations sur
-          sa portée, son contexte..</p>
+        <p rend="box"
+          >une représentation du contenu linguistique, de sa structure, avec des annotations sur sa portée, son contexte..</p>
         <figure>
           <graphic url="../images/graves-1.png" height="80%"/>
         </figure>
       </div>
       <div xml:lang="fr">
-        <head>Qu’est-ce qu’on fait en numérisant un texte ?</head>
+        <head>Que fait-on en numérisant un texte ?</head>
         <figure>
           <graphic url="../images/model-fr.png"/>
         </figure>
@@ -91,8 +84,7 @@
         <p>Elle représente un modèle conceptuel de texte bien établi qui facilite : <list>
             <item>la conversion des données existantes</item>
             <item>la création des données nouvelles</item>
-            <item>l’intégration des données déjà existantes mais répandues dans plusieurs
-              sources</item>
+            <item>l’intégration des données déjà existantes mais répandues dans plusieurs sources</item>
           </list></p>
         <p>Elle est basée sur des formats ouverts et des technologies ouvertes</p>
         <p>Elle s’appuie sur une théorie explicite de l’ontologie textuelle </p>
@@ -118,10 +110,10 @@
             <item>en les intentions (supposées) de son auteur ? </item>
           </list>
         </p>
-        <p rend="box">Un <soCalled>document</soCalled> est une chose physique, que nous pouvons
-          <emph>numériser</emph>.</p>
-        <p rend="box">Un <soCalled>texte</soCalled> est une abstraction, construite par ou pour une communauté de
-          lecteurs, que nous pouvons <emph>encoder</emph>.</p>
+        <p rend="box"
+            >Un <soCalled>document</soCalled> est une chose physique, que nous pouvons <emph>numériser</emph>.</p>
+        <p rend="box"
+            >Un <soCalled>texte</soCalled> est une abstraction construite par, ou pour, une communauté de lecteurs, que nous pouvons <emph>encoder</emph>.</p>
       </div>
       <div xml:lang="fr">
         <head>L’encodage</head>
@@ -150,9 +142,9 @@
           <graphic url="../images/moby.png" height="60%"/>
         </figure>
         <list>
-          <item rend="pause">Bonne nouvelle: il existe des logiciels capables de traduire entre 500
-            formats divers</item>
-          <item rend="pause">Mauvaise nouvelle: on en a besoin</item>
+          <item rend="pause"
+            >Bonne nouvelle : il existe des logiciels capables de traduire entre 500 formats divers</item>
+          <item rend="pause">Mauvaise nouvelle : on en a besoin !</item>
         </list>
       </div>
       <div xml:lang="fr">
@@ -163,7 +155,7 @@
         </figure>
       </div>
       <div xml:lang="fr">
-        <head>Echange d’informations (2)</head>
+        <head>Échange d’informations (2)</head>
         <figure>
           <graphic url="../images/echange-2.png" height="80%"/>
           <head>avec format pivot: 10 passerelles requises (2n)</head>
@@ -187,13 +179,13 @@
               <item rend="pause">cette séparation facilite la réutilisation</item>
               <item rend="pause">et augmente la flexibilité</item>
             </list></item>
-          <item rend="pause">Un balisage présentationnel par contre s’intéresse plus à l’affichage
-            qu’à sa sémantique</item>
+          <item rend="pause"
+            >Un balisage présentationnel, par contre, s’intéresse plus à l’affichage qu’à sa sémantique</item>
         </list>
       </div>
       <div xml:lang="fr">
         <head>Qu’est ce qu’on balisera ?</head>
-        <p>Comparer: </p>
+        <p>Comparer : </p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples"><pb n="4"/>A MONSEI- <lb/>GNEUR LE REVE-
           <lb/>rendissime Cardinal <lb/>du Bellay. <lb/>S <lb/><c rend="lettrine">V</c>EU le
           Personnaige, <lb/>que tu joues au Spec- <lb/>tacle de toute l’Europe...</egXML>
@@ -221,7 +213,7 @@
         </egXML>
       </div>
       <div xml:lang="fr">
-        <head>Notre système d’encodage devrait être capable de..</head>
+        <head>Notre système d’encodage devrait être capable de…</head>
         <list>
           <item>spécifier les caractères d’un texte</item>
           <item>expliciter la/les structures aperçue/s dans un texte</item>
@@ -229,7 +221,7 @@
           <item>spécifier les méta-informations, renseignements contextuels etc.</item>
           <item>prendre en compte la sémantique de la texte</item>
         </list>
-        <p rend="box">Jusqu’à présent, XML semble une bonne solution ...</p>
+        <p rend="box">Jusqu’à présent, XML semble une bonne solution...</p>
       </div>
       <div xml:lang="fr">
         <head>La bonne soupe d’acronymes</head>
@@ -278,7 +270,7 @@
         <list>
           <item>XML est une manière de représenter les <hi>données structurées</hi> sous forme de
             chaîne de caractères</item>
-          <item>un document XML ressemble à un document HTML, sauf que:-<list>
+          <item>un document XML ressemble à un document HTML, sauf que :<list>
               <item>XML est <hi>extensible</hi>
               </item>
               <item>un document XML doit être <term>bien formé</term>
@@ -293,7 +285,7 @@
         </list>
       </div>
       <div xml:lang="fr">
-        <head>(Presque) tout ce qu’il faut savoir au sujet de l’XML, sur un seul transparent</head>
+        <head>(Presque) tout ce qu’il faut savoir au sujet de XML, sur un seul transparent</head>
         <list>
           <item>Un document XML contient au moins un <term>élément</term></item>
           <item>Un élément possède une <term>balise d’ouverture</term>, facultativement de
@@ -329,10 +321,10 @@
             <item>des <term>références à entité</term> (interne ou externe) </item>
             <item>des <term>sections CDATA</term>
             </item>
-            <item>...et des caractères Unicode </item>
+            <item>... et des caractères Unicode </item>
           </list>
         </p>
-        <p>C’est tout!</p>
+        <p>C’est tout !</p>
       </div>
       <div xml:lang="fr">
         <head>XML: règles du jeu</head>
@@ -366,8 +358,7 @@
             au moyen de références entité (&amp;lt; et &amp;amp; respectivement)</item>
           <item>L’espace de noms auquel appartient un élément peut être signalé par un
               <term>namespace-prefix</term> (p.e. xml:) prédéfini</item>
-          <item>Les <term>commentaires</term> sont délimités par <code>&lt;--</code> et
-              <code>--&gt;</code></item>
+          <item>Les <term>commentaires</term> sont délimités par <code>&lt;!--</code> et <code>--&gt;</code></item>
           <item>Les <term>références entité</term> sont délimités par <code>&amp;</code> et
               <code>;</code></item>
           <item>Les <term>sections CDATA</term> sont délimités par <code>&lt;![CDATA[</code> et
@@ -376,7 +367,7 @@
         </list>
       </div>
       <div xml:lang="fr">
-        <head>Syntaxe XML: le "fine print"</head>
+        <head>Syntaxe XML : le "fine print"</head>
         <p>Pour qu’un document soit <term>bien formé</term>, il faut que : <list type="ordered">
             <item>une seul racine contienne le document entier</item>
             <item>chaque arborescence soit proprement imbriquée</item>
@@ -387,7 +378,7 @@
           </list></p>
       </div>
       <div xml:lang="fr">
-        <head>Bien formé? Oui ou non?</head>
+        <head>Bien formé ? oui ou non ?</head>
         <list type="unordered">
           <item rend="pause">
             <code><![CDATA[<seg>some text</seg>]]></code>
@@ -444,7 +435,7 @@
         <p>Un document XML <term>valide</term> est (bien sûr) bien formé, et en plus conforme à des
           règles supplémentaires, qui constituent un <term>schéma</term>
         </p>
-        <p>Avec un schéma, on peut spécifier : <list>
+        <p>Avec un schéma, on peut spécifier : <list>
             <item>les nom des éléments qui constituer la racine d’un document</item>
             <item>les noms de tous les éléments légaux </item>
             <item>les noms, les types, et les valeurs par défaut de tous les attributs</item>
