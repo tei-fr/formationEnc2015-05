@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Analyse et modelisation des textes</title>
+        <author>TEI@Oxford</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>TEI</publisher>
+        <availability>
+          <p>Freely available for use and derivative works under a Creative Commons Attribution
+            license.</p>
+        </availability>
+        <date>octobre 2012</date>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Some bits may be lifted from previous talks/workshops by the TEI Community.</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader><text>
+  <body>
+    <!-- ceci n'est pas une pipe -->
+    <div rend="slide"><head>Magritte nous rappelle</head>
+      <figure>
+        <graphic url="../images/ceci-nest-pas-une-pipe.jpg"/>
+      </figure></div>
+    
+    <div n="22">
+      <head>Ceci n'est pas un arbre</head>
+      <figure>
+        <graphic url="../images/tree-image.jpg" width="90%"/>
+      </figure>
+      
+    </div>
+    <div><head>Comment structurer un texte informatise??</head>
+      <p>Il existe (quelques) méthodes classiques d'analyses de
+        données. L'important c'est de comprendre:
+        <list>
+          <item>toute méthode ne serait qu'une modélisation</item>
+          <item>il ne faut absolument pas laisser cette tâche aux
+            informaticiens!</item>
+        </list>
+      </p>
+      <p>Après modélisation, on peut faire une implémentation informatisée;
+        sans modèle, une implémentation risque d'être incompréhensible et
+        aléatoire, inutile..</p>
+    </div>
+    
+    <div><head>Analyse des données classique</head>
+      <p>On identifie...
+        <list>
+          <item>les "objets d'interêt"</item>
+          <item>leurs attributs/propriétés</item>
+          <item>les relations entre objets</item>
+          <item>les procédures/traitements essentiels envisagés
+          </item>
+        </list>
+      </p>
+    </div>
+    
+    <div><head>Par exemple...</head>
+      <figure><graphic url="../images/carte-modele.png"/></figure>
+    </div>
+    
+    <div><head>Data ou text?</head>
+      <p>En informatique on distinguait nettement:
+        <list><item>un système de traitement
+          des données : par exemple une base de données relationnelle </item>
+          <item>un système de gestion de documents XML</item>
+        </list>
+      </p>
+      <p>Ils répondent à des besoins différents...
+        <list>
+          <item>gestion des abstractions</item>
+          <item>gestion des composants documentaires</item>
+        </list>
+      </p>
+    </div>
+  </body>
+  </text>
+</TEI>
