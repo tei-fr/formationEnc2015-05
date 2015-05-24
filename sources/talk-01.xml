@@ -289,18 +289,18 @@
          --></item><item>Le nom des balises n’est pas prédéfini<!--** : on peut librement créer son propre vocabulaire
          --></item><item>On peut utiliser une "grammaire" de balises<!--**, pour définir des contraintes ou s’assurer de la consistance de l’encodage
        --></item><item>XML est auto-descriptif et lisible par l’homme<!--**. Un fichier XML n’est rien que du texte, on peut facilement prendre connaissance d’un corpus dans n’importe quel éditeur textuel
-        --> 
+        -->
           </item></list></div>
-      
+
       <div><head>Exemple d'un document XML complet</head>
-        
+
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           &lt;?xml version="1.0"?>
           <doc xmlns="http://example.org/namespace">
             <p n="1">This is a paragraph.</p>
             <p n="2">This paragraph mentions <placeName>Bristol</placeName>.</p>
           </doc>
-        </egXML>   
+        </egXML>
       </div>
       <div xml:lang="fr">
         <head>(Presque) tout ce qu’il faut savoir au sujet de XML, sur un seul transparent</head>
@@ -329,7 +329,7 @@
       </div>
       <div xml:lang="fr">
         <head>Syntaxe XML</head>
-        <p>Un document XML contient : 
+        <p>Un document XML contient :
           <list>
             <item>des <term>éléments</term>, qui portent (facultativement) des
                 <term>attributs</term>, marqués par des <term>balises</term>
@@ -345,7 +345,7 @@
         </p>
         <p>C’est tout !</p>
       </div>
-     
+
       <div xml:lang="fr">
         <head>XML: règles du jeu</head>
         <list>
