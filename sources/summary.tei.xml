@@ -53,18 +53,18 @@
             <label>10h45-11h15</label>
             <item>pause</item>
             <label>11h15-12h</label>
-            <item>TP : <ref target="ex-1-oxygen.xml">A la découverte d'oXygen</ref></item>
+            <item>TP01 : <ref target="ex-1-oxygen.xml">A la découverte d'oXygen</ref></item>
             <label>12h-13h30</label>
             <item>pause dejeuner</item>
             <label>13h30-14h30</label>
-            <item><ref target="talk-02-tei.xml">La Text Encoding Initiative (TEI) C’est quoi ?
-              </ref>: des exemples actuels</item>
+            <item><ref target="talk-02-tei.xml">La Text Encoding Initiative (TEI) C’est quoi ?
+              </ref> : des exemples actuels</item>
             <label>14h30-15h15</label>
-            <item>TP : <ref target="ex-2-analyse.xml">Analyse et modelisation des textes</ref></item>
+            <item>TP02 : <ref target="ex-2-analyse.xml">Analyse et modelisation des textes</ref></item>
             <label>15h15-15h45</label>
             <item>pause</item>
             <label>15h45-16h45</label>
-            <item><ref target="tei-history.xml">Histoire et evolution de la Text Encoding Initiative
+            <item><ref target="tei-history.xml">Histoire et évolution de la Text Encoding Initiative
                 (TEI)</ref></item>
             <label>16h45-1700</label>
             <item>Questions, discussions, perspectives</item>
