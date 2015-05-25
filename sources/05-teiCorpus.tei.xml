@@ -27,7 +27,7 @@
        <p>-\-\-</p>
        <p>class: center middle</p>-->
       <titlePage xml:lang="fr">
-        <titlePart>07-Liens et structures complexes</titlePart>
+        <titlePart>05-Liens et structures complexes</titlePart>
         <docImprint>Formation TEI | ENC 26-29 mai 2015</docImprint>
         <note><ref target="https://github.com/tei-fr/formationEnc2015-05"
             >Répertoire GitHub</ref></note>
@@ -330,7 +330,7 @@
     <back>
       <div type="title">
         <div>
-          <head>Pour finir, les <ref target="08-namedEntities.html"
+          <head>Pour finir, les <ref target="06-namedEntities.html"
               >entités nommées</ref></head>
           <note><ref target="#index">revenir au début</ref></note>
           <note><ref target="00-programme.html">programme</ref></note>

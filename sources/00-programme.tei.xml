@@ -23,7 +23,7 @@
   </teiHeader>
   <text>
     <body>
-      <div rend="slide">
+      <div type="slide">
         <div xml:lang="fr">
           <head>Programme d’ensemble</head>
           <list>
@@ -40,7 +40,7 @@
           </list>
         </div>
       </div>
-      <div rend="slide">
+      <div type="slide">
         <div xml:lang="fr">
           <head>Première journée</head>
           <list type="gloss">
@@ -71,7 +71,7 @@
           </list>
         </div>
       </div>
-      <div rend="slide">
+      <div type="slide">
         <div xml:lang="fr">
           <head>2<hi rend="superscript">ème</hi> journée</head>
           <list>
@@ -83,7 +83,7 @@
           </list>
         </div>
       </div>
-      <div rend="slide">
+      <div type="slide">
         <div xml:lang="fr">
           <head>3<hi rend="superscript">ème</hi> journée</head>
           <list>
@@ -95,7 +95,7 @@
           </list>
         </div>
       </div>
-      <div rend="slide">
+      <div type="slide">
         <div xml:lang="fr">
           <head>4<hi rend="superscript">ème</hi> journée</head>
           <list>
@@ -103,6 +103,48 @@
             <item><ref target="14-XSLT02.html">Ma première XSLT</ref></item>
             <item><ref target="13-html4Humanists.html">HTML pour les Humanistes</ref></item>
             <item><ref target="10-XSLT03.html">Transformer un document TEI en HTML</ref></item>
+          </list>
+        </div>
+      </div>
+      <div type="slide">
+        <div>
+          <head>Télécharger les sources</head>
+          <list>
+            <item>Aller sur https://github.com/tei-fr/formationEnc2015-05</item>
+            <item>Copiez le lien HTTPS</item>
+            <item>Ouvrez le terminal et tapez les commandes magiques suivantes</item>
+          </list>
+          <eg>cd Desktop</eg>
+          <eg>git clone --recursive https://github.com/tei-fr/formationEnc2015-05.git</eg>
+        </div>
+      </div>
+      <div type="slide">
+        <div>
+          <head>Organisation du répertoire</head>
+          <list>
+            <item>exemples/ exemples tei</item>
+            <item>exercices/ contient les dossiers de travaux pratiques</item>
+            <item>images/ contenus graphiques</item>
+            <item>pdf/ présentations au format pdf</item>
+            <item>presentations/ présentations au format HTML</item>
+            <item>ressources/ matériel d’accompagnement</item>
+            <item>schemas/ schémas distribués pour la formation</item>
+            <item>sources/ sources tei des présentations (contient un sous-module schema/)</item>
+            <item>xsl/ transformations xslt</item>
+          </list>
+        </div>
+      </div>
+      <div type="slide">
+        <div>
+          <head>Utiliser ces diapositives</head>
+          <list>
+            <item>←, ↑, Pg Up, k : aller à la page précédente</item>
+            <item>→, ↓, Pg Dn, Espace, j : aller à la page suivante</item>
+            <item>Home : aller à la première diapositive</item>
+            <item>End : aller à la dernière diapositive</item>
+            <item>f : afficher en plein écran</item>
+            <item>Esc : quitter le mode plein écran</item>
+            <item>?, h : afficher l’aide</item>
           </list>
         </div>
       </div>
