@@ -138,7 +138,12 @@
           </div>
         </div>
       </div>
-      <div type="part">
+      <div type="part" xml:id="balisageDescriptif">
+        <div type="title" xml:lang="fr">
+          <div>
+            <head>Prise en charge de l’édition critique par le balisage descriptif</head>
+          </div>
+        </div>
         <div type="slide" xml:lang="fr">
           <div>
             <head>Peut-on <hi>(sérieusement)</hi> utiliser un traitement de texte ?</head>
@@ -189,19 +194,14 @@
             <head>encodage présentationnel</head>
           </div>
         </div>
-        <div>
-          <head>Encodage descriptif vs encodage présentationnel</head>
-          <p>Parce qu’il détermine tous les traitements informatiques qu’il est possible d’effectuer sur le texte, le balisage a historiquement constitué une question fondamentale dans l’histoire de l’informatique. Depuis l’article séminal de Coombs et ses collègues, on a pris l’habitude de distinguer plusieurs types de balisages : procédural, présentationnel, ou encore descriptif.</p>
-          <bibl>cf. Coombs, James H, Renear, Allen H, et DeRose, Steven J, <ref
-              target="http://xml.coverpages.org/coombs.html"
-              >« Markup Systems and the Future of Scholarly Text Processing »</ref>, Communications of the ACM, n° 11, t. 30, 1987, p.933-947.</bibl>
-          <p>La supériorité du balisage descriptif sur les autres types de balisage du texte a clairement été établie depuis quelques années. Un tel balisage présente l’avantage notable d’assurer une meilleure distinction entre le contenu et la forme (et donc de séparer les traitements). Cette distinction garantit une meilleure maintenance du texte encodé et une meilleure portabilité des artefacts numériques.</p>
-        </div>
-      </div>
-      <div type="part" xml:id="balisageDescriptif">
-        <div type="title" xml:lang="fr">
+        <div type="slide" xml:lang="fr">
           <div>
-            <head>Prise en charge de l’édition critique par le balisage descriptif</head>
+            <head>Encodage descriptif vs encodage présentationnel</head>
+            <p>Parce qu’il détermine tous les traitements informatiques qu’il est possible d’effectuer sur le texte, le balisage a historiquement constitué une question fondamentale dans l’histoire de l’informatique. Depuis l’article séminal de Coombs et ses collègues, on a pris l’habitude de distinguer plusieurs types de balisages : procédural, présentationnel, ou encore descriptif.</p>
+            <bibl>cf. Coombs, James H, Renear, Allen H, et DeRose, Steven J, <ref
+                target="http://xml.coverpages.org/coombs.html"
+                >« Markup Systems and the Future of Scholarly Text Processing »</ref>, Communications of the ACM, n° 11, t. 30, 1987, p.933-947.</bibl>
+            <p>La supériorité du balisage descriptif sur les autres types de balisage du texte a clairement été établie depuis quelques années. Un tel balisage présente l’avantage notable d’assurer une meilleure distinction entre le contenu et la forme (et donc de séparer les traitements). Cette distinction garantit une meilleure maintenance du texte encodé et une meilleure portabilité des artefacts numériques.</p>
           </div>
         </div>
         <div type="slide" xml:lang="fr">
@@ -305,7 +305,6 @@
           </div>
         </div>
       </div>
-      
       <div type="part" xml:id="presentationEdition">
         <div type="title" xml:lang="fr">
           <div>
@@ -453,12 +452,12 @@
         </div>
       </div>
       <div type="part" xml:id="biblio">
-          <div type="slide">
+        <div type="title" xml:lang="fr">
             <div>
               <head>Sources et bibliographie</head>
             </div>
           </div>
-        <div type="slide">
+        <div type="slide" xml:lang="fr">
           <div>
             <head>Orientations bibliographiques</head>
             <bibl>Burnard, Lou, O'Brien O'Keeffe, Katherine et Unsworth, John. <ref
@@ -481,7 +480,7 @@
                 >"Some Digital Editions and Some Remaining Challenges."</ref> Janus, Estudios sobre el siglo de oro , no. 1 (2012).</bibl>
           </div>
         </div>
-        <div type="slide">
+        <div type="slide" xml:lang="fr">
           <div>
             <head>Orientations bibliographiques .inverse[(suite)]</head>
               <bibl>Guyotjeannin, Olivier, and Olivier Poncet. <hi rend="italic">
@@ -505,7 +504,7 @@
         </div>
       </div>
       <div>
-        <head>XML, <ref target="02-xml.html">quésaco</ref> ?</head>
+        <head>XML, <ref target="02-teiMacrostructure.html">Encoder la structure d’un document en TEI</ref></head>
         <note><ref target="#index">Revenir au début</ref></note>
         <note><ref target="programme.html">Programme</ref></note>
       </div>

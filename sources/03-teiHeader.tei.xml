@@ -27,7 +27,7 @@
          <p>class: center middle</p>-->
     <front>
       <titlePage xml:lang="fr">
-        <titlePart>05-Le teiHeader et la description des manuscrits</titlePart>
+        <titlePart>03-Le teiHeader et la description des manuscrits</titlePart>
         <docImprint>Formation TEI | ENC 26-29 mai 2015</docImprint>
         <note><ref target="https://github.com/tei-fr/formationEnc2015-05"
           >Répertoire GitHub</ref></note>
@@ -456,8 +456,7 @@
       </div>
       <div type="title" xml:lang="fr">
         <div>
-          <head>Mettre <ref target="ex03-teiHeader.html">en pratique</ref>
-          </head>
+          <head>Mettre <ref target="ex03-teiHeader.html">en pratique</ref></head>
           <note><ref target="#index">revenir au début</ref></note>
           <note><ref target="00-programme.html">Programme</ref></note>
         </div>

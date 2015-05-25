@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples">
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -20,7 +20,7 @@
   <text>
     <front>
       <titlePage xml:lang="fr">
-        <titlePart>04-Macrostructure TEI</titlePart>
+        <titlePart>02-Macrostructure TEI</titlePart>
         <docImprint>Formation TEI | ENC 26-29 mai 2015</docImprint>
         <note><ref target="https://github.com/tei-fr/formationEnc2015-05"
             >Répertoire GitHub</ref></note>
@@ -410,6 +410,42 @@
           </div>
           <div type="slide" xml:lang="fr">
             <div>
+              <head>Éléments de type <soCalled>milestone</soCalled></head>
+              <p>Désignent un point dans le flux textuel. Des éléments XML vides.</p>
+              <list>
+                <item><gi>pb</gi> saut de page</item>
+                <item><gi>cb</gi> saut de colonne</item>
+                <item><gi>lb</gi> saut de ligne</item>
+              </list>
+              <list>
+                <item><gi>milestone</gi> élément borne permettant de délimiter une partie section de texte selon un autre système que les divisions</item>
+                <item><gi>anchor</gi> élément ancre</item>
+              </list>
+            </div>
+          </div>
+          <div type="slide" xml:lang="fr">
+            <div>
+              <head>Structures complexes</head>
+              <list>
+                <item><gi>addSpan</gi> partie de texte ajouté, avec <att>spanTo</att> qui pointe vers une cible</item>
+                <item><gi>anchor</gi> ancre avec <att>xml:id</att></item>
+              </list>
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <delSpan spanTo="#endDel" change="#L3"/>
+                <metamark function="flag" target="#zone-1"
+                  change="#L2">lege</metamark>
+                <zone xml:id="zone-1" change="#L1">Ock en schullen de bruwere des hilgen dages
+                  nicht over setten noch uppe den stillen fridach bruwen.</zone>
+                <addSpan spanTo="#endDel" change="#L2"/>
+                <zone>Noch nymande over setten, se en sehin denne erst, dat uppe den bonen neyn
+                  stro noch, huw noch flaß ligghe, by pine eyner halven roden, deme bruwere so
+                  wol alse dem bruwheren to murende.</zone>
+                <anchor xml:id="endDel"/>
+              </egXML>
+            </div>
+          </div>
+          <div type="slide" xml:lang="fr">
+            <div>
               <head>Pages de titre</head>
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
                 <titlePage xml:lang="fre">
@@ -421,7 +457,7 @@
                       <lb/>de <lb/>Paris.</titlePart>
                     <titlePart rend="italic">Par M<hi rend="superscript">e</hi>
                       <persName rend="capital"
-                      >Henri Sauval</persName> Avocat
+                        >Henri Sauval</persName> Avocat
                       <lb/>au Parlement.</titlePart>
                     <titlePart>Tome premier.</titlePart>
                   </docTitle>
