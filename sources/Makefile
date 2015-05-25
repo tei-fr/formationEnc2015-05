@@ -14,6 +14,7 @@ default: pdfslides exercises
 exercises:
 	for i in $(EXERCISES) ; do \
 		teitopdf $$i.xml; \
+		mv $$i.xml.pdf PDF/$$i.pdf
 	done
 
 slides: pdfslides 
