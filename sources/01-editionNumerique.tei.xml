@@ -37,29 +37,38 @@
             >Programme</ref></note>
       </titlePage>
       <div type="introduction" xml:lang="fr">
-        <head>L’édition critique numérique</head>
-        <list type="unordered">
-          <item>un domaine en évolution rapide</item>
-          <item>voir la biblio ecdotique traditionnelle</item>
-          <item>bcp de biblio en langue anglaise</item>
-        </list>
-        <p>Pas de norme ou de référence unique, même si certaines réalisations constituent des références fortes et que certains standards techniques qui favorisent la convergence.</p>
+        <div>
+          <head>L’édition critique numérique</head>
+          <list type="unordered">
+            <item>un domaine en évolution rapide</item>
+            <item>voir la biblio ecdotique traditionnelle</item>
+            <item>bcp de biblio en langue anglaise</item>
+          </list>
+          <p>Pas de norme ou de référence unique, même si certaines réalisations constituent des références fortes et que certains standards techniques qui favorisent la convergence.</p>
+        </div>
       </div>
       <div type="sommaire" xml:lang="fr" xml:id="index">
-        <head>L’édition critique numérique</head>
-        <head>Sommaire</head>
-        <list type="ordered">
-          <item><ref target="#caracteristiques"
-              >Caractéristiques attendues d’une édition critique</ref></item>
-          <item><ref target="#balisageDescriptif"
-              >La prise en charge de l’édition critique par un balisage descriptif</ref></item>
-          <item><ref target="#presentationEdition"
-              >Présentation et potentiel des éditions numériques</ref></item>
-        </list>
+        <div>
+          <head>L’édition critique numérique</head>
+          <head>Sommaire</head>
+          <list type="ordered">
+            <item><ref target="#caracteristiques"
+                >Caractéristiques attendues d’une édition critique</ref></item>
+            <item><ref target="#balisageDescriptif"
+                >La prise en charge de l’édition critique par un balisage descriptif</ref></item>
+            <item><ref target="#presentationEdition"
+                >Présentation et potentiel des éditions numériques</ref></item>
+          </list>
+        </div>
       </div>
     </front>
     <body>
       <div type="part" xml:id="caracteristiques">
+        <div type="title" xml:lang="fr">
+          <div>
+            <head>Caractéristiques attendues d’une édition critique</head>
+          </div>
+        </div>
         <div type="slide" xml:lang="fr">
           <div>
             <head>Comment rendre compte de la <hi>source primaire</hi> ?</head>
@@ -190,6 +199,11 @@
         </div>
       </div>
       <div type="part" xml:id="balisageDescriptif">
+        <div type="title" xml:lang="fr">
+          <div>
+            <head>Prise en charge de l’édition critique par le balisage descriptif</head>
+          </div>
+        </div>
         <div type="slide" xml:lang="fr">
           <div>
             <head>La production d’un <hi>balisage descriptif</hi></head>
@@ -293,6 +307,11 @@
       </div>
       
       <div type="part" xml:id="presentationEdition">
+        <div type="title" xml:lang="fr">
+          <div>
+            <head>La présentation de l'édition critique</head>
+          </div>
+        </div>
         <div type="slide" xml:lang="fr">
         <div type="introduction">
           <head>La Présentation de l’édition critique</head>

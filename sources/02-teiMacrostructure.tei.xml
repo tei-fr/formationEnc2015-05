@@ -48,9 +48,9 @@
       <p>name: index</p>
       <p>class: center middle</p>-->
       <div type="part" xml:id="part1">
-        <div type="slide" xml:lang="fr">
+        <div type="title" xml:lang="fr">
           <div>
-            <head>1. Structure d’un document TEI</head>
+            <head>Structure d’un document TEI</head>
           </div>
         </div>
         <div type="slide" xml:lang="fr">
@@ -118,9 +118,9 @@
         </div>
       </div>
       <div type="part" xml:id="part2">
-        <div type="slide" xml:lang="fr">
+        <div type="title" xml:lang="fr">
           <div>
-            <head>2. Le teiHeader</head>
+            <head>Le teiHeader</head>
           </div>
         </div>
         <div type="slide" xml:lang="fr">
@@ -227,9 +227,9 @@
         </div>
       </div>
         <div type="part" xml:id="part3">
-          <div type="slide" xml:lang="fr">
+          <div type="title" xml:lang="fr">
             <div>
-              <head>3. Macrostructure du texte</head>
+              <head>Macrostructure du texte</head>
             </div>
           </div>
           <div type="slide" xml:lang="fr">
@@ -440,51 +440,15 @@
               </egXML>
             </div>
           </div>
-          <div type="slide" xml:lang="fr">
-            <div>
-              <head>Tableau de tradition</head>
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <listWit>
-                  <witness xml:id="A">
-                    <msDesc>
-                      <msIdentifier>
-                        <country>France</country>
-                        <settlement>Paris</settlement>
-                        <repository>Archives nationales</repository>
-                        <collection>Monuments ecclésiastiques</collection>
-                        <idno>S 2364 n° 5</idno>
-                      </msIdentifier>
-                    </msDesc>
-                  </witness>
-                  <witness xml:id="B">
-                    <msDesc>
-                      <msIdentifier>
-                        <country>France</country>
-                        <settlement>Paris</settlement>
-                        <repository>Archives nationales</repository>
-                        <collection>Monuments ecclésiastiques</collection>
-                        <idno>LL1157 p. 383b-384b, n° XXXVI</idno>
-                        <msName>Cartulaire blanc de l’abbaye de Saint-Denis, tome I</msName>
-                      </msIdentifier>
-                      <msContents>
-                        <msItem>
-                          <rubric xml:lang="lat" >De dimidio arpento vinee nobis vendito a Petro de Cellario <num value="36">XXXVI</num></rubric>
-                        </msItem>
-                      </msContents>
-                    </msDesc>
-                  </witness>
-                </listWit>
-              </egXML>
-            </div>
-          </div>
         </div>
     </body>
     <back>
-      <div type="slide" xml:lang="fr">
+      <div type="title" xml:lang="fr">
         <div>
           <head>Maintenant, passons à <ref target="ex02-teiMacrostructure.html"
             >la pratique</ref> !</head>
           <note><ref target="#index">revenir au début</ref></note>
+          <note><ref target="00-programme.html">programme</ref></note>
         </div>
       </div>
     </back>

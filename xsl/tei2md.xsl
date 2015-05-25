@@ -20,11 +20,12 @@
       </head>
       <body>
         <textarea id="source">
-
           <xsl:apply-templates select="TEI/teiHeader"/>
           <xsl:text>
---- 
-            </xsl:text>
+
+---
+
+</xsl:text>
           <xsl:apply-templates select="TEI/text"/>
         </textarea>
         <!--<script src="http://gnab.github.com/remark/downloads/remark-0.6.5.min.js" type="text/javascript"></script>-->
@@ -56,16 +57,32 @@ description: </xsl:text>
 </xsl:text>
   </xsl:template>
   
-  <xsl:template match="div[@type='slide']">
+  <xsl:template match="div[@type='title']">
     <xsl:text>
+
 --- 
+
+class: center middle
+
     </xsl:text>
     <xsl:apply-templates/>
   </xsl:template>
   
+  <xsl:template match="div[@type='slide']">
+    <xsl:text>
+
+--- 
+
+    </xsl:text>
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  
   <xsl:template match="div[@type='slide']/div[2]">
     <xsl:text>
-???
+
+??? 
+
     </xsl:text>
     <xsl:apply-templates/>
   </xsl:template>
@@ -78,22 +95,35 @@ description: </xsl:text>
     <xsl:apply-templates select="graphic/@url"/>
     <xsl:text>)</xsl:text>
   </xsl:template>
-
+  
   <xsl:template match="teix:egXML">
     <xsl:text>
+
 ```xml
-    </xsl:text>
+</xsl:text>
     <xsl:copy-of select="."/>
     <xsl:text>
-```</xsl:text>
+``` 
+
+</xsl:text>
+  </xsl:template>
+  
+  <xsl:template match="att">
+    <xsl:text>`@</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>`</xsl:text>
   </xsl:template>
   
   <xsl:template match="gi">
-    <xsl:text>&lt;</xsl:text>
+    <xsl:text>`&lt;</xsl:text>
     <xsl:apply-templates/>
-    <xsl:text>&gt;</xsl:text>
-    
-```
+    <xsl:text>&gt;`</xsl:text>
+  </xsl:template>
+  
+  <xsl:template match="hi">
+    <xsl:text>.red[</xsl:text>
+    <xsl:apply-templates />
+    <xsl:text>]</xsl:text>
   </xsl:template>
   
 </xsl:stylesheet>

@@ -7,7 +7,7 @@
   
   
   <xsl:import href="/Applications/oxygen/frameworks/tei/xml/tei/stylesheet/markdown/markdown-to-tei.xsl"/>
-  <xsl:param name="input-uri" select="/Users/emmanuelchateau/Sites/tei-fr/formationEnc2015-05/md/05-teiHeader.md"/>
+  <xsl:param name="input-uri" select="/Users/emmanuelchateau/Sites/tei-fr/formationEnc2015-05/md/09-personnalisation.md"/>
   
   <xsl:template match="/">
     <xsl:call-template name="main"/>
