@@ -1,12 +1,8 @@
 <?xml version="1.0"?>
-<?xml-model href="schema/trunk/teitalks.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0">
   <teiHeader>
     <fileDesc>
-      <titleStmt>
-          <title xml:lang="fr">Une breve histoire de la TEI</title>
-        <title xml:lang="en"><hi>What is the Text Encoding Initiative?</hi><lb/>(and how did it get
-          to be that way?)</title>        <author>Lou Burnard</author>
+      <titleStmt><title >Une brève histoire de la Text Encoding Initiative</title>
       </titleStmt>
       <publicationStmt>
         <publisher>Lou Burnard Consulting</publisher>
@@ -207,7 +203,7 @@
         </figure>
         <p>Parce qu’on s’est aperçu qu’on risquait une nouvelle confusion de langues avec l’arrivée
           de l'informatique dans la représentation des données textuelles !</p>
-      </div>1994
+      </div>
       
       <div xml:lang="en">
         <head>Why was this considered necessary ?</head>
