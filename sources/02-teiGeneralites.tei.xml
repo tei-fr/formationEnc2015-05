@@ -693,29 +693,39 @@
                <p>class: center middle</p>
             </div>
          </div>
-         <div>
-            <head>Sources et bibliographie</head>
-            <p>---</p>
-            <p>name: biblio</p>
-         </div>
-         <div>
-            <head>Orientations bibliographiques</head>
-            <list type="unordered">
-               <item>Burnard, Lou. <ref target="http://books.openedition.org/oep/426">What is the Text Encoding Initiative</ref>, OpenEdition Books, 2014.</item>
-               <item>Sperberg-McQueen, C. Michael, Lou Burnard, and Syd Bauman. <ref target="http://www.tei-c.org/Guidelines/P5/">TEI P5 : Guidelines for Electronic Text Encoding.</ref> Charlottesville, Virginia: Text Encoding Initiative Consortium, version 2.5.0, 2013.</item>
-               <item>Wittern, Christian, Ciula, Arianna, Tuohy, Conal, <ref target="http://llc.oxfordjournals.org/content/24/3/281.abstract">"The Making of TEI P5"</ref> Literary and Linguistic Computing 24, no. 3 (2009): 281-296.</item>
-               <item>Ide, Nancy M., and C. Michael Sperberg-McQueen. <ref target="http://www.cs.vassar.edu/~ide/papers/teiHistory.pdf">"The Text Encoding Initiative: Its History, Goals, and Future Development."</ref> In Computers and the Humanities. Edited by Nancy M. Ide and Jean Véronis. 1995.</item>
-               <item>Mylonas, Elli, and Allen Renear. <ref target="http://link.springer.com/article/10.1023%2FA%3A1001832310939">"The Text Encoding Initiative at 10: Not Just An Interchange Format Anymore – but a New Research Community."</ref> Computers and the Humanities 33, no. 1-2 (1999): doi:10.1023/A:1001832310939.</item>
-            </list>
-            <p>---</p>
-            <p>template: inverse</p>
-            <p>class: center middle</p>
-         </div>
-         <div>
-            <head>La <ref target="04-teiMacrostructure.html">suite</ref>
-            </head>
-            <p>.left<ref target="#index">.footnote[[revenir au début</ref>]]</p>
-         </div>
       </body>
+     <back>
+      <div type="title">
+        <div>
+          <head>Sources et bibliographie</head>
+        </div>
+      </div>
+      <div>
+        <head>Orientations bibliographiques</head>
+        <list>
+          <item><bibl>Burnard, Lou. <ref target="http://books.openedition.org/oep/426"
+              >What is the Text Encoding Initiative</ref>, OpenEdition Books, 2014.</bibl></item>
+          <item>Sperberg-McQueen, C. Michael, Lou Burnard, and Syd Bauman. <ref
+              target="http://www.tei-c.org/Guidelines/P5/"
+              >TEI P5 : Guidelines for Electronic Text Encoding.</ref> Charlottesville, Virginia: Text Encoding Initiative Consortium, version 2.5.0, 2013.</item>
+          <item>Wittern, Christian, Ciula, Arianna, Tuohy, Conal, <ref
+              target="http://llc.oxfordjournals.org/content/24/3/281.abstract"
+              >"The Making of TEI P5"</ref> Literary and Linguistic Computing 24, no. 3 (2009): 281-296.</item>
+          <item>Ide, Nancy M., and C. Michael Sperberg-McQueen. <ref
+              target="http://www.cs.vassar.edu/~ide/papers/teiHistory.pdf"
+              >"The Text Encoding Initiative: Its History, Goals, and Future Development."</ref> In Computers and the Humanities. Edited by Nancy M. Ide and Jean Véronis. 1995.</item>
+          <item>Mylonas, Elli, and Allen Renear. <ref
+              target="http://link.springer.com/article/10.1023%2FA%3A1001832310939"
+              >"The Text Encoding Initiative at 10: Not Just An Interchange Format Anymore – but a New Research Community."</ref> Computers and the Humanities 33, no. 1-2 (1999): doi:10.1023/A:1001832310939.</item>
+        </list>
+      </div>
+      <div type="title" xml:lang="fr">
+        <div>
+          <head>La <ref target="04-teiMacrostructure.html">suite</ref></head>
+          <note><ref target="#index">revenir au début</ref></note>
+          <note><ref target="00-programme.html">Programme</ref></note>
+        </div>
+      </div>
+     </back>
    </text>
 </TEI>
