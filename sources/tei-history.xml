@@ -4,11 +4,9 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
+          <title xml:lang="fr">Une breve histoire de la TEI</title>
         <title xml:lang="en"><hi>What is the Text Encoding Initiative?</hi><lb/>(and how did it get
-          to be that way?)</title>
-        <title xml:lang="fr"><hi>Histoire de la TEI</hi><!--<lb/>un cas d’étude dans l’évolution des
-          méthodes et pratiques scientifiques dans les SHS<--></title>
-        <author>Lou Burnard</author>
+          to be that way?)</title>        <author>Lou Burnard</author>
       </titleStmt>
       <publicationStmt>
         <publisher>Lou Burnard Consulting</publisher>
@@ -209,7 +207,8 @@
         </figure>
         <p>Parce qu’on s’est aperçu qu’on risquait une nouvelle confusion de langues avec l’arrivée
           de l'informatique dans la représentation des données textuelles !</p>
-      </div>
+      </div>1994
+      
       <div xml:lang="en">
         <head>Why was this considered necessary ?</head>
         <figure>
@@ -677,11 +676,11 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
       <div xml:lang="fr">
         <head>1994 : P3</head>
         <figure>
-          <graphic height="40%" url="../images/1994_0516_02.jpg"/>
+          <graphic height="60%" url="../images/1994_0516_02.jpg"/>
         </figure>
         <cb/>
         <list>
-          <item>avril : TEI P3 est annonce au colloque ALLC-ACH à Paris </item>
+          <item>avril : TEI P3 est annoncé au colloque ALLC-ACH à Paris </item>
           <item>mai : Les <soCalled>green books</soCalled> apparaissent enfin au colloque
             international SGML à Montreux</item>
           <item>déc : Le premier <soCalled>TEI Metaworkshop</soCalled> a lieu à Chicago</item>
