@@ -1,4 +1,5 @@
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -13,20 +14,24 @@
       </fileDesc>
    </teiHeader>
    <text>
-      <body>
-         <p>title: 03-teiGeneralites</p>
+     <front>
+       <!--<p>title: 03-teiGeneralites</p>
          <p>description: emchateau, ENC 27-30 octobre 2014</p>
          <p>theme: theme/remark-dark.css</p>
          <p>name: inverse</p>
          <p>layout: true</p>
          <p>class: inverse</p>
-         <p>---</p>
+         <p>-\-\-</p>
          <p>name: index</p>
-         <p>class: center middle</p>
-         <div>
-            <head>03-La Text Encoding Initiative comme cadre de travail pour l'édition des textes</head>
-            <p>Formation TEI | ENC 27-30 octobre 2014</p>
-            <p>.footnote<ref target="https://github.com/emchateau/formEnc2014-10">[Répertoire GitHub</ref> | <ref target="00-programme.html">Programme</ref>]</p>
+         <p>class: center middle</p>-->
+       <titlePage xml:lang="fr">
+         <titlePart>03-La Text Encoding Initiative comme cadre de travail pour l'édition des textes</titlePart>
+         <p>Formation TEI | ENC 27-30 octobre 2014</p>
+         <p>.footnote<ref target="https://github.com/emchateau/formEnc2014-10">[Répertoire GitHub</ref> | <ref target="00-programme.html">Programme</ref>]</p>
+       </titlePage>
+     </front>
+      <body>
+        <div>
             <p>---</p>
             <p>layout: false</p>
             <p>.left-column[</p>
