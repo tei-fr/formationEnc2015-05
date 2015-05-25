@@ -4,7 +4,7 @@
     <fileDesc>
       <titleStmt>
         <title>À la découverte d’oXygen</title>
-        <author>TEI@Oxford</author>
+        <author>Lou Burnard Consulting</author>
       </titleStmt>
       <publicationStmt>
         <publisher>TEI</publisher>
@@ -12,7 +12,6 @@
           <p>Freely available for use and derivative works under a Creative Commons Attribution
             license.</p>
         </availability>
-        <date>octobre 2012</date>
       </publicationStmt>
       <sourceDesc>
         <p>Some bits may be lifted from previous talks/workshops by the TEI Community.</p>
@@ -21,7 +20,7 @@
   </teiHeader>
   <text>
     <body>
-      <!--    <head>À la découverte d’oXygen</head> -->
+
       <p>Dans ce premier exercice, nous allons nous servir d’oXygen pour : <list>
           <item>la création d’un nouveau document XML</item>
           <item>le balisage progressif d’un document</item>
@@ -41,10 +40,11 @@
             Nouveau</item>
           <item>Choisissez <ident>Cadre des modèles</ident>, ensuite <ident>TEI P5</ident>, puis
               <ident>Bare</ident>, pour sélectionner un schéma TEI minimal. </item>
-          <item>
+	      </list>
+          <p>
             <graphic height="5cm" url="../images/new-bare-1.png"/>
-          </item>
-          <item> Cliquez sur le bouton <ident>Créer</ident> en bas. oXygen affiche un document TEI
+          </p>
+<list>          <item> Cliquez sur le bouton <ident>Créer</ident> en bas. oXygen affiche un document TEI
             que vous allez compléter.</item>
         </list>
         <p>Le schéma TEI bare contient un minimum de balises, mais il permet quand-même de décrire
