@@ -6,8 +6,8 @@
       <titleStmt>
         <title xml:lang="en"><hi>What is the Text Encoding Initiative?</hi><lb/>(and how did it get
           to be that way?)</title>
-        <title xml:lang="fr"><hi>Histoire de la TEI</hi><lb/>un cas d’étude dans l’évolution des
-          méthodes et pratiques scientifiques dans les SHS</title>
+        <title xml:lang="fr"><hi>Histoire de la TEI</hi><!--<lb/>un cas d’étude dans l’évolution des
+          méthodes et pratiques scientifiques dans les SHS<-->/title>
         <author>Lou Burnard</author>
       </titleStmt>
       <publicationStmt>
@@ -41,7 +41,7 @@
     <body>
       <div xml:lang="fr">
         <head>Qu’est-ce que la Text Encoding Initiative (TEI) ?</head>
-        <p><graphic url="../images/whatistei.png" height="50%"/></p>
+        <p><graphic url="../images/whatistei.png" height="60%"/></p>
         <list>
           <item>Une organisation, une institution ?</item>
           <item>Un <soCalled>club</soCalled>, une mode, une religion ?</item>
@@ -982,7 +982,8 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
             <item>la représentations des faits ou des objets (les bases de données)</item>
             <item>la production des logiciels</item>
           </list></p>
-        <p rend="box">Elle se focalise seulement sur : les métadonnées, les textes, les analyses textuelles et linguistiques !</p>
+        <p>Elle se focalisait seulement sur : les métadonnées, les textes, les analyses textuelles et linguistiques</p>
+        <p rend="box">Nous avons changé tout cela</p>
       </div>
       <div xml:lang="en">
         <head>What's <hi rend="italic">not</hi> TEI?</head>
@@ -1026,7 +1027,7 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
       <div xml:lang="fr">
         <head>Un standard existe pour qu'on s'y conforme, non ?</head>
         <figure>
-          <graphic url="../images/1991-TEI-commandments.png" height="70%"/>
+          <graphic url="../images/1991-TEI-commandments.png" height="80%"/>
         </figure>
       </div>
       <div xml:lang="en">
@@ -1410,25 +1411,7 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
         <p rend="box">These mechanisms make it easy to test new ideas while remaining TEI
           conformant. </p>
       </div>
-      <!-- <div xml:lang="en">
-        <head>Addition d'éléments</head>
-        <p>Un schema ressemble à une grammaire, déjà existante. Comment serait-il possible d'ajouter
-          des termes nouveaux? </p>
-        <list>
-          <item>Les modèles de contenu s'expriment d'une manière indirecte</item>
-          <item>Les définitions des éléments font référence normalement aux classes, et non pas
-            directement aux éléments</item>
-          <item>Donc pour ajouter un nouvel élément, on a seulement besoin d'identifier sa
-            classification </item>
-        </list>
-        <p>La schéma TEI est enrichi de sémantique. Comment explique-t-on la signification d'un
-          nouveau élément ?</p>
-        <list>
-          <item>une classe TEI peut indiquer une sémantique au-delà de sa structuration</item>
-          <item>la documentation ODD d'un élément peut fournir des renseignements complets sur sa
-            signification. </item>
-        </list>
-      </div>-->
+    
       <div xml:lang="fr">
         <head>Not Invented Here?</head>
         <list>
@@ -1469,7 +1452,7 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
             une "feature request" sur sourceforge</item>
           <item>Il y a une version nouvelle de TEI P5 deux fois par an…</item>
         </list>
-        <p rend="box">Oh, and don’t forget to join the Consortium !</p>
+        <p rend="box">... et n'oubliez pas de vous abonner au Consortium !</p>
       </div>
       <div xml:lang="en">
         <head>Darwinism works ...</head>
@@ -1490,14 +1473,15 @@ Contexts</title>, special triple issue of <title>Computers and the Humanities</t
           <item><ptr target="http://tei.sf.net"/></item>
           <item><ptr target="http://listserv.brown.edu/archives/cgi-bin/wa?SUBED1=tei-l&amp;A=1"
             /></item>
+          <item>tei-fr@cru.fr</item>
         </list>
-        <p>plus, quelques références francophones : <list>
+        <!--<p>plus, quelques références francophones : <list>
             <item>tei-fr@cru.fr</item>
             <item>http://meet.tge-adonis.fr</item>
             <item>http://lespetitescases.net/index102/</item>
             <item>http://www.culture.gouv.fr/culture/dglf/riofi/tei.htm</item>
             <item>http://artist.inist.fr/article.php3?id_article=122</item>
-          </list></p>
+          </list></p>-->
       </div>
       <div xml:lang="en">
         <head>Some vital links</head>

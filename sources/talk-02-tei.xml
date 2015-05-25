@@ -119,10 +119,10 @@
         </figure>
       </div><div xml:lang="fr">  <head>... et ses produits (2)</head>
         
-        <figure>
+      <!--  <figure>
           <graphic url="../images/theGuidelinesOnline.png"/>
-        </figure>
-        <cb/>
+        </figure>-->
+        
       </div>
       <div xml:lang="fr">
         <head>Qu’est-ce que la TEI aujourd’hui ?</head>
