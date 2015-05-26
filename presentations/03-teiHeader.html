@@ -1,9 +1,25 @@
 <!DOCTYPE HTML>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Title</title><link href="remarks/themes/remark-dark-em.css" rel="stylesheet" media="all" type="text/css"></head><body><textarea id="source">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Programme</title>
+      <link href="themes/remark-dark-em.css" rel="stylesheet" media="all" type="text/css">
+   </head>
+   <body><textarea id="source">
 title: Le teiHeader
 description: , 
-03-Le teiHeader et la description des manuscritsFormation TEI | ENC 26-29 mai 2015Répertoire GitHubProgramme
-## L’en-tête TEI et la description des manuscrits
+---
+class: center middle
+
+# 03-Le teiHeader et la description des manuscritsFormation TEI | ENC 26-29 mai 2015
+.footnote[Répertoire GitHub]
+.footnote[Programme]
+---
+class: center middle
+name: index
+
+
+# L’en-tête TEI et la description des manuscrits
 
 1. L’importance des métadonnées
 
@@ -11,17 +27,16 @@ description: ,
 
 1. La description du manuscrit
 
-
 ---
-
 class: center middle
 
-### 1. L’importance des métadonnées
 
+## 1. L’importance des métadonnées
 
 ---
 
-### L’importance des métadonnées
+
+## L’importance des métadonnées
 
 * documenter la source
 
@@ -37,10 +52,9 @@ class: center middle
 
 Glorieux, Frédéric, et Jolivet, Vincent, «&nbsp;weboai, Human web interface on OAI repository&nbsp;», SourceForge.
 
-
 ???
 
-### L’importance des métadonnées
+## L’importance des métadonnées
 
 L’entête TEI ou `&lt;teiHeader&gt;` vous permet de renseigner finement les métadonnées concernant votre fichier. Comme ces métadonnées qui comportent des informations sur l’information font partie du document, on peut dire qu’elles sont auto-portées. Ces métadonnées peuvent aussi bien concerner la source du document édité que votre édition et ses attributions. La qualité de ces information et la granularité du modèle descriptif utilisé déterminent en grande partie les possibilité d’agrégation dans des bibliothèques numériques.
 
@@ -48,19 +62,18 @@ Dans la production d’une édition numérique il est souvent nécessaire de tra
 
 Un travail en vue de permettre un moissonnage des en-têtes TEI en OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting) des éditions produites au sein du Consortium cahier a permis de se diriger vers la définition de pratiques commune pour la communauté francophone. Il serait dommage de ne pas s’y conformer.
 
-
 ---
-
 class: center middle
 
-### 2. Les composants du teiHeader
 
+## 2. Les composants du teiHeader
 
 ---
 
-### Les composants du teiHeader
 
-#### `&lt;fileDesc&gt;` la description de fichier
+## Les composants du teiHeader
+
+### `&lt;fileDesc&gt;` la description de fichier
 
 * `&lt;encodingDesc&gt;` description des convention d’encodage
 
@@ -68,34 +81,33 @@ class: center middle
 
 * `&lt;revisionDesc&gt;` révisions
 
-
 ---
 
-### teiHeader minimal
 
+## teiHeader minimal
 
 ```xml
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <teiHeader>
+<teiHeader xmlns="http://www.tei-c.org/ns/Examples">
                 <fileDesc>
                   <titleStmt>
-                    <title><!-- titre --></title>
+                    <title>
+                     <!-- titre --></title>
                   </titleStmt>
                   <publicationSmt>
-                    <p><!-- mentions de publication --></p>
+                    <p>
+                     <!-- mentions de publication --></p>
                   </publicationSmt>
                   <sourceDesc>
                     <p></p>
                   </sourceDesc>
                 </fileDesc>
-              </teiHeader></egXML>
+              </teiHeader>
 ```
-
-
 
 ---
 
-### fileDesc
+
+## fileDesc
 
 * `&lt;titleStmt&gt;` mentions de titre et de responsabilité
 
@@ -111,15 +123,13 @@ class: center middle
 
 * `&lt;noteStmt&gt;` notes fournissant des informations sur le texte
 
-
 ---
 
-### Mentions de titre et de responsabilité `&lt;titleStmt&gt;`
 
+## Mentions de titre et de responsabilité `&lt;titleStmt&gt;`
 
 ```xml
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <titleStmt>
+<titleStmt xmlns="http://www.tei-c.org/ns/Examples">
                 <title xml:lang="fre" type="main">Sauval 1724</title>
                 <principal>
                   <persName ref="#MCL">
@@ -137,16 +147,15 @@ class: center middle
                     <forename>Emmanuel</forename>
                     <surname>Château</surname>
                   </persName>
-                </respStmt><!-- ... -->
+                </respStmt>
+            <!-- ... -->
               </titleStmt>
-            </egXML>
 ```
-
-
 
 ---
 
-### `&lt;encodingDesc&gt;`
+
+## `&lt;encodingDesc&gt;`
 
 Élément optionnel destiné à documenter l’encodage.
 
@@ -166,15 +175,13 @@ class: center middle
 * `&lt;schemaSpec&gt;` spécification de schéma
 
 
-
 ---
 
-### exemple d’`&lt;encodingDesc&gt;`
 
+## exemple d’`&lt;encodingDesc&gt;`
 
 ```xml
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <encodingDesc>
+<encodingDesc xmlns="http://www.tei-c.org/ns/Examples">
                 <charDecl>
                   <glyph xml:id="uut">
                     <glyphName>two latin small letter u with macron and vertical
@@ -194,29 +201,22 @@ class: center middle
                   </normalization>
                 </editorialDecl>
               </encodingDesc>
-            </egXML>
 ```
-
-
 
 ???
 
-### Par exemple, pour les ouvrages imprimés
-
+## Par exemple, pour les ouvrages imprimés
 
 ```xml
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <hyphenation>
+<hyphenation xmlns="http://www.tei-c.org/ns/Examples">
                 <p>Pour les ouvrages imprimés, il n’a pas été tenu compte de l’hyphénation.</p>
               </hyphenation>
-            </egXML>
 ```
-
-
 
 ---
 
-### `&lt;profileDesc&gt;`
+
+## `&lt;profileDesc&gt;`
 
 * `&lt;abstract&gt;` bref résumé
 
@@ -226,59 +226,47 @@ class: center middle
 
 * `&lt;textClass&gt;` nature du texte d’après un thesaurus interne ou externe
 
-
 ```xml
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <profileDesc>
+<profileDesc xmlns="http://www.tei-c.org/ns/Examples">
                 <creation><date when="2009-04-20">20 avril 2009</date></creation>
                 <langUsage>
                   <language indent="fre" scope="60">Français</language>
                   <language ident="lat" scope="40">Latin</language>
                 </langUsage>
               </profileDesc>
-            </egXML>
 ```
-
-
 
 ???
 
-#### `&lt;revisionDesc&gt;`
+### `&lt;revisionDesc&gt;`
 
 Enregistre les révisions et modifications du fichier
 
-
 ```xml
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <revisionDesc>
+<revisionDesc xmlns="http://www.tei-c.org/ns/Examples">
                   <change when="2009-11" who="#VJ">Deuxième édition éclectronique</change>
                   <change when="2009-10" who="#FG">Schéma et transformations</change>
                   <change when="2009-10" who="#CD">Encodage de l'apparat critique</change>
                 </revisionDesc>
-              </egXML>
 ```
 
-
-
 ---
-
 class: center middle
 
-### La description des manuscrits
 
+## La description des manuscrits
 
 ---
 
-### `&lt;msDesc&gt;` (dans `&lt;sourceDesc&gt;`)
+
+## `&lt;msDesc&gt;` (dans `&lt;sourceDesc&gt;`)
 
 L’élément `&lt;sourceDesc&gt;` est obligatoire et sert à la description des manuscrits.
 
-Ici, le module msdescription fournit de nombreux éléments spécialisés.
-
+Ici, le module `msdescription` fournit de nombreux éléments spécialisés.
 
 ```xml
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <msDesc>
+<msDesc xmlns="http://www.tei-c.org/ns/Examples">
                 <msIdentifier>
                   <country>France</country>
                   <settlement>Paris</settlement>
@@ -287,22 +275,21 @@ Ici, le module msdescription fournit de nombreux éléments spécialisés.
                   <idno>F/12/5080</idno>
                 </msIdentifier>
                 <msContents>
-                  <p><!-- description du contenu --></p>
+                  <p>
+                  <!-- description du contenu --></p>
                 </msContents>
                 <physDesc>
-                  <p><!-- description physique --></p>
+                  <p>
+                  <!-- description physique --></p>
                 </physDesc>
               </msDesc>
-            </egXML>
 ```
-
-
 
 ???
 
-### `&lt;msDesc&gt;` (dans `&lt;sourceDesc&gt;`)
+## `&lt;msDesc&gt;` (dans `&lt;sourceDesc&gt;`)
 
-L’élément `&lt;sourceDesc&gt;` est obligatoire et sert à la description des manuscrits. Ici, le module msdescription fournit de nombreux éléments spécialisés.
+L’élément `&lt;sourceDesc&gt;` est obligatoire et sert à la description des manuscrits. Ici, le module `msdescription` fournit de nombreux éléments spécialisés.
 
 * l’élément `&lt;msDesc&gt;` accueille la description du manuscrit.
 
@@ -318,15 +305,13 @@ L’élément `&lt;sourceDesc&gt;` est obligatoire et sert à la description des
 
 Rmq&nbsp;: Les éléments sont ordonnés.
 
-
 ---
 
-### `&lt;msContents&gt;` (dans `&lt;msDesc&gt;`)
 
+## `&lt;msContents&gt;` (dans `&lt;msDesc&gt;`)
 
 ```xml
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <msContents>
+<msContents xmlns="http://www.tei-c.org/ns/Examples">
                 <msItemStruct>
                   <author>
                     <persName xml:lang="fre" full="yes" ref="#desgodets">Desgodets,
@@ -350,19 +335,15 @@ Rmq&nbsp;: Les éléments sont ordonnés.
                   <textLang mainLang="fre" otherLangs="lat ita">texte en français, quelques passages en latin et en italien.</textLang>
                 </msItemStruct>
               </msContents>
-            </egXML>
 ```
-
-
 
 ---
 
-### Description du support (dans msContent)
 
+## Description du support (dans msContent)
 
 ```xml
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <physDesc>
+<physDesc xmlns="http://www.tei-c.org/ns/Examples">
                 <objectDesc form="codex">
                   <supportDesc material="paper">
                     <support>
@@ -375,7 +356,8 @@ Rmq&nbsp;: Les éléments sont ordonnés.
                         <width quantity="250" unit="mm"></width>
                         <depth quantity="40" unit="mm"></depth>
                       </dimensions>
-                      <!-- dimensions est répétable -->
+                      
+                     <!-- dimensions est répétable -->
                     </extent>
                     <foliation>foliotées au crayon en haut, au centre des pages</foliation>
                     <collation>le manuscrit est monté sur onglet</collation>
@@ -383,33 +365,33 @@ Rmq&nbsp;: Les éléments sont ordonnés.
                   </supportDesc>
                   <layoutDesc>
                     <layout columns="1" ruledLines="25 30">texte sur une colonne, 25 à 30 lignes réglées à la mine de plomb</layout>
-                    <!-- layout est répétable -->
+                    
+                  <!-- layout est répétable -->
                   </layoutDesc>
                 </objectDesc>
               </physDesc>
-            </egXML>
 ```
-
-
 
 ---
 
-### Autres éléments pour la description physique (dans `&lt;physDesc&gt;`)
 
+## Autres éléments pour la description physique (dans `&lt;physDesc&gt;`)
 
 ```xml
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <physDesc>
-                <!-- ... -->
+<physDesc xmlns="http://www.tei-c.org/ns/Examples">
+                
+            <!-- ... -->
                 <handDesc>
                   <handNote xml:id="c2Hand1" scope="major">à l’encre noire</handNote>
-                  <!-- handNote est répétable, localisation avec locus -->
+                  
+               <!-- handNote est répétable, localisation avec locus -->
                   <handNote xml:id="c2Hand2" scope="minor">à l’encre noire</handNote>
                 </handDesc>
                 <decoDesc>
                   <decoNote>le manuscrit contient 42 planches au lavis d’une grande
                         qualité d’exécution</decoNote>
-                  <!-- decoNote est répétable, localisation avec locus -->
+                  
+               <!-- decoNote est répétable, localisation avec locus -->
                 </decoDesc>
                 <bindingDesc>
                   <binding>
@@ -419,19 +401,15 @@ Rmq&nbsp;: Les éléments sont ordonnés.
                   </binding>
                 </bindingDesc>
               </physDesc>
-            </egXML>
 ```
-
-
 
 ---
 
-### L’historique du manuscrit (dans `&lt;msDesc&gt;`)
 
+## L’historique du manuscrit (dans `&lt;msDesc&gt;`)
 
 ```xml
-<egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <history>
+<history xmlns="http://www.tei-c.org/ns/Examples">
                 <origin>
                   <p>Copié au cours du <origDate notBefore="1725" notAfter="1785">XVIII<hi rend="superscript">e</hi> siècle</origDate> ce manuscrit est pour ainsi dire en tous points identique à celui conservé au Rijk. La numérotation des planches semble indiquer qu’il a pu être copié d’après un même original.</p>
                 </origin>
@@ -441,28 +419,25 @@ Rmq&nbsp;: Les éléments sont ordonnés.
                 <acquisition>
                   <p>Entré par le biais d’une acquisition du cabinet des Estampes de la bibliothèque du roi circa 1785.</p>
                 </acquisition>
-              </history>
-              <additional>
+              </history><additional xmlns="http://www.tei-c.org/ns/Examples">
                 <surrogates>
                   <idno>microfilm R 710124-710264</idno>
                 </surrogates>
-                <!-- références bibliographiques sur l’exemplaire -->
+                
+            <!-- références bibliographiques sur l’exemplaire -->
                 <listBibl>
                   <bibl corresp="#scheurleer1964"></bibl>
                 </listBibl>
               </additional>
-            </egXML>
 ```
 
-
-
 ---
-
 class: center middle
+
 
 # Sources et bibliographie
 
-## Orientations bibliographiques
+# Orientations bibliographiques
 
 * Glorieux, Frédéric, et Jolivet, Vincent, « weboai, Human web interface on OAI repository », SourceForge.
 
@@ -474,17 +449,19 @@ class: center middle
 
 * Driscoll. "P5-MS: A General Purpose Tagset for Manuscript Description." Digital Medievalist 1 (2006). http://www.digitalmedievalist.org/journal/2.1/driscoll/ (accessed February 23, 2014).
 
-
 ---
-
 class: center middle
 
-## Mettre en pratique
-revenir au débutProgramme</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
+
+# Mettre en pratique
+
+.footnote[revenir au début]
+.footnote[Programme]</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
         var hljs = remark.highlighter.engine;
       </script><script src="remark.language.js" type="text/javascript"></script><script type="text/javascript">
         var slideshow = remark.create({
         highlightStyle: 'monokai',
         highlightLanguage: 'remark'
         }) ;
-      </script></body></html>
+      </script></body>
+</html>

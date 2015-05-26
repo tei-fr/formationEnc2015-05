@@ -5,23 +5,26 @@
   exclude-result-prefixes="tei teix xsl" 
   xpath-default-namespace="http://www.tei-c.org/ns/1.0">
   
-  
   <xsl:import href="/Applications/oxygen/frameworks/tei/xml/tei/stylesheet/markdown/tei-to-markdown.xsl"/>
   
-  <xsl:output method="html" version="5"/>
+  <xsl:output method="html" version="5" indent="yes"/>
+  
+  <xsl:strip-space elements="egXML"/>
+  
   <xsl:param name="language" select="fr"/>
+  
   <xsl:template match="/">
     <html>
       <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <title>Title</title>
-        <link href="remarks/themes/remark-dark-em.css" rel="stylesheet"
-          media="all" type="text/css"/>
+        <title>Programme</title>
+        <link href="themes/remark-dark-em.css" rel="stylesheet" media="all"
+          type="text/css"/>
       </head>
       <body>
         <textarea id="source">
           <xsl:apply-templates select="TEI/teiHeader"/>
-          <xsl:text></xsl:text>
+          <xsl:text/>
           <xsl:apply-templates select="TEI/text"/>
         </textarea>
         <!--<script src="http://gnab.github.com/remark/downloads/remark-0.6.5.min.js" type="text/javascript"></script>-->
@@ -41,47 +44,67 @@
   </xsl:template>
   
   <xsl:template match="teiHeader">
-        <xsl:text>
-title: </xsl:text>
-        <xsl:apply-templates select="fileDesc/titleStmt/title"/>
-        <xsl:text>
-description: </xsl:text>
-        <xsl:apply-templates select="fileDesc/titleStmt/author"/>
-        <xsl:text>, </xsl:text>
-        <xsl:apply-templates select="fileDesc/publicationStmt/date"/>
-        <xsl:text>
-</xsl:text>
+    <xsl:call-template name="newline"/>
+    <xsl:text>title: </xsl:text>
+    <xsl:apply-templates select="fileDesc/titleStmt/title"/>
+    <xsl:call-template name="newline"/>
+    <xsl:text>description: </xsl:text>
+    <xsl:apply-templates select="fileDesc/titleStmt/author"/>
+    <xsl:text>, </xsl:text>
+    <xsl:apply-templates select="fileDesc/publicationStmt/date"/>
   </xsl:template>
   
-  <xsl:template match="div[@type='title']">
-    <xsl:text>
-
----
-
-class: center middle
-</xsl:text>
+  <xsl:template match="titlePage">
+    <xsl:call-template name="newline"/>
+    <xsl:text>---</xsl:text>
+    <xsl:call-template name="newline"/>
+    <xsl:text>class: center middle</xsl:text>
+    <xsl:call-template name="newline"/>
+    <xsl:if test="./@xml:id">
+      <xsl:text>name: </xsl:text>
+      <xsl:value-of select="@xml:id"/>
+      <xsl:call-template name="newline"/>
+    </xsl:if>
+    <xsl:call-template name="newline"/>
     <xsl:apply-templates/>
   </xsl:template>
   
-  <xsl:template match="div[@type='slide' or @rend='slide']">
-    <xsl:text>
-
----
-</xsl:text>
+  <xsl:template match="div[@type='title'] | div[@type='sommaire']">
+    <xsl:call-template name="newline"/>
+    <xsl:text>---</xsl:text>
+    <xsl:call-template name="newline"/>
+    <xsl:text>class: center middle</xsl:text>
+    <xsl:call-template name="newline"/>
+    <xsl:if test="./@xml:id">
+      <xsl:text>name: </xsl:text>
+      <xsl:value-of select="@xml:id"/>
+      <xsl:call-template name="newline"/>
+    </xsl:if>
+    <xsl:call-template name="newline"/>
     <xsl:apply-templates/>
   </xsl:template>
   
+  <xsl:template match="div[@type='slide']">
+    <xsl:call-template name="newline"/>
+    <xsl:text>---</xsl:text>
+    <xsl:call-template name="newline"/>
+    <xsl:if test="@xml:id">
+      <xsl:text>name: </xsl:text>
+      <xsl:value-of select="."/>
+    </xsl:if>
+    <xsl:call-template name="newline"/>
+    <xsl:apply-templates/>
+  </xsl:template>
   
   <xsl:template match="div[@type='slide']/div[2]">
-    <xsl:text>
-
-???
-</xsl:text>
+    <xsl:call-template name="newline"/>
+    <xsl:text>???</xsl:text>
+    <xsl:call-template name="newline"/>
     <xsl:apply-templates/>
   </xsl:template>
   
   <xsl:template match="figure">
-    <xsl:text>[</xsl:text>
+    <xsl:text>![</xsl:text>
     <xsl:apply-templates select="figDesc"/>
     <xsl:text>]</xsl:text>
     <xsl:text>(</xsl:text>
@@ -91,13 +114,11 @@ class: center middle
   
   <xsl:template match="teix:egXML">
     <xsl:text>
-
 ```xml
 </xsl:text>
-    <xsl:copy-of select="."/>
+    <xsl:copy-of select="./*"/>
     <xsl:text>
 ```
-
 </xsl:text>
   </xsl:template>
   
@@ -105,6 +126,13 @@ class: center middle
     <xsl:text>`@</xsl:text>
     <xsl:apply-templates/>
     <xsl:text>`</xsl:text>
+  </xsl:template>
+  
+  <xsl:template match="note">
+    <xsl:call-template name="newline"/>
+    <xsl:text>.footnote[</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>]</xsl:text>
   </xsl:template>
   
   <xsl:template match="gi">
@@ -119,6 +147,11 @@ class: center middle
     <xsl:text>]</xsl:text>
   </xsl:template>
   
+  <xsl:template match="ident">
+    <xsl:text>`</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>`</xsl:text>
+  </xsl:template>
   
   <xsl:template match="label[parent::list]">
     <xsl:choose>
@@ -127,6 +160,19 @@ class: center middle
     </xsl:choose>
     <xsl:apply-templates/> 
     <xsl:apply-templates select="following-sibling::item[1]"/>
+  </xsl:template>
+  
+  <xsl:template match="titlePart">
+    <xsl:text># </xsl:text>
+    <xsl:apply-templates/>
+  </xsl:template>
+  
+  <xsl:template match="ref">
+    <xsl:text>[</xsl:text>
+    <xsl:apply-templates />
+    <xsl:text>](</xsl:text>
+    <xsl:value-of select="@target"/>
+    <xsl:text>)</xsl:text>
   </xsl:template>
   
 </xsl:stylesheet>
