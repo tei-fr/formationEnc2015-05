@@ -58,9 +58,10 @@ font-size: 1em}
   padding: 15px;
 }
 .inverse {
-  background: #272822;
-  color: #777872;
-  text-shadow: 0 0 20px #333;
+  // background: #272822;
+  background: #fbf8f4;
+  color: #272822;
+  text-shadow: 0 0 6px #333;
 }
 .inverse h1, .inverse h2 {
   color: #f3f3f3;
