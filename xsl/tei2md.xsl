@@ -21,11 +21,7 @@
       <body>
         <textarea id="source">
           <xsl:apply-templates select="TEI/teiHeader"/>
-          <xsl:text>
-
----
-
-</xsl:text>
+          <xsl:text></xsl:text>
           <xsl:apply-templates select="TEI/text"/>
         </textarea>
         <!--<script src="http://gnab.github.com/remark/downloads/remark-0.6.5.min.js" type="text/javascript"></script>-->
@@ -60,20 +56,18 @@ description: </xsl:text>
   <xsl:template match="div[@type='title']">
     <xsl:text>
 
---- 
+---
 
 class: center middle
-
-    </xsl:text>
+</xsl:text>
     <xsl:apply-templates/>
   </xsl:template>
   
   <xsl:template match="div[@type='slide']">
     <xsl:text>
 
---- 
-
-    </xsl:text>
+---
+</xsl:text>
     <xsl:apply-templates/>
   </xsl:template>
   
@@ -81,9 +75,8 @@ class: center middle
   <xsl:template match="div[@type='slide']/div[2]">
     <xsl:text>
 
-??? 
-
-    </xsl:text>
+???
+</xsl:text>
     <xsl:apply-templates/>
   </xsl:template>
   
@@ -103,7 +96,7 @@ class: center middle
 </xsl:text>
     <xsl:copy-of select="."/>
     <xsl:text>
-``` 
+```
 
 </xsl:text>
   </xsl:template>
@@ -124,6 +117,16 @@ class: center middle
     <xsl:text>.red[</xsl:text>
     <xsl:apply-templates />
     <xsl:text>]</xsl:text>
+  </xsl:template>
+  
+  
+  <xsl:template match="label[parent::list]">
+    <xsl:choose>
+      <xsl:when test="tei:isOrderedList(..)"><xsl:text>1. </xsl:text></xsl:when>
+      <xsl:otherwise><xsl:text>* </xsl:text></xsl:otherwise>
+    </xsl:choose>
+    <xsl:apply-templates/> 
+    <xsl:apply-templates select="following-sibling::item[1]"/>
   </xsl:template>
   
 </xsl:stylesheet>
