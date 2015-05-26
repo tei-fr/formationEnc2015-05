@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Title</title><link href="remarks/themes/remark-dark-em.css" rel="stylesheet" media="all" type="text/css"></head><body><textarea id="source">
+title: L’édition critique des sources manuscrites
+description: , 
+04-Édition critiqueL’édition critique des sources manuscritesFormation TEI | ENC 26-29 mai 2015Répertoire GitHubProgramme
+
+---
+
+class: center middle
+
+## Introduction
+
+## Introduction
+
+La TEI présente de nombreux mécanismes spécialement destinés à la prise en charge des éditions critiques.
+
+La plupart de ces éléments sont compris dans le module transcr, d’autres dabs msdescription.
+
+Ces modules peuvent parfois être augmentés à propos par certainty.
+
+
+---
+
+## Sommaire
+
+* L’inscription du texte sur le support
+
+* Les corrections éditoriales
+
+* Les variantes
+
+
+---
+
+class: center middle
+
+### L’inscription du texte sur le support
+
+
+---
+
+### Ajouts et surplus
+
+#### `&lt;add&gt;` texte ajouté
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <add place="above">nous</add>
+              </egXML>
+```
+
+
+#### `&lt;del&gt;` texte supprimé
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <del rend="overstrike">claustra</del>
+              </egXML>
+```
+
+
+
+???
+
+#### `&lt;subst&gt;` substitutions (génétique textuelle)
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <subst>
+                  <del>claustra</del>
+                  <add place="margin">fenêtre</add>
+                </subst>
+              </egXML>
+```
+
+
+
+---
+
+### Prise en charge des lacunes
+
+`&lt;gap&gt;` passage ne pouvant pas être restitué pour des raisons matérielles
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <gap reason="illegible" agent="ink-blot"></gap>
+            </egXML>
+```
+
+
+`&lt;unclear&gt;` passage en partie illisible
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <unclear agent="ink-blot" cert="low" resp="#EC"></unclear>
+            </egXML>
+```
+
+
+`&lt;suplied&gt;` restitution d'un passage manquant
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <supplied reason="hole" source="#autreEd">les</supplied>
+            </egXML>
+```
+
+
+
+???
+
+### Prise en charge des lacunes
+
+Ne pas confondre `&lt;gap&gt;` et `&lt;space&gt;` qui sert à désigner un espace blanc jugé significatif
+
+Plusieurs attributs issus du module certainty qui peuvent vous permettre de préciser le niveau de certitude des restitutions.
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <space quantity="1" unit="cm"></space>
+            </egXML>
+```
+
+
+
+---
+
+class: center middle
+
+### Les corrections éditoriales
+
+
+---
+
+### Passages fautifs
+
+* `&lt;sic&gt;` passage fautif, ou segment syntaxiquement incorrect
+
+* `&lt;corr&gt;` correction de l'éditeur
+
+* `&lt;abbr&gt;` abréviation
+
+* utilisation de `&lt;choice&gt;`
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <choice>
+                <abbr>M<hi rend="superscript">r</hi></abbr>
+                <expan>Monsieur</expan>
+              </choice>
+            </egXML>
+```
+
+
+
+???
+
+### Passages fautifs
+
+La même utilisation de `&lt;choice&gt;` est possible pour les segments syntaxiquement incorrects.
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <choice>
+                <sic>charbone</sic>
+                <corr>charbon</corr>
+              </choice>
+            </egXML>
+```
+
+
+Partout, les attributs `@cert`, `@resp` et `@source` peuvent s’avérer utile.
+
+
+---
+
+class: center middle
+
+### Les variantes et les mains
+
+
+---
+
+### La description des mains
+
+* `@hand`
+
+* `@handDesc` et ses sous-éléments dans le `&lt;teiHeader&gt;`
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <handDesc>
+                <handNote xml:id="c2Hand1" scope="major">à l’encre noire</handNote>
+                <handNote xml:id="c2Hand2" scope="minor">au crayon</handNote>
+              </handDesc>
+            </egXML>
+```
+
+
+handNote est répétable et peut contenir une localisation avec `@locus`.
+
+
+---
+
+### Trois approches pour l’enregistrement et l’.red[alignement] des variantes
+
+Les Guidelines proposent trois approches différentes pour aligner des passages textuels lorsque l’on établit une édition critique&nbsp;:
+
+* la .red[méthode de localisation référencée], où les entrées d’apparat critique sont liées aux blocs de texte identifiés qui contiennent les lemmes respectifs
+
+* la .red[méthode d’attachement à double point], où les entrées d’apparat critique sont liées à des ponts de départ et de fin identifiées dans un texte
+
+* la .red[méthode de segmentation parallèle], où les entrées d’apparat critique son encodées au moyen d’une transcription du texte connu invariable et de tous les témoins.
+
+
+???
+
+### Trois approches pour l’enregistrement et l’.red[alignement] des variantes
+
+Les Guidelines proposent trois approches différentes pour aligner des passages textuels lorsque l’on établit une édition critique&nbsp;:
+
+* la .red[méthode de localisation référencée], où les entrées d’apparat critique sont liées aux blocs de texte identifiés qui contiennent les lemmes respectifs
+
+* la .red[méthode d’attachement à double point], où les entrées d’apparat critique sont liées à des ponts de départ et de fin identifiées dans un texte
+
+* la .red[méthode de segmentation parallèle], où les entrées d’apparat critique son encodées au moyen d’une transcription du texte connu invariable et de tous les témoins.
+
+La méthode par segmentation parallèle est le plus couramment utilisée lors de l’encodage de sources en XML-TEI pour comparer des témoins. Cette méthode correspond également à une méthode de travail pour l’établissement du texte. Mais son emploi qui présente une certain nombre de limites est sujet à discussion.
+
+
+---
+
+### Segmentation parallèle
+
+* `&lt;app&gt;` entrée d'apparat critique
+
+* `&lt;lem&gt;` lemme ou leçon retenue du texte
+
+* `&lt;rdg&gt;` variante (lecture)
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <app>
+                <lem>remener</lem>
+                <rdg wit="#l-1-C #l-1-D #l-1-E #l-1-F">remettre</rdg>
+                <rdg wit="#l-#-a">conduire dehors</rdg>
+              </app>
+            </egXML>
+```
+
+
+
+---
+
+### Variantes
+
+* `&lt;rdgGrp&gt;` pour regrouper plusieurs variantes ayant un lien entre elles
+
+* `@type` pour catégoriser la variante
+
+* `@cause` pour expliciter la cause de la variante
+
+
+---
+
+### Tableau de tradition
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <listWit>
+                <witness xml:id="A">
+                  <msDesc>
+                    <msIdentifier>
+                      <country>France</country>
+                      <settlement>Paris</settlement>
+                      <repository>Archives nationales</repository>
+                      <collection>Monuments ecclésiastiques</collection>
+                      <idno>S 2364 n° 5</idno>
+                    </msIdentifier>
+                  </msDesc>
+                </witness>
+                <witness xml:id="B">
+                  <msDesc>
+                    <!-- ... -->
+                  </msDesc>
+                </witness>
+                <!-- répéter l'élément witness autant de fois que de témoins -->
+              </listWit>
+            </egXML>
+```
+
+
+
+---
+
+### Localisation référencée
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <div type="alignmentText" xml:id="cAlignmentText">
+                <linkGrp>
+                  <!-- Front -->
+                  <link target="#c1Front #c2Front"></link>
+                  <link target="#c1FrontFr #c2FrontFr02"></link>
+                  <link target="#c1FrontFr01 #c2FrontFr01"></link>
+                  <link target="#c1FrontFr01.p001 #c2FrontFr01.p001"></link>
+                  <!-- ... -->
+                </linkGrp>
+              </div>
+            </egXML>
+```
+
+
+
+---
+
+## Exemple d’apparat critique
+Revenir au débutProgramme</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
+        var hljs = remark.highlighter.engine;
+      </script><script src="remark.language.js" type="text/javascript"></script><script type="text/javascript">
+        var slideshow = remark.create({
+        highlightStyle: 'monokai',
+        highlightLanguage: 'remark'
+        }) ;
+      </script></body></html>

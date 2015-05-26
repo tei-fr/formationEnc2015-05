@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Title</title><link href="remarks/themes/remark-dark-em.css" rel="stylesheet" media="all" type="text/css"></head><body><textarea id="source">
+title: 
+description: , 
+05-Liens et structures complexesFormation TEI | ENC 26-29 mai 2015Répertoire GitHubProgramme
+
+---
+
+class: center middle
+
+## Introduction
+
+## Introduction
+
+On l’a vu, la Text Encoding Initiative fournit un grand nombre de balises dans lesquelles il est possible de puiser pour modéliser son texte. Personne ne les utilise toutes dans le cadre d’un même projet. En d’autres termes, on doit construire des représentations du texte source qui reflètent les phénomènes que l’on observe d’un point de vue structurel, sémantique ou linguistique, et que l’on va modéliser d’après la manière dont on espère les exploiter par la suite. À cet égard, la modélisation XML-TEI est une opération intrinsèque au processus éditorial et qui a directement trait au caractère scientifique de l’édition numérique. Puisqu’il s’agit bel et bien de produire un artefact orienté.
+
+## Sommaire
+
+* Les liens
+
+* Les Corpus
+
+* Les figures et facsimili
+
+
+---
+
+class: center middle
+
+### Les liens
+
+
+---
+
+#### Créer des liens
+
+`&lt;ptr&gt;` pointeur vers un autre emplacement (élément vide)
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <ptr target="url.fr"></ptr>
+              </egXML>
+```
+
+
+`&lt;ref&gt;` référence vers un autre emplacement (complément d’information)
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <ref type="note" target="#nH201">Passage annoté</ref>
+              </egXML>
+```
+
+
+#### Attributs
+
+* `@xml:id` ancre pour identifier l'élément de référence
+
+* `@target` spécifie la destination de la référence
+
+* `@corresp` indique un élément correspondant
+
+
+---
+
+### Notes de commentaire historique
+
+note élément pour l’enregistrement d’une note
+
+* soit encodée directement dans le texte
+
+* soit regroupées à un autre endroit
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <p>Le fût de chaque colonne est cannelé de vingt
+                quatre canneaux dans son pourtour<ref type="noteHistorical" target="#c2Nh0081"></ref>. En...
+              </p>
+              <!-- ... -->
+              <note xml:id="c2Nh0081"><p>texte de la note</p></note>
+            </egXML>
+```
+
+
+
+---
+
+### Localisation référencée
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <div type="alignmentText" xml:id="cAlignmentText">
+                <linkGrp>
+                  <!-- Front -->
+                  <link target="#c1Front #c2Front"></link>
+                  <link target="#c1FrontFr #c2FrontFr02"></link>
+                  <link target="#c1FrontFr01 #c2FrontFr01"></link>
+                  <link target="#c1FrontFr01.p001 #c2FrontFr01.p001"></link>
+                  <!-- ... -->
+                </linkGrp>
+              </div>
+            </egXML>
+```
+
+
+
+???
+
+### Localisation référencée
+
+L’utilisation d’identifiants uniques rassemble plusieurs avantages, ceux-ci permettent d’identifier précisément, à l’exclusion de tout autre, une unité textuelle ou un passage dans l’un des manuscrits.
+
+Ils constituent donc une bonne pratique notamment pour la citabilité.
+
+Comme on utilise ici l’attribut global de XML `@xml:id` qui doit nécessairement être unique dans un fichier XML, il y a un contrôle d’unicité (ce contrôle s’applique à l’ensemble du corpus car il est compris dans une arborescence de fichiers XML).
+
+Enfin, le fait d’utiliser des identifiants uniques, a surtout l’avantage de permettre de traiter les regroupements de paragraphes, les interversions, les ajouts, indépendamment du manuscrit édité (et donc par la suite éventuellement d’éditer toutes les variantes du texte ou le réemploi des sources XML-TEI dans d’autres projets).
+
+
+---
+
+class: center middle
+
+### Les corpus
+
+
+---
+
+### Macrostructures de texte composite
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <TEI>
+                <teiHeader><!-- ... --></teiHeader>
+                <text>
+                  <front><!-- ... --></front>
+                  <group>
+                    <text>
+                      <front><!-- ... --></front>
+                      <body><!-- ... --></body>
+                      <back><!-- ... --></back>
+                    </text>
+                    <text><!-- ... --></text>
+                    <text><!-- ... --></text>
+                  </group>
+                  <back><!-- ... --></back>
+                </text>
+              </TEI>
+            </egXML>
+```
+
+
+
+---
+
+### Macrostructure
+
+
+???
+
+### Macrostructure
+
+Exemple de l’édition desgodets&nbsp;: Les manuscrits que nous avions à traiter présentaient généralement une structure textuelle relativement commune qui pouvait facilement être prise en charge à l’aide des éléments structurels offerts par la TEI. Il a systématiquement été établi une division tripartite dans l’édition avec les éléments &lt;front&gt; pour les parties liminaires, &lt;body&gt; pour le corps de texte et &lt;back&gt; pour les paries postérieures.
+
+À l’intérieur de ces différentes parties, &lt;titlePage&gt; avec ses sous-composants permettait de prendre en charge les pages de titre, et une combinaison des éléments &lt;div&gt;, &lt;p&gt;, &lt;list&gt; et tous ses composants, ainsi que &lt;seg&gt; a paru adaptée et suffisante pour traiter presque tous les cas de figure. Un système de typage des divisions a toutefois été établi pour préciser cette macrostructure en utilisant l’attribut @type. La liste fermée des types de division doit encore être restreinte par le schéma.
+
+Pour des groupes de textes, des documents composites, ou des corpus hétérogènes, on aura probablement besoin de structures plus complexes
+
+
+---
+
+### teiCorpus
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <teiCorpus>
+                <teiCorpus>
+                  <TEI>
+                    <!-- témoin manuscrit -->
+                    <teiHeader><!-- ... --></teiHeader>
+                    <text>
+                      <body><!-- ... --></body>
+                    </text>
+                  </TEI>
+                  <TEI>
+                    <!-- témoin manuscrit -->
+                  </TEI>
+                  <TEI>
+                    <!-- témoin manuscrit -->
+                  </TEI>
+                </teiCorpus>
+                <teiCorpus>
+                  <!-- ... -->
+                </teiCorpus>
+              </teiCorpus>
+            </egXML>
+```
+
+
+
+---
+
+### Utilisation de XInclude
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"><teiHeader><!-- ... --></teiHeader><!-- Inclusion du fichier TEI du manuscrit des Ordres (O) -->
+                Fichier des Ordres non trouvé
+                <!-- Inclusion du fichier TEI du manuscrit des Commodités (C) -->
+                Fichier des Commodités non trouvé
+              </teiCorpus>
+            </egXML>
+```
+
+
+XML Inclusions (XInclude) Version 1.0 (Second Edition), W3C Recommendation 15 November 2006.
+
+### Utilisation de XInclude
+
+Pour faciliter la mise en œuvre du travail (par exemple pour répartir l'encodage entre des participants), il peut parfois être utile de traiter les éléments du corpus dans des fichiers séparés.
+
+Pour l’inclusion, on s'appuie ici sur le standard XML du W3C XInclude.
+
+Attention&nbsp;! il ne faut pas oublier de déclarer l'espace de nom XInclude.
+
+### Utilisation de XInclude
+
+équivaut à :
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"><teiHeader><!-- ... --></teiHeader><!-- Inclusion du fichier TEI du manuscrit des Ordres (O) --><TEI><!-- contenu du fichier TEI --></TEI><TEI><!-- contenu du fichier TEI --></TEI></teiCorpus>
+            </egXML>
+```
+
+
+
+---
+
+class: center middle
+
+### Les figures et facsimili
+
+
+---
+
+### Description des figures (simple)
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <figure xml:id="c2Pl0001" type="plate" facs="#c2FacsPl0001">
+                <head>L'église de Sainte-Sabine à Rome</head>
+                <figDesc>Plan de l'église</figDesc>
+                <graphic url="facs/full/facsC2Pl0001.jpg"></graphic>
+              </figure>
+            </egXML>
+```
+
+
+
+---
+
+### Description des figures (plus élaborée)
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <figure xml:id="c2Pl0001" type="plate" facs="#c2FacsPl0001">
+                <head>Plan de l'église de Sainte-Sabine à Rome</head>
+                <figDesc>
+                  <locus from="#c2F9v" n="p16">p. 16</locus>
+                  <label>
+                    <num n="1">1</num>
+                  </label>
+                  <title>Plan de l’église de Sainte-Sabine à Rome</title>
+                  <desc>plume et encre noire, lavis</desc>
+                  <dimensions>
+                    <height quantity="21" unit="mm"></height>
+                    <width quantity="42" unit="mm"></width>
+                  </dimensions>
+                </figDesc>
+              </figure>
+            </egXML>
+```
+
+
+
+---
+
+### Traitement des facsimili
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <teiHeader><!-- ... --></teiHeader>
+              <facsimile corresp="#c2ImagesLicence" xml:id="c2Facs">
+                <surface xml:id="c2FacsPl0001">
+                  <graphic n="full" mimeType="image/jpg" url="facs/full/facsC2Pl0001.jpg"></graphic>
+                  <graphic n="thumb" mimeType="image/jpg" url="facs/thumbs/facsC2Pl0001.jpg"></graphic>
+                </surface>
+                <!-- ... -->
+              </facsimile>
+              <text>
+                <!-- ... -->
+              </text>
+            </egXML>
+```
+
+
+
+???
+
+### Traitement des facsimili
+
+L’élément `&lt;facsimile&gt;` permet de fournir des artefacts numériques référencés par ailleurs dans le texte.
+
+
+---
+
+### Traitement des facsimili
+
+
+```xml
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <teiHeader><!-- ... --></teiHeader>
+              <facsimile corresp="#c2ImagesLicence" xml:id="c2Facs">
+                <surface xml:id="c2FacsPl0001">
+                  <graphic n="full" mimeType="image/jpg" url="facs/full/facsC2Pl0001.jpg"></graphic>
+                  <graphic n="thumb" mimeType="image/jpg" url="facs/thumbs/facsC2Pl0001.jpg"></graphic>
+                </surface>
+                <!-- ... -->
+              </facsimile>
+              <text>
+                <!-- ... -->
+                <pb facs="#c2Facs"></pb>
+              </text>
+            </egXML>
+```
+
+
+
+---
+
+class: center middle
+
+## Pour finir, les entités nommées
+revenir au débutprogramme</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
+        var hljs = remark.highlighter.engine;
+      </script><script src="remark.language.js" type="text/javascript"></script><script type="text/javascript">
+        var slideshow = remark.create({
+        highlightStyle: 'monokai',
+        highlightLanguage: 'remark'
+        }) ;
+      </script></body></html>

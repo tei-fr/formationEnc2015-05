@@ -309,7 +309,7 @@
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <attDef ident="agent" mode="change" usage="req">
                 <datatype minOccurs="1" maxOccurs="unbounded">
-                  <rng:text/>
+                  <rng:text xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
                 </datatype>
                 <valList type="closed" mode="replace">
                   <valItem ident="fire"/>
@@ -358,10 +358,10 @@
         <div type="slide" xml:lang="fr">
           <div>
             <head>Les différentes manières de personnaliser la TEI</head>
-            <div type="ordered">
+            <list type="ordered">
               <item>rédiger une spécification de haut niveau</item>
               <item>utiliser les sous-modules de la TEI et spécifier dans ces sous-ensembles les fonctionnalités à activer</item>
-            </div>
+            </list>
             <div>
               <head>Les différentes manières de personnaliser la TEI</head>
               <p>Il est possible de personnaliser la TEI en supprimant des modules un certain nombre d’éléments qui ne seraient pas nécessaires pour le traitement de ses documents ou en modifiant ces classes. Ce faisant, on peut restreindre la manière de traiter certains phénomènes, ou encore, limiter les attributs disponibles sur un élément, et définir pour ces attributs des listes de valeurs ouvertes ou fermées. Au besoin, on peut également modifier le nom des éléments par exemple pour l’internationalisation ou ajouter des éléments, ce qui n’a pas été retenu dans le cadre de notre projet.</p>
