@@ -63,7 +63,7 @@ class: center middle
     <xsl:apply-templates/>
   </xsl:template>
   
-  <xsl:template match="div[@type='slide']">
+  <xsl:template match="div[@type='slide' or @rend='slide']">
     <xsl:text>
 
 ---
