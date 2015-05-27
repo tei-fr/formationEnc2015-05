@@ -8,27 +8,34 @@
    <body><textarea id="source">
 title: Le teiHeader
 description: , 
+theme: theme/remark-dark-em.cssname: inverse
+layout: true
+class: inverse
+
 ---
 class: center middle
 
-# 03-Le teiHeader et la description des manuscritsFormation TEI | ENC 26-29 mai 2015
-.footnote[Répertoire GitHub]
-.footnote[Programme]
----
-class: center middle
-name: index
+# 03-Le teiHeader et la description des manuscrits
 
+## Formation TEI | ENC 26-29 mai 2015
+
+.footnote[[Programme](00-programme.html)]
+![test](images/logo-ecole-nationale-des-chartes.png)
+
+---
+name: L’en-tête TEI et la description des manuscritsL’importance des métadonnéesLes composants du headerLa description du manuscrit
 
 # L’en-tête TEI et la description des manuscrits
 
-1. L’importance des métadonnées
+1. [L’importance des métadonnées](#part1)
 
-1. Les composants du header
+1. [Les composants du header](#part2)
 
-1. La description du manuscrit
+1. [La description du manuscrit](#part3)
 
 ---
 class: center middle
+name: part1
 
 
 ## 1. L’importance des métadonnées
@@ -50,7 +57,7 @@ class: center middle
 
 * conformité aux bonnes pratiques
 
-Glorieux, Frédéric, et Jolivet, Vincent, «&nbsp;weboai, Human web interface on OAI repository&nbsp;», SourceForge.
+Glorieux, Frédéric, et Jolivet, Vincent, [«&nbsp;weboai, Human web interface on OAI repository&nbsp;»](http://sourceforge.net/p/weboai/wiki/Home/), SourceForge.
 
 ???
 
@@ -64,6 +71,7 @@ Un travail en vue de permettre un moissonnage des en-têtes TEI en OAI-PMH (Open
 
 ---
 class: center middle
+name: part2
 
 
 ## 2. Les composants du teiHeader
@@ -88,20 +96,19 @@ class: center middle
 
 ```xml
 <teiHeader xmlns="http://www.tei-c.org/ns/Examples">
-                <fileDesc>
-                  <titleStmt>
-                    <title>
-                     <!-- titre --></title>
-                  </titleStmt>
-                  <publicationSmt>
-                    <p>
-                     <!-- mentions de publication --></p>
-                  </publicationSmt>
-                  <sourceDesc>
-                    <p></p>
-                  </sourceDesc>
-                </fileDesc>
-              </teiHeader>
+  <fileDesc>
+    <titleStmt>
+      <title>
+      <!-- titre --></title>
+    </titleStmt>
+    <publicationSmt>
+      <p><!-- mentions de publication --></p>
+    </publicationSmt>
+    <sourceDesc>
+      <p></p>
+    </sourceDesc>
+  </fileDesc>
+</teiHeader>
 ```
 
 ---
@@ -130,26 +137,26 @@ class: center middle
 
 ```xml
 <titleStmt xmlns="http://www.tei-c.org/ns/Examples">
-                <title xml:lang="fre" type="main">Sauval 1724</title>
-                <principal>
-                  <persName ref="#MCL">
-                    <forename>Marianne</forename>
-                    <surname>Cojannot-Le Blanc</surname>
-                  </persName>
-                </principal>
-                <funder>
-                  <orgName>Labex Les Passés dans le Présent</orgName>
-                  <date from="2013" to="2018">2013-2018</date>
-                </funder>
-                <respStmt>
-                  <resp key="mrk">encodage XML-TEI</resp>
-                  <persName ref="#EC">
-                    <forename>Emmanuel</forename>
-                    <surname>Château</surname>
-                  </persName>
-                </respStmt>
-            <!-- ... -->
-              </titleStmt>
+  <title xml:lang="fre" type="main">Sauval 1724</title>
+    <principal>
+      <persName ref="#MCL">
+        <forename>Marianne</forename>
+        <surname>Cojannot-Le Blanc</surname>
+      </persName>
+    </principal>
+    <funder>
+      <orgName>Labex Les Passés dans le Présent</orgName>
+      <date from="2013" to="2018">2013-2018</date>
+    </funder>
+    <respStmt>
+      <resp key="mrk">encodage XML-TEI</resp>
+        <persName ref="#EC">
+          <forename>Emmanuel</forename>
+          <surname>Château</surname>
+        </persName>
+      </respStmt>
+      <!-- ... -->
+</titleStmt>
 ```
 
 ---
@@ -182,25 +189,25 @@ class: center middle
 
 ```xml
 <encodingDesc xmlns="http://www.tei-c.org/ns/Examples">
-                <charDecl>
-                  <glyph xml:id="uut">
-                    <glyphName>two latin small letter u with macron and vertical
-                      line</glyphName>
-                    <charProp>
-                      <localName>entity</localName>
-                      <value>omega2</value>
-                    </charProp>
-                    <mapping type="composed">u͞u͞|</mapping>
-                    <graphic url="x2.jpg"></graphic>
-                  </glyph>
-                </charDecl>
-                <editorialDecl>
-                  <normalization>
-                    <p>La ponctuation a été ajoutée, conformément...</p>
-                    <p>les mots ont été séparés lorsque l'usage actuel...</p>
-                  </normalization>
-                </editorialDecl>
-              </encodingDesc>
+  <charDecl>
+    <glyph xml:id="uut">
+      <glyphName>two latin small letter u with macron and vertical
+      line</glyphName>
+      <charProp>
+        <localName>entity</localName>
+        <value>omega2</value>
+      </charProp>
+      <mapping type="composed">u͞u͞|</mapping>
+      <graphic url="x2.jpg"></graphic>
+    </glyph>
+  </charDecl>
+  <editorialDecl>
+    <normalization>
+      <p>La ponctuation a été ajoutée, conformément...</p>
+      <p>les mots ont été séparés lorsque l'usage actuel...</p>
+    </normalization>
+  </editorialDecl>
+</encodingDesc>
 ```
 
 ???
@@ -209,8 +216,8 @@ class: center middle
 
 ```xml
 <hyphenation xmlns="http://www.tei-c.org/ns/Examples">
-                <p>Pour les ouvrages imprimés, il n’a pas été tenu compte de l’hyphénation.</p>
-              </hyphenation>
+  <p>Pour les ouvrages imprimés, il n’a pas été tenu compte de l’hyphénation.</p>
+</hyphenation>
 ```
 
 ---
@@ -228,12 +235,12 @@ class: center middle
 
 ```xml
 <profileDesc xmlns="http://www.tei-c.org/ns/Examples">
-                <creation><date when="2009-04-20">20 avril 2009</date></creation>
-                <langUsage>
-                  <language indent="fre" scope="60">Français</language>
-                  <language ident="lat" scope="40">Latin</language>
-                </langUsage>
-              </profileDesc>
+  <creation><date when="2009-04-20">20 avril 2009</date></creation>
+  <langUsage>
+    <language indent="fre" scope="60">Français</language>
+    <language ident="lat" scope="40">Latin</language>
+  </langUsage>
+</profileDesc>
 ```
 
 ???
@@ -244,14 +251,15 @@ Enregistre les révisions et modifications du fichier
 
 ```xml
 <revisionDesc xmlns="http://www.tei-c.org/ns/Examples">
-                  <change when="2009-11" who="#VJ">Deuxième édition éclectronique</change>
-                  <change when="2009-10" who="#FG">Schéma et transformations</change>
-                  <change when="2009-10" who="#CD">Encodage de l'apparat critique</change>
-                </revisionDesc>
+  <change when="2009-11" who="#VJ">Deuxième édition éclectronique</change>
+  <change when="2009-10" who="#FG">Schéma et transformations</change>
+  <change when="2009-10" who="#CD">Encodage de l'apparat critique</change>
+</revisionDesc>
 ```
 
 ---
 class: center middle
+name: part3
 
 
 ## La description des manuscrits
@@ -267,22 +275,20 @@ Ici, le module `msdescription` fournit de nombreux éléments spécialisés.
 
 ```xml
 <msDesc xmlns="http://www.tei-c.org/ns/Examples">
-                <msIdentifier>
-                  <country>France</country>
-                  <settlement>Paris</settlement>
-                  <repository>Archives Nationales</repository>
-                  <collection>Commerce et industrie</collection>
-                  <idno>F/12/5080</idno>
-                </msIdentifier>
-                <msContents>
-                  <p>
-                  <!-- description du contenu --></p>
-                </msContents>
-                <physDesc>
-                  <p>
-                  <!-- description physique --></p>
-                </physDesc>
-              </msDesc>
+  <msIdentifier>
+    <country>France</country>
+    <settlement>Paris</settlement>
+    <repository>Archives Nationales</repository>
+    <collection>Commerce et industrie</collection>
+    <idno>F/12/5080</idno>
+  </msIdentifier>
+  <msContents>
+    <p><!-- description du contenu --></p>
+  </msContents>
+  <physDesc>
+    <p><!-- description physique --></p>
+  </physDesc>
+</msDesc>
 ```
 
 ???
@@ -312,29 +318,29 @@ Rmq&nbsp;: Les éléments sont ordonnés.
 
 ```xml
 <msContents xmlns="http://www.tei-c.org/ns/Examples">
-                <msItemStruct>
-                  <author>
-                    <persName xml:lang="fre" full="yes" ref="#desgodets">Desgodets,
-                          Antoine (1653-1728)</persName>
-                  </author>
-                  <respStmt>
-                    <resp key="com">collationneur</resp>
-                    <persName xml:lang="fre" full="yes" ref="#pinardJean">Pinard,
-                            Jean</persName>
-                  </respStmt>
-                  <title type="supplied">Traité de la Commodité</title>
-                  <title type="full">Traité de la Commodité de l’architecture
-                          concernant la distribution et les proportions des édifices</title>
-                  <note>
-                    <p>Suite du cours d’architecture prononcé par Antoine Desgodets
-                            à l’Académie d’architecture concernant les Ordres.
-                            Manuscrit incomplet, divisé en trois sections, la première
-                            en cinq chapitres, la deuxième en deux chapitres, les
-                            autres chapitres et la troisième section manquent.</p>
-                  </note>
-                  <textLang mainLang="fre" otherLangs="lat ita">texte en français, quelques passages en latin et en italien.</textLang>
-                </msItemStruct>
-              </msContents>
+  <msItemStruct>
+    <author>
+      <persName xml:lang="fre" full="yes" ref="#desgodets">Desgodets,
+      Antoine (1653-1728)</persName>
+    </author>
+    <respStmt>
+      <resp key="com">collationneur</resp>
+      <persName xml:lang="fre" full="yes" ref="#pinardJean">Pinard,
+        Jean</persName>
+    </respStmt>
+    <title type="supplied">Traité de la Commodité</title>
+    <title type="full">Traité de la Commodité de l’architecture
+      concernant la distribution et les proportions des édifices</title>
+    <note>
+      <p>Suite du cours d’architecture prononcé par Antoine Desgodets
+      à l’Académie d’architecture concernant les Ordres.
+      Manuscrit incomplet, divisé en trois sections, la première
+      en cinq chapitres, la deuxième en deux chapitres, les
+      autres chapitres et la troisième section manquent.</p>
+    </note>
+    <textLang mainLang="fre" otherLangs="lat ita">texte en français, quelques passages en latin et en italien.</textLang>
+  </msItemStruct>
+</msContents>
 ```
 
 ---
@@ -344,32 +350,30 @@ Rmq&nbsp;: Les éléments sont ordonnés.
 
 ```xml
 <physDesc xmlns="http://www.tei-c.org/ns/Examples">
-                <objectDesc form="codex">
-                  <supportDesc material="paper">
-                    <support>
-                      <p><objectType>codex</objectType>, <material>papier à la cuve</material> avec filigranes, <watermark>raisins</watermark> similaire à <ref>[référence]</ref>, <date>1570-1758</date></p>
-                    </support>
-                    <extent>
-                      <dimensions type="leaves">
-                        <dim quantity="286" unit="leaves">286 pages, dont 42 planches</dim>
-                        <height quantity="410" unit="mm"></height>
-                        <width quantity="250" unit="mm"></width>
-                        <depth quantity="40" unit="mm"></depth>
-                      </dimensions>
-                      
-                     <!-- dimensions est répétable -->
-                    </extent>
-                    <foliation>foliotées au crayon en haut, au centre des pages</foliation>
-                    <collation>le manuscrit est monté sur onglet</collation>
-                    <condition>bon</condition>
-                  </supportDesc>
-                  <layoutDesc>
-                    <layout columns="1" ruledLines="25 30">texte sur une colonne, 25 à 30 lignes réglées à la mine de plomb</layout>
-                    
-                  <!-- layout est répétable -->
-                  </layoutDesc>
-                </objectDesc>
-              </physDesc>
+  <objectDesc form="codex">
+    <supportDesc material="paper">
+      <support>
+        <p><objectType>codex</objectType>, <material>papier à la cuve</material> avec filigranes, <watermark>raisins</watermark> similaire à <ref>[référence]</ref>, <date>1570-1758</date></p>
+      </support>
+      <extent>
+        <dimensions type="leaves">
+          <dim quantity="286" unit="leaves">286 pages, dont 42 planches</dim>
+          <height quantity="410" unit="mm"></height>
+          <width quantity="250" unit="mm"></width>
+          <depth quantity="40" unit="mm"></depth>
+        </dimensions>
+        <!-- dimensions est répétable -->
+      </extent>
+      <foliation>foliotées au crayon en haut, au centre des pages</foliation>
+      <collation>le manuscrit est monté sur onglet</collation>
+      <condition>bon</condition>
+    </supportDesc>
+    <layoutDesc>
+      <layout columns="1" ruledLines="25 30">texte sur une colonne, 25 à 30 lignes réglées à la mine de plomb</layout>
+        <!-- layout est répétable -->
+    </layoutDesc>
+  </objectDesc>
+</physDesc>
 ```
 
 ---
@@ -379,28 +383,25 @@ Rmq&nbsp;: Les éléments sont ordonnés.
 
 ```xml
 <physDesc xmlns="http://www.tei-c.org/ns/Examples">
-                
-            <!-- ... -->
-                <handDesc>
-                  <handNote xml:id="c2Hand1" scope="major">à l’encre noire</handNote>
-                  
-               <!-- handNote est répétable, localisation avec locus -->
-                  <handNote xml:id="c2Hand2" scope="minor">à l’encre noire</handNote>
-                </handDesc>
-                <decoDesc>
-                  <decoNote>le manuscrit contient 42 planches au lavis d’une grande
-                        qualité d’exécution</decoNote>
-                  
-               <!-- decoNote est répétable, localisation avec locus -->
-                </decoDesc>
-                <bindingDesc>
-                  <binding>
-                    <p>relié en <material>veau</material></p>
-                    <condition>bon</condition>
-                    <decoNote>dorure au fer</decoNote>
-                  </binding>
-                </bindingDesc>
-              </physDesc>
+  <!-- ... -->
+  <handDesc>
+    <handNote xml:id="c2Hand1" scope="major">à l’encre noire</handNote>
+    <!-- handNote est répétable, localisation avec locus -->
+    <handNote xml:id="c2Hand2" scope="minor">à l’encre noire</handNote>
+  </handDesc>
+  <decoDesc>
+    <decoNote>le manuscrit contient 42 planches au lavis d’une grande
+    qualité d’exécution</decoNote>
+    <!-- decoNote est répétable, localisation avec locus -->
+  </decoDesc>
+  <bindingDesc>
+    <binding>
+      <p>relié en <material>veau</material></p>
+      <condition>bon</condition>
+      <decoNote>dorure au fer</decoNote>
+    </binding>
+  </bindingDesc>
+</physDesc>
 ```
 
 ---
@@ -409,26 +410,26 @@ Rmq&nbsp;: Les éléments sont ordonnés.
 ## L’historique du manuscrit (dans `&lt;msDesc&gt;`)
 
 ```xml
-<history xmlns="http://www.tei-c.org/ns/Examples">
-                <origin>
-                  <p>Copié au cours du <origDate notBefore="1725" notAfter="1785">XVIII<hi rend="superscript">e</hi> siècle</origDate> ce manuscrit est pour ainsi dire en tous points identique à celui conservé au Rijk. La numérotation des planches semble indiquer qu’il a pu être copié d’après un même original.</p>
-                </origin>
-                <provenance>
-                  <p>[Si nous avions eu des informations sur la provenance].</p>
-                </provenance>
-                <acquisition>
-                  <p>Entré par le biais d’une acquisition du cabinet des Estampes de la bibliothèque du roi circa 1785.</p>
-                </acquisition>
-              </history><additional xmlns="http://www.tei-c.org/ns/Examples">
-                <surrogates>
-                  <idno>microfilm R 710124-710264</idno>
-                </surrogates>
-                
-            <!-- références bibliographiques sur l’exemplaire -->
-                <listBibl>
-                  <bibl corresp="#scheurleer1964"></bibl>
-                </listBibl>
-              </additional>
+  <history xmlns="http://www.tei-c.org/ns/Examples">
+    <origin>
+      <p>Copié au cours du <origDate notBefore="1725" notAfter="1785">XVIII<hi rend="superscript">e</hi> siècle</origDate> ce manuscrit est pour ainsi dire en tous points identique à celui conservé au Rijk. La numérotation des planches semble indiquer qu’il a pu être copié d’après un même original.</p>
+    </origin>
+    <provenance>
+      <p>[Si nous avions eu des informations sur la provenance].</p>
+    </provenance>
+    <acquisition>
+      <p>Entré par le biais d’une acquisition du cabinet des Estampes de la bibliothèque du roi circa 1785.</p>
+    </acquisition>
+  </history>
+  <additional xmlns="http://www.tei-c.org/ns/Examples">
+    <surrogates>
+      <idno>microfilm R 710124-710264</idno>
+    </surrogates>
+    <!-- références bibliographiques sur l’exemplaire -->
+    <listBibl>
+      <bibl corresp="#scheurleer1964"></bibl>
+    </listBibl>
+  </additional>
 ```
 
 ---
@@ -437,26 +438,29 @@ class: center middle
 
 # Sources et bibliographie
 
+---
+
+
 # Orientations bibliographiques
 
-* Glorieux, Frédéric, et Jolivet, Vincent, « weboai, Human web interface on OAI repository », SourceForge.
+* Glorieux, Frédéric, et Jolivet, Vincent, [« weboai, Human web interface on OAI repository »](http://weboai.sourceforge.net), SourceForge.
 
-* DeMArch Description des manuscrits et fonds d'archives modernes et contemporains en bibliothèque.
+* [DeMArch Description des manuscrits et fonds d'archives modernes et contemporains en bibliothèque](http://www.bnf.fr/fr/professionnels/normes_catalogage/a.ead_demarch.html).
 
-* Hawkins, Kevin, Dalmau, Michelle, et Bauman, Syd, Best Practices for TEI in Libraries.
+* Hawkins, Kevin, Dalmau, Michelle, et Bauman, Syd, [Best Practices for TEI in Libraries](http://www.tei-c.org/SIG/Libraries/teiinlibraries/main-driver.html).
 
-* Lou Burnard ed., The ENRICH Schema – A Reference Guide.
+* Lou Burnard ed., [The ENRICH Schema – A Reference Guide](http://projects.oucs.ox.ac.uk/ENRICH/).
 
-* Driscoll. "P5-MS: A General Purpose Tagset for Manuscript Description." Digital Medievalist 1 (2006). http://www.digitalmedievalist.org/journal/2.1/driscoll/ (accessed February 23, 2014).
+* Driscoll. "P5-MS: A General Purpose Tagset for Manuscript Description." Digital Medievalist 1 (2006). [http://www.digitalmedievalist.org/journal/2.1/driscoll/](http://www.digitalmedievalist.org/journal/2.1/driscoll/) (accessed February 23, 2014).
 
 ---
 class: center middle
 
 
-# Mettre en pratique
+# Mettre [en pratique](ex03-teiHeader.html)
 
-.footnote[revenir au début]
-.footnote[Programme]</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
+.footnote[[revenir au début](#index)[Programme](00-programme.html)]
+</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
         var hljs = remark.highlighter.engine;
       </script><script src="remark.language.js" type="text/javascript"></script><script type="text/javascript">
         var slideshow = remark.create({

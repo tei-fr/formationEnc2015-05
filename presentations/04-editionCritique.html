@@ -8,12 +8,25 @@
    <body><textarea id="source">
 title: L’édition critique des sources manuscrites
 description: , 
+theme: theme/remark-dark-em.cssname: inverse
+layout: true
+class: inverse
+
 ---
+
 class: center middle
 
-# 04-Édition critique# L’édition critique des sources manuscritesFormation TEI | ENC 26-29 mai 2015
-.footnote[[Répertoire GitHub](https://github.com/tei-fr/formationEnc2015-05)]
+
+
+# 04-Édition critique
+
+# L’édition critique des sources manuscrites
+
+## Formation TEI | ENC 26-29 mai 2015
+
 .footnote[[Programme](00-programme.html)]
+![test](images/logo-ecole-nationale-des-chartes.png)
+
 ---
 class: center middle
 
@@ -68,9 +81,9 @@ class: center middle
 
 ```xml
 <subst xmlns="http://www.tei-c.org/ns/Examples">
-                  <del>claustra</del>
-                  <add place="margin">fenêtre</add>
-                </subst>
+  <del>claustra</del>
+  <add place="margin">fenêtre</add>
+</subst>
 ```
 
 ---
@@ -129,9 +142,9 @@ class: center middle
 
 ```xml
 <choice xmlns="http://www.tei-c.org/ns/Examples">
-                <abbr>M<hi rend="superscript">r</hi></abbr>
-                <expan>Monsieur</expan>
-              </choice>
+  <abbr>M<hi rend="superscript">r</hi></abbr>
+  <expan>Monsieur</expan>
+</choice>
 ```
 
 ???
@@ -166,9 +179,9 @@ class: center middle
 
 ```xml
 <handDesc xmlns="http://www.tei-c.org/ns/Examples">
-                <handNote xml:id="c2Hand1" scope="major">à l’encre noire</handNote>
-                <handNote xml:id="c2Hand2" scope="minor">au crayon</handNote>
-              </handDesc>
+  <handNote xml:id="c2Hand1" scope="major">à l’encre noire</handNote>
+  <handNote xml:id="c2Hand2" scope="minor">au crayon</handNote>
+</handDesc>
 ```
 
 handNote est répétable et peut contenir une localisation avec `@locus`.
@@ -213,10 +226,10 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
 
 ```xml
 <app xmlns="http://www.tei-c.org/ns/Examples">
-                <lem>remener</lem>
-                <rdg wit="#l-1-C #l-1-D #l-1-E #l-1-F">remettre</rdg>
-                <rdg wit="#l-#-a">conduire dehors</rdg>
-              </app>
+  <lem>remener</lem>
+  <rdg wit="#l-1-C #l-1-D #l-1-E #l-1-F">remettre</rdg>
+  <rdg wit="#l-#-a">conduire dehors</rdg>
+</app>
 ```
 
 ---
@@ -237,26 +250,24 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
 
 ```xml
 <listWit xmlns="http://www.tei-c.org/ns/Examples">
-                <witness xml:id="A">
-                  <msDesc>
-                    <msIdentifier>
-                      <country>France</country>
-                      <settlement>Paris</settlement>
-                      <repository>Archives nationales</repository>
-                      <collection>Monuments ecclésiastiques</collection>
-                      <idno>S 2364 n° 5</idno>
-                    </msIdentifier>
-                  </msDesc>
-                </witness>
-                <witness xml:id="B">
-                  <msDesc>
-                    
-                  <!-- ... -->
-                  </msDesc>
-                </witness>
-                
-            <!-- répéter l'élément witness autant de fois que de témoins -->
-              </listWit>
+  <witness xml:id="A">
+    <msDesc>
+      <msIdentifier>
+        <country>France</country>
+        <settlement>Paris</settlement>
+        <repository>Archives nationales</repository>
+        <collection>Monuments ecclésiastiques</collection>
+        <idno>S 2364 n° 5</idno>
+      </msIdentifier>
+    </msDesc>
+  </witness>
+  <witness xml:id="B">
+    <msDesc>
+       <!-- ... -->
+    </msDesc>
+  </witness>
+  <!-- répéter l'élément witness autant de fois que de témoins -->
+</listWit>
 ```
 
 ---
@@ -266,17 +277,15 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
 
 ```xml
 <div xmlns="http://www.tei-c.org/ns/Examples" type="alignmentText" xml:id="cAlignmentText">
-                <linkGrp>
-                  
-               <!-- Front -->
-                  <link target="#c1Front #c2Front"></link>
-                  <link target="#c1FrontFr #c2FrontFr02"></link>
-                  <link target="#c1FrontFr01 #c2FrontFr01"></link>
-                  <link target="#c1FrontFr01.p001 #c2FrontFr01.p001"></link>
-                  
-               <!-- ... -->
-                </linkGrp>
-              </div>
+  <linkGrp>
+    <!-- Front -->
+    <link target="#c1Front #c2Front"></link>
+    <link target="#c1FrontFr #c2FrontFr02"></link>
+    <link target="#c1FrontFr01 #c2FrontFr01"></link>
+    <link target="#c1FrontFr01.p001 #c2FrontFr01.p001"></link>
+    <!-- ... -->
+  </linkGrp>
+</div>
 ```
 
 ---
@@ -284,8 +293,9 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
 
 # Exemple d’[apparat critique](ex04-witness.html)
 
-.footnote[[Revenir au début](#index)]
-.footnote[[Programme](00-programme.html)]</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
+.footnote[[Revenir au début](#index) | [Programme](00-programme.html)]
+
+</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
         var hljs = remark.highlighter.engine;
       </script><script src="remark.language.js" type="text/javascript"></script><script type="text/javascript">
         var slideshow = remark.create({

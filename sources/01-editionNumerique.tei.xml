@@ -36,7 +36,7 @@
         <note><ref target="https://github.com/emchateau/formEnc2014-10"
             >Programme</ref></note>
       </titlePage>
-      <div type="introduction" xml:lang="fr">
+      <div type="slide" xml:lang="fr">
         <div>
           <head>L’édition critique numérique</head>
           <list type="unordered">
@@ -47,7 +47,7 @@
           <p>Pas de norme ou de référence unique, même si certaines réalisations constituent des références fortes et que certains standards techniques qui favorisent la convergence.</p>
         </div>
       </div>
-      <div type="sommaire" xml:lang="fr" xml:id="index">
+      <div type="slide" xml:lang="fr" xml:id="index">
         <div>
           <head>L’édition critique numérique</head>
           <head>Sommaire</head>
@@ -63,8 +63,8 @@
       </div>
     </front>
     <body>
-      <div type="part" xml:id="caracteristiques">
-        <div type="title" xml:lang="fr">
+      <div type="part" >
+        <div type="title" xml:lang="fr" xml:id="caracteristiques">
           <div>
             <head>Caractéristiques attendues d’une édition critique</head>
           </div>
@@ -138,8 +138,8 @@
           </div>
         </div>
       </div>
-      <div type="part" xml:id="balisageDescriptif">
-        <div type="title" xml:lang="fr">
+      <div type="part">
+        <div type="title" xml:lang="fr"  xml:id="balisageDescriptif">
           <div>
             <head>Prise en charge de l’édition critique par le balisage descriptif</head>
           </div>
@@ -305,8 +305,8 @@
           </div>
         </div>
       </div>
-      <div type="part" xml:id="presentationEdition">
-        <div type="title" xml:lang="fr">
+      <div type="part" >
+        <div type="title" xml:lang="fr" xml:id="presentationEdition">
           <div>
             <head>La présentation de l'édition critique</head>
           </div>
@@ -451,8 +451,8 @@
           </div>
         </div>
       </div>
-      <div type="part" xml:id="biblio">
-        <div type="title" xml:lang="fr">
+      <div type="part">
+        <div type="title" xml:lang="fr" xml:id="biblio">
             <div>
               <head>Sources et bibliographie</head>
             </div>
@@ -460,53 +460,57 @@
         <div type="slide" xml:lang="fr">
           <div>
             <head>Orientations bibliographiques</head>
-            <bibl>Burnard, Lou, O'Brien O'Keeffe, Katherine et Unsworth, John. <ref
+            <list><item><bibl>Burnard, Lou, O'Brien O'Keeffe, Katherine et Unsworth, John. <ref
                 target="http://www.tei-c.org/About/Archive_new/ETE/Preview/index.xml"
-                >Electronic Textual Editing. Modern Language Association</ref>, 2006.</bibl>
-            <bibl>Schillingsburg, Peter L., <ref
+                >Electronic Textual Editing. Modern Language Association</ref>, 2006.</bibl></item>
+            <item><bibl>Schillingsburg, Peter L., <ref
                 target="http://books.google.fr/books/about/From_Gutenberg_to_Google.html?id=rd57F8IjyF0C"
-                >From Gutenberg to Google</ref>, 2006.</bibl>
-            <bibl>Coombs, James H, Renear, Allen H, et DeRose, Steven J. <ref
+                >From Gutenberg to Google</ref>, 2006.</bibl></item>
+            <item><bibl>Coombs, James H, Renear, Allen H, et DeRose, Steven J. <ref
                 target="http://xml.coverpages.org/coombs.html"
-                >"Markup Systems and the Future of Scholarly Text Processing."</ref> Communications of the ACM 30, no. 11 (1987): 933-947.</bibl>
-            <bibl>Hayles, Katherine. <ref
+                >"Markup Systems and the Future of Scholarly Text Processing."</ref> Communications of the ACM 30, no. 11 (1987): 933-947.</bibl></item>
+            <item><bibl>Hayles, Katherine. <ref
                 target="http://www.lab404.com/242/hayles_print_is_flat.pdf"
-                >"Print Is Flat, Code Is Deep: The Importance of Media-Specific Analysis."</ref> Poetics Today 25, no. 1 (2004): 67-90.</bibl>
-            <bibl>Barney, Brett. <ref
+                >"Print Is Flat, Code Is Deep: The Importance of Media-Specific Analysis."</ref> Poetics Today 25, no. 1 (2004): 67-90.</bibl></item>
+            <item><bibl>Barney, Brett. <ref
                 target="http://www.jstor.org/stable/10.2979/textcult.7.1.29"
-                >"Digital Editing with the TEI Yesterday, Today, and Tomorrow."</ref> Textual Cultures: Texts, Contexts, Interpretation 7, no. 1 (2012): 29-41.</bibl>
-            <bibl>Boot, Peter. <ref
+                >"Digital Editing with the TEI Yesterday, Today, and Tomorrow."</ref> Textual Cultures: Texts, Contexts, Interpretation 7, no. 1 (2012): 29-41.</bibl></item>
+            <item><bibl>Boot, Peter. <ref
                 target="http://www.janusdigital.es/articulo.htm?id=7"
-                >"Some Digital Editions and Some Remaining Challenges."</ref> Janus, Estudios sobre el siglo de oro , no. 1 (2012).</bibl>
+                >"Some Digital Editions and Some Remaining Challenges."</ref> Janus, Estudios sobre el siglo de oro , no. 1 (2012).</bibl></item>
+            </list>
           </div>
         </div>
         <div type="slide" xml:lang="fr">
           <div>
             <head>Orientations bibliographiques .inverse[(suite)]</head>
-              <bibl>Guyotjeannin, Olivier, and Olivier Poncet. <hi rend="italic">
+            <list>
+              <item><bibl>Guyotjeannin, Olivier, and Olivier Poncet. <hi rend="italic">
                 <ref
                   target="https://intranet.enc.sorbonne.fr/files/20100315-Edition-electronique-intro-OGJ-OP.pdf"
                   >L’édition électronique de sources d’archives médiévales et modernes, Quelques réflexions</ref>
-              </hi>. mars, 2010.</bibl>
-              <bibl>Bourgain, Pascale, and Françoise Vieillard (dir.), <hi
+              </hi>. mars, 2010.</bibl></item>
+              <item><bibl>Bourgain, Pascale, and Françoise Vieillard (dir.), <hi
                 rend="italic"
-                >Conseils Pour L'édition Des Textes Médiévaux</hi>. Conseils généraux, Fascicule I. Documents d'archives, Fascicule II. Textes littéraires, Fascicule III. Paris: Comité des travaux historiques et scientifiques / École nationale des chartes, 2001-2002.</bibl>
-              <bibl>Barbiche, Bernard. <hi rend="italic"
+                >Conseils Pour L'édition Des Textes Médiévaux</hi>. Conseils généraux, Fascicule I. Documents d'archives, Fascicule II. Textes littéraires, Fascicule III. Paris: Comité des travaux historiques et scientifiques / École nationale des chartes, 2001-2002.</bibl></item>
+              <item><bibl>Barbiche, Bernard. <hi rend="italic"
                 >["Conseils Pour L’édition Des Textes De L’époque Moderne (XVIe-XVIIIe Siècle)"](http://theleme.enc.sorbonne.fr/cours/edition</hi>epoque<hi
                   rend="italic">moderne/edition</hi>des<hi rend="italic"
-                    >textes)</hi>. Theleme (Techniques pour l'Historien en Ligne : Études, Manuels, Exercices).</bibl>
-              <bibl>Christine Nougaret et Elisabeth Parinet (dir.), <hi
+                    >textes)</hi>. Theleme (Techniques pour l'Historien en Ligne : Études, Manuels, Exercices).</bibl></item>
+              <item><bibl>Christine Nougaret et Elisabeth Parinet (dir.), <hi
                 rend="italic"
                 >Conseils pour l'édition des textes de l'époque moderne</hi>, École nationale des chartes, <hi
                   rend="bold"
-                  >à paraître en décembre 2014 (avec un chapitre de Florence Clavaud consacré à l'édition électronique) !!</hi>.</bibl>
+                  >à paraître en décembre 2014 (avec un chapitre de Florence Clavaud consacré à l'édition électronique) !!</hi>.</bibl></item>
+            </list>
           </div>
         </div>
       </div>
       <div>
-        <head>XML, <ref target="02-teiMacrostructure.html">Encoder la structure d’un document en TEI</ref></head>
-        <note><ref target="#index">Revenir au début</ref></note>
-        <note><ref target="programme.html">Programme</ref></note>
+        <div type="title" xml:lang="fr">
+          <head>XML, <ref target="02-teiMacrostructure.html">Encoder la structure d’un document en TEI</ref></head>
+          <note><ref target="#index">Revenir au début</ref> | <ref target="programme.html">Programme</ref></note>
+        </div>
       </div>
     </back>
   </text>

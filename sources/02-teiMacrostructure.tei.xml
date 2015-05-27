@@ -22,8 +22,6 @@
       <titlePage xml:lang="fr">
         <titlePart>02-Macrostructure TEI</titlePart>
         <docImprint>Formation TEI | ENC 26-29 mai 2015</docImprint>
-        <note><ref target="https://github.com/tei-fr/formationEnc2015-05"
-            >Répertoire GitHub</ref></note>
         <note><ref target="00-programme.html">Programme</ref></note>
       </titlePage>
       <div type="sommaire" xml:lang="fr" xml:id="index">
@@ -47,8 +45,8 @@
       <p>-\-\-</p>
       <p>name: index</p>
       <p>class: center middle</p>-->
-      <div type="part" xml:id="part1">
-        <div type="title" xml:lang="fr">
+      <div type="part">
+        <div type="title" xml:lang="fr"  xml:id="part1">
           <div>
             <head>Structure d’un document TEI</head>
           </div>
@@ -117,8 +115,8 @@
           </div>
         </div>
       </div>
-      <div type="part" xml:id="part2">
-        <div type="title" xml:lang="fr">
+      <div type="part">
+        <div type="title" xml:lang="fr" xml:id="part2">
           <div>
             <head>Le teiHeader</head>
           </div>
@@ -226,8 +224,8 @@
           </div>
         </div>
       </div>
-        <div type="part" xml:id="part3">
-          <div type="title" xml:lang="fr">
+        <div type="part" >
+          <div type="title" xml:lang="fr" xml:id="part3">
             <div>
               <head>Macrostructure du texte</head>
             </div>
@@ -483,8 +481,7 @@
         <div>
           <head>Maintenant, passons à <ref target="ex02-teiMacrostructure.html"
             >la pratique</ref> !</head>
-          <note><ref target="#index">revenir au début</ref></note>
-          <note><ref target="00-programme.html">programme</ref></note>
+          <note><ref target="#index">revenir au début</ref> | <ref target="00-programme.html">programme</ref></note>
         </div>
       </div>
     </back>

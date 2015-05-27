@@ -45,8 +45,8 @@
       </div>
     </front>
     <body>
-      <div type="part" xml:id="part1">
-        <div type="title" xml:lang="fr">
+      <div type="part">
+        <div type="title" xml:lang="fr"  xml:id="part1">
           <div>
             <head>1. L’importance des métadonnées</head>
           </div>
@@ -82,8 +82,8 @@
           </div>
         </div>
       </div>
-      <div type="part" xml:id="part2">
-        <div type="title" xml:lang="fr">
+      <div type="part" >
+        <div type="title" xml:lang="fr" xml:id="part2">
           <div>
             <head>2. Les composants du teiHeader</head>
           </div>
@@ -255,8 +255,8 @@
           </div>
         </div>
       </div>
-      <div type="part" xml:id="part3">
-        <div type="title" xml:lang="fr">
+      <div type="part">
+        <div type="title" xml:lang="fr" xml:id="part3">
           <div>
             <head>La description des manuscrits</head>
           </div>
@@ -431,7 +431,7 @@
       <div type="title" xml:lang="fr">
         <head>Sources et bibliographie</head>
       </div>
-      <div type="biblio" xml:lang="fr">
+      <div type="slide" xml:lang="fr">
         <div>
           <head>Orientations bibliographiques</head>
           <list>
@@ -457,8 +457,7 @@
       <div type="title" xml:lang="fr">
         <div>
           <head>Mettre <ref target="ex03-teiHeader.html">en pratique</ref></head>
-          <note><ref target="#index">revenir au début</ref></note>
-          <note><ref target="00-programme.html">Programme</ref></note>
+          <note><ref target="#index">revenir au début</ref><ref target="00-programme.html">Programme</ref></note>
         </div>
       </div>
     </back>

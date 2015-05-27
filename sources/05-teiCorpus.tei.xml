@@ -29,8 +29,6 @@
       <titlePage xml:lang="fr">
         <titlePart>05-Liens et structures complexes</titlePart>
         <docImprint>Formation TEI | ENC 26-29 mai 2015</docImprint>
-        <note><ref target="https://github.com/tei-fr/formationEnc2015-05"
-            >Répertoire GitHub</ref></note>
         <note><ref target="00-programme.html">Programme</ref></note>
       </titlePage>
       <div type="title">
@@ -54,8 +52,8 @@
       </div>
     </front>
     <body>
-      <div type="part" xml:id="part1">
-        <div type="title" xml:lang="fr">
+      <div type="part">
+        <div type="title" xml:lang="fr" xml:id="part1">
           <div>
             <head>Les liens</head>
           </div>
@@ -128,13 +126,13 @@
           </div>
         </div>
       </div>
-      <div type="part" xml:id="part2">
+      <div type="part">
         <div type="title">
           <div>
             <head>Les corpus</head>
           </div>
         </div>
-        <div type="slide" xml:lang="fr">
+        <div type="slide" xml:lang="fr" xml:id="part2">
           <div>
             <head>Macrostructures de texte composite</head>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -240,8 +238,8 @@
           </div>
         </div>
       </div>
-      <div type="part" xml:id="part3">
-        <div type="title">
+      <div type="part">
+        <div type="title" xml:id="part3">
           <div>
             <head>Les figures et facsimili</head>
           </div>
@@ -332,8 +330,7 @@
         <div>
           <head>Pour finir, les <ref target="06-namedEntities.html"
               >entités nommées</ref></head>
-          <note><ref target="#index">revenir au début</ref></note>
-          <note><ref target="00-programme.html">programme</ref></note>
+          <note><ref target="#index">revenir au début</ref> | <ref target="00-programme.html">programme</ref></note>
         </div>
       </div>
     </back>

@@ -8,12 +8,23 @@
    <body><textarea id="source">
 title: Un rapide panorama de l’édition critique avec la TEI
 description: , 
+theme: theme/remark-dark-em.cssname: inverse
+layout: true
+class: inverse
+
 ---
 class: center middle
 
-# 01-Un rapide panorama de l’édition critique avec la TEIFormation TEI | ENC 26-29 mai 2015
-.footnote[Répertoire GitHub]
-.footnote[Programme]
+
+# 01-Un rapide panorama de l’édition critique avec la TEI
+
+## Formation TEI | ENC 26-29 mai 2015
+
+.footnote[[Programme](00.programme.html)]
+![test](images/logo-ecole-nationale-des-chartes.png)
+
+---
+
 # L’édition critique numérique
 
 * un domaine en évolution rapide
@@ -25,22 +36,21 @@ class: center middle
 Pas de norme ou de référence unique, même si certaines réalisations constituent des références fortes et que certains standards techniques qui favorisent la convergence.
 
 ---
-class: center middle
-name: index
-
+name: L’édition critique numériqueSommaireCaractéristiques attendues d’une édition critiqueLa prise en charge de l’édition critique par un balisage descriptifPrésentation et potentiel des éditions numériques
 
 # L’édition critique numérique
 
 # Sommaire
 
-1. Caractéristiques attendues d’une édition critique
+1. [Caractéristiques attendues d’une édition critique](#caracteristiques)
 
-1. La prise en charge de l’édition critique par un balisage descriptif
+1. [La prise en charge de l’édition critique par un balisage descriptif](#balisageDescriptif)
 
-1. Présentation et potentiel des éditions numériques
+1. [Présentation et potentiel des éditions numériques](#presentationEdition)
 
 ---
 class: center middle
+name: caracteristiques
 
 
 ## Caractéristiques attendues d’une édition critique
@@ -126,6 +136,7 @@ Compte tenu de l’investissement engagé, il est aussi nécessaire de se préoc
 
 ---
 class: center middle
+name: balisageDescriptif
 
 
 ## Prise en charge de l’édition critique par le balisage descriptif
@@ -166,17 +177,17 @@ Ici, les critères de qualité d’une édition critique peuvent guider certains
 
 ## Exemples d’éditions numériques
 
-* elec
+* [elec](http://elec.enc.sorbonne.fr)
 
-* hyperdonnat
+* [hyperdonnat](http://elec.enc.sorbonne.fr)
 
-* Roman du Mont Saint-Michel
+* [Roman du Mont Saint-Michel](http://www.unicaen.fr/puc/sources/gsp/www.unicaen.fr/services/puc/sources/gsp/index-2.html)
 
-* Mercure galant
+* [Mercure galant](http://obvil.paris-sorbonne.fr/corpus/mercure-galant/)
 
-* vangoghletters.org
+* [vangoghletters.org](http://vangoghletters.org/vg/)
 
-* sandrart.net
+* [sandrart.net](http://www.sandrart.net/de/)
 
 ---
 
@@ -187,13 +198,12 @@ Ici, les critères de qualité d’une édition critique peuvent guider certains
 
 ## encodage présentationnel
 
----
-
+???
 
 ## Encodage descriptif vs encodage présentationnel
 
 Parce qu’il détermine tous les traitements informatiques qu’il est possible d’effectuer sur le texte, le balisage a historiquement constitué une question fondamentale dans l’histoire de l’informatique. Depuis l’article séminal de Coombs et ses collègues, on a pris l’habitude de distinguer plusieurs types de balisages&nbsp;: procédural, présentationnel, ou encore descriptif.
-cf. Coombs, James H, Renear, Allen H, et DeRose, Steven J, « Markup Systems and the Future of Scholarly Text Processing », Communications of the ACM, n° 11, t. 30, 1987, p.933-947.
+cf. Coombs, James H, Renear, Allen H, et DeRose, Steven J, [« Markup Systems and the Future of Scholarly Text Processing »](http://xml.coverpages.org/coombs.html), Communications of the ACM, n° 11, t. 30, 1987, p.933-947.
 La supériorité du balisage descriptif sur les autres types de balisage du texte a clairement été établie depuis quelques années. Un tel balisage présente l’avantage notable d’assurer une meilleure distinction entre le contenu et la forme (et donc de séparer les traitements). Cette distinction garantit une meilleure maintenance du texte encodé et une meilleure portabilité des artefacts numériques.
 
 ---
@@ -214,7 +224,7 @@ Identifier explicitement la structure sémantique sous-jacente d’un document, 
 ## La production d’un .red[balisage descriptif]
 
 La production d’un .red[balisage descriptif] consiste à identifier explicitement la structure sémantique sous-jacente d’un document, cela indépendamment de tout traitement déterminé à l’avance.
-cf. Renear, Allen, Dubin, David, Sperberg-McQueen, C. Michael, et Huitfeldt, Claus, «&nbsp;XML semantics and digital libraries&nbsp;», Proceedings of the 3rd ACM/IEEE-CS joint conference on Digital libraries, p. 303-305, 2003.
+cf. Renear, Allen, Dubin, David, Sperberg-McQueen, C. Michael, et Huitfeldt, Claus, [«&nbsp;XML semantics and digital libraries&nbsp;»](http://dl.acm.org/citation.cfm?id=827140.827192), Proceedings of the 3rd ACM/IEEE-CS joint conference on Digital libraries, p. 303-305, 2003.
 Il s’agit de .red[distinguer explicitement à l’intérieur du texte différents objets éditoriaux] en les encadrant par des balises dont le nom peut être arbitraire.
 
 Ce faisant l’auteur d’un balisage fournit une .red[information sémantique] et pragmatique suffisante pour produire des vues alternatives sur le document ou bien une édition basée sur la structure du texte.
@@ -294,6 +304,7 @@ Autrement dit, le balisage descriptif offre un certain nombre d’avantages pour
 
 ---
 class: center middle
+name: presentationEdition
 
 
 ## La présentation de l'édition critique
@@ -465,6 +476,7 @@ Même si la mise en place d’un balisage descriptif du texte, implique le dépl
 
 ---
 class: center middle
+name: biblio
 
 
 ## Sources et bibliographie
@@ -473,16 +485,40 @@ class: center middle
 
 
 ## Orientations bibliographiques
-Burnard, Lou, O'Brien O'Keeffe, Katherine et Unsworth, John. Electronic Textual Editing. Modern Language Association, 2006.Schillingsburg, Peter L., From Gutenberg to Google, 2006.Coombs, James H, Renear, Allen H, et DeRose, Steven J. "Markup Systems and the Future of Scholarly Text Processing." Communications of the ACM 30, no. 11 (1987): 933-947.Hayles, Katherine. "Print Is Flat, Code Is Deep: The Importance of Media-Specific Analysis." Poetics Today 25, no. 1 (2004): 67-90.Barney, Brett. "Digital Editing with the TEI Yesterday, Today, and Tomorrow." Textual Cultures: Texts, Contexts, Interpretation 7, no. 1 (2012): 29-41.Boot, Peter. "Some Digital Editions and Some Remaining Challenges." Janus, Estudios sobre el siglo de oro , no. 1 (2012).
+
+* Burnard, Lou, O'Brien O'Keeffe, Katherine et Unsworth, John. [Electronic Textual Editing. Modern Language Association](http://www.tei-c.org/About/Archive_new/ETE/Preview/index.xml), 2006.
+
+* Schillingsburg, Peter L., [From Gutenberg to Google](http://books.google.fr/books/about/From_Gutenberg_to_Google.html?id=rd57F8IjyF0C), 2006.
+
+* Coombs, James H, Renear, Allen H, et DeRose, Steven J. ["Markup Systems and the Future of Scholarly Text Processing."](http://xml.coverpages.org/coombs.html) Communications of the ACM 30, no. 11 (1987): 933-947.
+
+* Hayles, Katherine. ["Print Is Flat, Code Is Deep: The Importance of Media-Specific Analysis."](http://www.lab404.com/242/hayles_print_is_flat.pdf) Poetics Today 25, no. 1 (2004): 67-90.
+
+* Barney, Brett. ["Digital Editing with the TEI Yesterday, Today, and Tomorrow."](http://www.jstor.org/stable/10.2979/textcult.7.1.29) Textual Cultures: Texts, Contexts, Interpretation 7, no. 1 (2012): 29-41.
+
+* Boot, Peter. ["Some Digital Editions and Some Remaining Challenges."](http://www.janusdigital.es/articulo.htm?id=7) Janus, Estudios sobre el siglo de oro , no. 1 (2012).
+
 ---
 
 
 ## Orientations bibliographiques .inverse[(suite)]
-Guyotjeannin, Olivier, and Olivier Poncet. .red[L’édition électronique de sources d’archives médiévales et modernes, Quelques réflexions]. mars, 2010.Bourgain, Pascale, and Françoise Vieillard (dir.), .red[Conseils Pour L'édition Des Textes Médiévaux]. Conseils généraux, Fascicule I. Documents d'archives, Fascicule II. Textes littéraires, Fascicule III. Paris: Comité des travaux historiques et scientifiques / École nationale des chartes, 2001-2002.Barbiche, Bernard. .red[["Conseils Pour L’édition Des Textes De L’époque Moderne (XVIe-XVIIIe Siècle)"](http://theleme.enc.sorbonne.fr/cours/edition]epoque.red[moderne/edition]des.red[textes)]. Theleme (Techniques pour l'Historien en Ligne&nbsp;: Études, Manuels, Exercices).Christine Nougaret et Elisabeth Parinet (dir.), .red[Conseils pour l'édition des textes de l'époque moderne], École nationale des chartes, .red[à paraître en décembre 2014 (avec un chapitre de Florence Clavaud consacré à l'édition électronique) !!].
-# XML, Encoder la structure d’un document en TEI
 
-.footnote[Revenir au début]
-.footnote[Programme]</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
+* Guyotjeannin, Olivier, and Olivier Poncet. .red[[L’édition électronique de sources d’archives médiévales et modernes, Quelques réflexions](https://intranet.enc.sorbonne.fr/files/20100315-Edition-electronique-intro-OGJ-OP.pdf)]. mars, 2010.
+
+* Bourgain, Pascale, and Françoise Vieillard (dir.), .red[Conseils Pour L'édition Des Textes Médiévaux]. Conseils généraux, Fascicule I. Documents d'archives, Fascicule II. Textes littéraires, Fascicule III. Paris: Comité des travaux historiques et scientifiques / École nationale des chartes, 2001-2002.
+
+* Barbiche, Bernard. .red[["Conseils Pour L’édition Des Textes De L’époque Moderne (XVIe-XVIIIe Siècle)"](http://theleme.enc.sorbonne.fr/cours/edition]epoque.red[moderne/edition]des.red[textes)]. Theleme (Techniques pour l'Historien en Ligne&nbsp;: Études, Manuels, Exercices).
+
+* Christine Nougaret et Elisabeth Parinet (dir.), .red[Conseils pour l'édition des textes de l'époque moderne], École nationale des chartes, .red[à paraître en décembre 2014 (avec un chapitre de Florence Clavaud consacré à l'édition électronique) !!].
+
+---
+class: center middle
+
+
+# XML, [Encoder la structure d’un document en TEI](02-teiMacrostructure.html)
+
+.footnote[[Revenir au début](#index) | [Programme](programme.html)]
+</textarea><script src="js/remark-0.6.5.min.js" type="text/javascript"></script><script type="text/javascript">
         var hljs = remark.highlighter.engine;
       </script><script src="remark.language.js" type="text/javascript"></script><script type="text/javascript">
         var slideshow = remark.create({

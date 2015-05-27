@@ -52,10 +52,35 @@
     <xsl:apply-templates select="fileDesc/titleStmt/author"/>
     <xsl:text>, </xsl:text>
     <xsl:apply-templates select="fileDesc/publicationStmt/date"/>
+    <xsl:call-template name="newline"/>
+    <xsl:text>theme: theme/remark-dark-em.css</xsl:text>
+    <xsl:text>name: inverse</xsl:text>
+    <xsl:call-template name="newline"/>
+    <xsl:text>layout: true</xsl:text>
+    <xsl:text>class: inverse</xsl:text>
+    <xsl:call-template name="newline"/>
   </xsl:template>
   
   <xsl:template match="titlePage">
     <xsl:call-template name="newline"/>
+    <!--<xsl:text>-\-\-</xsl:text>-->
+    <xsl:call-template name="newline"/>
+    <xsl:text>class: center middle</xsl:text>
+    <xsl:call-template name="newline"/>
+    <xsl:if test="./@xml:id">
+      <xsl:text>name: </xsl:text>
+      <xsl:value-of select="@xml:id"/>
+    </xsl:if>
+    <xsl:call-template name="newline"/>
+    <xsl:call-template name="newline"/>
+    <xsl:apply-templates/>
+    <xsl:text>![test](images/logo-ecole-nationale-des-chartes.png)</xsl:text>
+    <xsl:call-template name="newline"/>
+  </xsl:template>
+  
+  
+  <xsl:template match="div[@type='title']">
+    <xsl:call-template name="newline"/>
     <xsl:text>---</xsl:text>
     <xsl:call-template name="newline"/>
     <xsl:text>class: center middle</xsl:text>
@@ -69,22 +94,7 @@
     <xsl:apply-templates/>
   </xsl:template>
   
-  <xsl:template match="div[@type='title'] | div[@type='sommaire']">
-    <xsl:call-template name="newline"/>
-    <xsl:text>---</xsl:text>
-    <xsl:call-template name="newline"/>
-    <xsl:text>class: center middle</xsl:text>
-    <xsl:call-template name="newline"/>
-    <xsl:if test="./@xml:id">
-      <xsl:text>name: </xsl:text>
-      <xsl:value-of select="@xml:id"/>
-      <xsl:call-template name="newline"/>
-    </xsl:if>
-    <xsl:call-template name="newline"/>
-    <xsl:apply-templates/>
-  </xsl:template>
-  
-  <xsl:template match="div[@type='slide']">
+  <xsl:template match="div[@type='slide'] | div[@type='sommaire']">
     <xsl:call-template name="newline"/>
     <xsl:text>---</xsl:text>
     <xsl:call-template name="newline"/>
@@ -131,9 +141,16 @@
   <xsl:template match="note">
     <xsl:call-template name="newline"/>
     <xsl:text>.footnote[</xsl:text>
-    <xsl:apply-templates/>
+    <xsl:for-each select=".">
+      <xsl:apply-templates/>
+      <xsl:if test="position() != last()">
+        <xsl:text> | </xsl:text>
+      </xsl:if>
+    </xsl:for-each>
     <xsl:text>]</xsl:text>
+    <xsl:call-template name="newline"/>
   </xsl:template>
+
   
   <xsl:template match="gi">
     <xsl:text>`&lt;</xsl:text>
@@ -163,8 +180,17 @@
   </xsl:template>
   
   <xsl:template match="titlePart">
+    <xsl:call-template name="newline"/>
     <xsl:text># </xsl:text>
     <xsl:apply-templates/>
+    <xsl:call-template name="newline"/>
+  </xsl:template>
+  
+  <xsl:template match="docImprint">
+    <xsl:call-template name="newline"/>
+    <xsl:text>## </xsl:text>
+    <xsl:apply-templates/>
+    <xsl:call-template name="newline"/>
   </xsl:template>
   
   <xsl:template match="ref">
