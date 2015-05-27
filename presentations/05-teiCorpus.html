@@ -9,8 +9,10 @@
 title: 
 description: , 
 theme: theme/remark-dark-em.cssname: inverse
-layout: trueclass: inverse
+layout: true
+class: inverse
 
+---
 
 class: center middle
 
@@ -24,12 +26,14 @@ class: center middle
 ![test](images/logo-ecole-nationale-des-chartes.png)
 
 ---
+layout: false
 class: center middle
 
 
 # Introduction
 
-# Introduction
+???
+Introduction
 
 On l’a vu, la Text Encoding Initiative fournit un grand nombre de balises dans lesquelles il est possible de puiser pour modéliser son texte. Personne ne les utilise toutes dans le cadre d’un même projet. En d’autres termes, on doit construire des représentations du texte source qui reflètent les phénomènes que l’on observe d’un point de vue structurel, sémantique ou linguistique, et que l’on va modéliser d’après la manière dont on espère les exploiter par la suite. À cet égard, la modélisation XML-TEI est une opération intrinsèque au processus éditorial et qui a directement trait au caractère scientifique de l’édition numérique. Puisqu’il s’agit bel et bien de produire un artefact orienté.
 
@@ -88,9 +92,11 @@ note élément pour l’enregistrement d’une note
 * soit regroupées à un autre endroit
 
 ```xml
-<p xmlns="http://www.tei-c.org/ns/Examples">Le fût de chaque colonne est cannelé de vingt
-                quatre canneaux dans son pourtour<ref type="noteHistorical" target="#c2Nh0081"></ref>. En...
-              </p><note xmlns="http://www.tei-c.org/ns/Examples" xml:id="c2Nh0081"><p>texte de la note</p></note>
+<p xmlns="http://www.tei-c.org/ns/Examples">Le fût de chaque colonne est 
+  cannelé de vingt quatre canneaux dans son 
+  pourtour<ref type="noteHistorical" target="#c2Nh0081"></ref>. En...
+  </p><note xmlns="http://www.tei-c.org/ns/Examples" xml:id="c2Nh0081"><p>texte de la 
+  note</p></note>
 ```
 
 ---
@@ -100,17 +106,15 @@ note élément pour l’enregistrement d’une note
 
 ```xml
 <div xmlns="http://www.tei-c.org/ns/Examples" type="alignmentText" xml:id="cAlignmentText">
-                <linkGrp>
-                  
-               <!-- Front -->
-                  <link target="#c1Front #c2Front"></link>
-                  <link target="#c1FrontFr #c2FrontFr02"></link>
-                  <link target="#c1FrontFr01 #c2FrontFr01"></link>
-                  <link target="#c1FrontFr01.p001 #c2FrontFr01.p001"></link>
-                  
-               <!-- ... -->
-                </linkGrp>
-              </div>
+  <linkGrp>
+    <!-- Front -->
+    <link target="#c1Front #c2Front"></link>
+    <link target="#c1FrontFr #c2FrontFr02"></link>
+    <link target="#c1FrontFr01 #c2FrontFr01"></link>
+    <link target="#c1FrontFr01.p001 #c2FrontFr01.p001"></link>
+    <!-- ... -->
+  </linkGrp>
+</div>
 ```
 
 ???
@@ -133,51 +137,27 @@ class: center middle
 
 ---
 name: Macrostructures de texte composite
-              
-                
-                
-                  
-                  
-                    
-                      
-                      
-                      
-                    
-                    
-                    
-                  
-                  
-                
-              
-            
+
 
 ## Macrostructures de texte composite
 
 ```xml
 <TEI xmlns="http://www.tei-c.org/ns/Examples">
-                <teiHeader>
-               <!-- ... --></teiHeader>
-                <text>
-                  <front>
-                  <!-- ... --></front>
-                  <group>
-                    <text>
-                      <front>
-                        <!-- ... --></front>
-                      <body>
-                        <!-- ... --></body>
-                      <back>
-                        <!-- ... --></back>
-                    </text>
-                    <text>
-                     <!-- ... --></text>
-                    <text>
-                     <!-- ... --></text>
-                  </group>
-                  <back>
-                  <!-- ... --></back>
-                </text>
-              </TEI>
+  <teiHeader><!-- ... --></teiHeader>
+  <text>
+    <front><!-- ... --></front>
+    <group>
+      <text>
+        <front><!-- ... --></front>
+        <body><!-- ... --></body>
+        <back><!-- ... --></back>
+      </text>
+      <text><!-- ... --></text>
+      <text><!-- ... --></text>
+    </group>
+    <back><!-- ... --></back>
+  </text>
+</TEI>
 ```
 
 ---
@@ -202,31 +182,18 @@ Pour des groupes de textes, des documents composites, ou des corpus hétérogèn
 
 ```xml
 <teiCorpus xmlns="http://www.tei-c.org/ns/Examples">
-                <teiCorpus>
-                  <TEI>
-                    
-                  <!-- témoin manuscrit -->
-                    <teiHeader>
-                     <!-- ... --></teiHeader>
-                    <text>
-                      <body>
-                        <!-- ... --></body>
-                    </text>
-                  </TEI>
-                  <TEI>
-                    
-                  <!-- témoin manuscrit -->
-                  </TEI>
-                  <TEI>
-                    
-                  <!-- témoin manuscrit -->
-                  </TEI>
-                </teiCorpus>
-                <teiCorpus>
-                  
-               <!-- ... -->
-                </teiCorpus>
-              </teiCorpus>
+  <teiCorpus>
+    <TEI><!-- témoin manuscrit -->
+      <teiHeader><!-- ... --></teiHeader>
+      <text>
+        <body><!-- ... --></body>
+      </text>
+    </TEI>
+    <TEI><!-- témoin manuscrit --></TEI>
+    <TEI><!-- témoin manuscrit --></TEI>
+  </teiCorpus>
+  <teiCorpus><!-- ... --></teiCorpus>
+</teiCorpus>
 ```
 
 ---
@@ -235,14 +202,13 @@ Pour des groupes de textes, des documents composites, ou des corpus hétérogèn
 ## Utilisation de XInclude
 
 ```xml
-<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"><teiHeader>
-               <!-- ... --></teiHeader>
-            <!-- Inclusion du fichier TEI du manuscrit des Ordres (O) -->
-                Fichier des Ordres non trouvé
-                
-            <!-- Inclusion du fichier TEI du manuscrit des Commodités (C) -->
-                Fichier des Commodités non trouvé
-              </teiCorpus>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <teiHeader><!-- ... --></teiHeader>
+  <!-- Inclusion du fichier TEI du manuscrit des Ordres (O) -->
+  Fichier des Ordres non trouvé
+  <!-- Inclusion du fichier TEI du manuscrit des Commodités (C) -->
+  Fichier des Commodités non trouvé
+</teiCorpus>
 ```
 
 [XML Inclusions (XInclude) Version 1.0 (Second Edition), W3C Recommendation 15 November 2006.](http://www.w3.org/TR/xinclude/)
@@ -294,20 +260,20 @@ name: part3
 
 ```xml
 <figure xmlns="http://www.tei-c.org/ns/Examples" xml:id="c2Pl0001" type="plate" facs="#c2FacsPl0001">
-                <head>Plan de l'église de Sainte-Sabine à Rome</head>
-                <figDesc>
-                  <locus from="#c2F9v" n="p16">p. 16</locus>
-                  <label>
-                    <num n="1">1</num>
-                  </label>
-                  <title>Plan de l’église de Sainte-Sabine à Rome</title>
-                  <desc>plume et encre noire, lavis</desc>
-                  <dimensions>
-                    <height quantity="21" unit="mm"></height>
-                    <width quantity="42" unit="mm"></width>
-                  </dimensions>
-                </figDesc>
-              </figure>
+  <head>Plan de l'église de Sainte-Sabine à Rome</head>
+  <figDesc>
+    <locus from="#c2F9v" n="p16">p. 16</locus>
+    <label>
+      <num n="1">1</num>
+    </label>
+    <title>Plan de l’église de Sainte-Sabine à Rome</title>
+    <desc>plume et encre noire, lavis</desc>
+    <dimensions>
+      <height quantity="21" unit="mm"></height>
+      <width quantity="42" unit="mm"></width>
+    </dimensions>
+  </figDesc>
+</figure>
 ```
 
 ---
@@ -316,18 +282,14 @@ name: part3
 ## Traitement des facsimili
 
 ```xml
-<teiHeader xmlns="http://www.tei-c.org/ns/Examples">
-            <!-- ... --></teiHeader><facsimile xmlns="http://www.tei-c.org/ns/Examples" corresp="#c2ImagesLicence" xml:id="c2Facs">
-                <surface xml:id="c2FacsPl0001">
-                  <graphic n="full" mimeType="image/jpg" url="facs/full/facsC2Pl0001.jpg"></graphic>
-                  <graphic n="thumb" mimeType="image/jpg" url="facs/thumbs/facsC2Pl0001.jpg"></graphic>
-                </surface>
-                
-            <!-- ... -->
-              </facsimile><text xmlns="http://www.tei-c.org/ns/Examples">
-                
-            <!-- ... -->
-              </text>
+<teiHeader><!-- ... --></teiHeader>
+  <facsimile corresp="#c2ImagesLicence" xml:id="c2Facs">
+    <surface xml:id="c2FacsPl0001">
+      <graphic n="full" mimeType="image/jpg" url="facs/full/facsC2Pl0001.jpg"></graphic>
+      <graphic n="thumb" mimeType="image/jpg" url="facs/thumbs/facsC2Pl0001.jpg"></graphic>
+    </surface><!-- ... -->
+  </facsimile>
+  <text><!-- ... --></text>
 ```
 
 ???
@@ -342,19 +304,18 @@ L’élément `&lt;facsimile&gt;` permet de fournir des artefacts numériques r�
 ## Traitement des facsimili
 
 ```xml
-<teiHeader xmlns="http://www.tei-c.org/ns/Examples">
-            <!-- ... --></teiHeader><facsimile xmlns="http://www.tei-c.org/ns/Examples" corresp="#c2ImagesLicence" xml:id="c2Facs">
-                <surface xml:id="c2FacsPl0001">
-                  <graphic n="full" mimeType="image/jpg" url="facs/full/facsC2Pl0001.jpg"></graphic>
-                  <graphic n="thumb" mimeType="image/jpg" url="facs/thumbs/facsC2Pl0001.jpg"></graphic>
-                </surface>
-                
-            <!-- ... -->
-              </facsimile><text xmlns="http://www.tei-c.org/ns/Examples">
-                
-            <!-- ... -->
-                <pb facs="#c2Facs"></pb>
-              </text>
+<teiHeader xmlns="http://www.tei-c.org/ns/Examples"><!-- ... --></teiHeader>
+  <facsimile xmlns="http://www.tei-c.org/ns/Examples" corresp="#c2ImagesLicence" xml:id="c2Facs">
+    <surface xml:id="c2FacsPl0001">
+      <graphic n="full" mimeType="image/jpg" url="facs/full/facsC2Pl0001.jpg"></graphic>
+      <graphic n="thumb" mimeType="image/jpg" url="facs/thumbs/facsC2Pl0001.jpg"></graphic>
+    </surface>
+    <!-- ... -->
+  </facsimile>
+  <text xmlns="http://www.tei-c.org/ns/Examples">
+  <!-- ... -->
+  <pb facs="#c2Facs"></pb>
+  </text>
 ```
 
 ---

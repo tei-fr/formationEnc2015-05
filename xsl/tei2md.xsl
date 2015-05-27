@@ -57,13 +57,14 @@
     <xsl:text>name: inverse</xsl:text>
     <xsl:call-template name="newline"/>
     <xsl:text>layout: true</xsl:text>
+    <xsl:call-template name="newline"/>
     <xsl:text>class: inverse</xsl:text>
     <xsl:call-template name="newline"/>
   </xsl:template>
   
   <xsl:template match="titlePage">
     <xsl:call-template name="newline"/>
-    <!--<xsl:text>-\-\-</xsl:text>-->
+    <xsl:text>---</xsl:text>
     <xsl:call-template name="newline"/>
     <xsl:text>class: center middle</xsl:text>
     <xsl:call-template name="newline"/>

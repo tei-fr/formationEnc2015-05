@@ -18,9 +18,7 @@ class: center middle
 
 
 
-# 04-Édition critique
-
-# L’édition critique des sources manuscrites
+# 04-L’édition critique des sources manuscrites
 
 ## Formation TEI | ENC 26-29 mai 2015
 
@@ -28,10 +26,13 @@ class: center middle
 ![test](images/logo-ecole-nationale-des-chartes.png)
 
 ---
+layout: false
 class: center middle
 
 
 # Introduction
+
+???
 
 # Introduction
 
@@ -94,19 +95,22 @@ class: center middle
 `&lt;gap&gt;` passage ne pouvant pas être restitué pour des raisons matérielles
 
 ```xml
-<gap xmlns="http://www.tei-c.org/ns/Examples" reason="illegible" agent="ink-blot"></gap>
+<gap xmlns="http://www.tei-c.org/ns/Examples" 
+  reason="illegible" agent="ink-blot"></gap>
 ```
 
 `&lt;unclear&gt;` passage en partie illisible
 
 ```xml
-<unclear xmlns="http://www.tei-c.org/ns/Examples" agent="ink-blot" cert="low" resp="#EC"></unclear>
+<unclear xmlns="http://www.tei-c.org/ns/Examples" 
+  agent="ink-blot" cert="low" resp="#EC"></unclear>
 ```
 
 `&lt;suplied&gt;` restitution d'un passage manquant
 
 ```xml
-<supplied xmlns="http://www.tei-c.org/ns/Examples" reason="hole" source="#autreEd">les</supplied>
+<supplied xmlns="http://www.tei-c.org/ns/Examples" 
+  reason="hole" source="#autreEd">les</supplied>
 ```
 
 ???
@@ -118,7 +122,8 @@ Ne pas confondre `&lt;gap&gt;` et `&lt;space&gt;` qui sert à désigner un espac
 Plusieurs attributs issus du module `certainty` qui peuvent vous permettre de préciser le niveau de certitude des restitutions.
 
 ```xml
-<space xmlns="http://www.tei-c.org/ns/Examples" quantity="1" unit="cm"></space>
+<space xmlns="http://www.tei-c.org/ns/Examples" 
+  quantity="1" unit="cm"></space>
 ```
 
 ---
@@ -276,7 +281,8 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
 ## Localisation référencée
 
 ```xml
-<div xmlns="http://www.tei-c.org/ns/Examples" type="alignmentText" xml:id="cAlignmentText">
+<div xmlns="http://www.tei-c.org/ns/Examples" 
+  type="alignmentText" xml:id="cAlignmentText">
   <linkGrp>
     <!-- Front -->
     <link target="#c1Front #c2Front"></link>
