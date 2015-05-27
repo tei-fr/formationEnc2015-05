@@ -131,7 +131,7 @@ Enfin, le fait d’utiliser des identifiants uniques, a surtout l’avantage de 
 
 ---
 class: center middle
-
+name: part2
 
 ## Les corpus
 
@@ -202,17 +202,19 @@ Pour des groupes de textes, des documents composites, ou des corpus hétérogèn
 ## Utilisation de XInclude
 
 ```xml
-<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" 
+  xmlns:xi="http://www.w3.org/2001/XInclude">
   <teiHeader><!-- ... --></teiHeader>
-  <!-- Inclusion du fichier TEI du manuscrit des Ordres (O) -->
-  Fichier des Ordres non trouvé
-  <!-- Inclusion du fichier TEI du manuscrit des Commodités (C) -->
-  Fichier des Commodités non trouvé
+  <!-- inclusion d’un fichier avec XInclude -->
+  <xi:include href="sauval1724/gdpSauval1724.tei.xml" parse="xml">
+    <xi:fallback>Fichier de Sauval 1724 non trouvé</xi:fallback>
+  </xi:include>
 </teiCorpus>
 ```
 
 [XML Inclusions (XInclude) Version 1.0 (Second Edition), W3C Recommendation 15 November 2006.](http://www.w3.org/TR/xinclude/)
 
+???
 ## Utilisation de XInclude
 
 Pour faciliter la mise en œuvre du travail (par exemple pour répartir l'encodage entre des participants), il peut parfois être utile de traiter les éléments du corpus dans des fichiers séparés.
@@ -221,16 +223,20 @@ Pour l’inclusion, on s'appuie ici sur le standard XML du W3C XInclude.
 
 Attention&nbsp;! il ne faut pas oublier de déclarer l'espace de nom XInclude.
 
+---
+
 ## Utilisation de XInclude
 
 équivaut à :
 
 ```xml
-<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"><teiHeader>
-               <!-- ... --></teiHeader>
-            <!-- Inclusion du fichier TEI du manuscrit des Ordres (O) --><TEI>
-               <!-- contenu du fichier TEI --></TEI><TEI>
-               <!-- contenu du fichier TEI --></TEI></teiCorpus>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0" 
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <teiHeader><!-- ... --></teiHeader>
+  <!-- contenu du fichier TEI -->
+  </TEI>
+  <TEI><!-- contenu du fichier TEI --></TEI>
+</teiCorpus>
 ```
 
 ---
@@ -246,11 +252,12 @@ name: part3
 ## Description des figures (simple)
 
 ```xml
-<figure xmlns="http://www.tei-c.org/ns/Examples" xml:id="c2Pl0001" type="plate" facs="#c2FacsPl0001">
-                <head>L'église de Sainte-Sabine à Rome</head>
-                <figDesc>Plan de l'église</figDesc>
-                <graphic url="facs/full/facsC2Pl0001.jpg"></graphic>
-              </figure>
+<figure xmlns="http://www.tei-c.org/ns/Examples" 
+  xml:id="c2Pl0001" type="plate" facs="#c2FacsPl0001">
+  <head>L'église de Sainte-Sabine à Rome</head>
+  <figDesc>Plan de l'église</figDesc>
+  <graphic url="facs/full/facsC2Pl0001.jpg"></graphic>
+</figure>
 ```
 
 ---
@@ -259,7 +266,8 @@ name: part3
 ## Description des figures (plus élaborée)
 
 ```xml
-<figure xmlns="http://www.tei-c.org/ns/Examples" xml:id="c2Pl0001" type="plate" facs="#c2FacsPl0001">
+<figure xmlns="http://www.tei-c.org/ns/Examples" 
+  xml:id="c2Pl0001" type="plate" facs="#c2FacsPl0001">
   <head>Plan de l'église de Sainte-Sabine à Rome</head>
   <figDesc>
     <locus from="#c2F9v" n="p16">p. 16</locus>
@@ -285,8 +293,10 @@ name: part3
 <teiHeader><!-- ... --></teiHeader>
   <facsimile corresp="#c2ImagesLicence" xml:id="c2Facs">
     <surface xml:id="c2FacsPl0001">
-      <graphic n="full" mimeType="image/jpg" url="facs/full/facsC2Pl0001.jpg"></graphic>
-      <graphic n="thumb" mimeType="image/jpg" url="facs/thumbs/facsC2Pl0001.jpg"></graphic>
+      <graphic n="full" mimeType="image/jpg" 
+        url="facs/full/facsC2Pl0001.jpg"></graphic>
+      <graphic n="thumb" mimeType="image/jpg" 
+        url="facs/thumbs/facsC2Pl0001.jpg"></graphic>
     </surface><!-- ... -->
   </facsimile>
   <text><!-- ... --></text>
@@ -304,18 +314,22 @@ L’élément `&lt;facsimile&gt;` permet de fournir des artefacts numériques r�
 ## Traitement des facsimili
 
 ```xml
-<teiHeader xmlns="http://www.tei-c.org/ns/Examples"><!-- ... --></teiHeader>
-  <facsimile xmlns="http://www.tei-c.org/ns/Examples" corresp="#c2ImagesLicence" xml:id="c2Facs">
-    <surface xml:id="c2FacsPl0001">
-      <graphic n="full" mimeType="image/jpg" url="facs/full/facsC2Pl0001.jpg"></graphic>
-      <graphic n="thumb" mimeType="image/jpg" url="facs/thumbs/facsC2Pl0001.jpg"></graphic>
-    </surface>
-    <!-- ... -->
-  </facsimile>
-  <text xmlns="http://www.tei-c.org/ns/Examples">
+<teiHeader xmlns="http://www.tei-c.org/ns/Examples">
+  <!-- ... --></teiHeader>
+<facsimile xmlns="http://www.tei-c.org/ns/Examples" 
+  corresp="#c2ImagesLicence" xml:id="c2Facs">
+  <surface xml:id="c2FacsPl0001">
+    <graphic n="full" mimeType="image/jpg" 
+      url="facs/full/facsC2Pl0001.jpg"></graphic>
+    <graphic n="thumb" mimeType="image/jpg" 
+      url="facs/thumbs/facsC2Pl0001.jpg"></graphic>
+  </surface>
+  <!-- ... -->
+</facsimile>
+<text xmlns="http://www.tei-c.org/ns/Examples">
   <!-- ... -->
   <pb facs="#c2Facs"></pb>
-  </text>
+</text>
 ```
 
 ---
