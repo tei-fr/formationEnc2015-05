@@ -186,6 +186,28 @@ Pour produire un sous-ensemble de la TEI, on va donc très largement s’appuyer
 
 Le module tagdocs, qui sert au modèle TEI à produire ses spécifications formelles mais dont peut se servir pour préciser les spécifications.
 
+---
+
+# Attributs
+
+### `@add` : ajout d’un objet nouveau ex.
+```xml
+  <elementSpec ident="nouvelElement" mode="add"/>
+```
+
+### `@replace` : substitution de l’objet défini à l’objet désigné par `@ident`
+
+### `@delete` : supprime toute référence à l’objet désigné par `@ident`
+
+```xml
+  <elementSpec ident="name" mode="delete"/>
+```
+
+### `@change` : modification du contenu de l’objet
+
+```xml
+<elementSpec ident="p" mode="change">...</elementSpec>
+```
 
 ---
 
