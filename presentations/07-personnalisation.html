@@ -248,18 +248,19 @@ Il est enfin possible de déclarer sous forme de macros, les déclarations fréq
 # Sélection des modules
 
 ```xml
-  <schemaSpec ident="desgodetsSchemaTEI" docLang="fr" prefix="tei_" xml:lang="en">
-    <moduleRef key="tei"></moduleRef>
-    <moduleRef key="header"></moduleRef>
-    <moduleRef key="core"></moduleRef>
-    <moduleRef key="textstructure"></moduleRef>
-    <moduleRef key="msdescription"></moduleRef>
+  <schemaSpec ident="desgodetsSchemaTEI" docLang="fr" 
+    prefix="tei_" xml:lang="en">
+    <moduleRef key="tei"/>
+    <moduleRef key="header"/>
+    <moduleRef key="core"/>
+    <moduleRef key="textstructure"/>
+    <moduleRef key="msdescription"/>
     <!-- description des manuscrits -->
-    <moduleRef key="transcr"></moduleRef>
+    <moduleRef key="transcr"/>
     <!-- transcription des sources primaires -->
-    <moduleRef key="figures"></moduleRef>
+    <moduleRef key="figures"/>
     <!-- tableaux et figures -->
-    <moduleRef key="namesdates"></moduleRef>
+    <moduleRef key="namesdates"/>
     <!-- noms, dates, personnes et lieux -->
   </schemaSpec>
 ```
@@ -285,12 +286,14 @@ Dans le fichier ODD, à l’intérieur de l’élément `&lt;schemaSpec&gt;`, un
 
 
 ```xml
-  <schemaSpec ident="monSchema" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml">
-    <moduleRef key="tei"></moduleRef>
-    <moduleRef key="core"></moduleRef>
-    <moduleRef key="header"></moduleRef>
-    <moduleRef key="textstructure" except="div1 div2 div3 div4 div5 div6 div7 group"></moduleRef>
-    <moduleRef key="namesdates" include="persName placeName"></moduleRef>
+  <schemaSpec ident="monSchema" 
+    source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml">
+    <moduleRef key="tei"/>
+    <moduleRef key="core"/>
+    <moduleRef key="header"/>
+    <moduleRef key="textstructure" except="div1 div2 div3 
+      div4 div5 div6 div7 group"/>
+    <moduleRef key="namesdates" include="persName placeName"/>
   </schemaSpec>
 ```
 
@@ -356,13 +359,13 @@ On peut également modifier la liste des attributs possibles pour un élément. 
       <rng:text xmlns:rng="http://relaxng.org/ns/structure/1.0"></rng:text>
     </datatype>
     <valList type="closed" mode="replace">
-      <valItem ident="fire"></valItem>
-      <valItem ident="moisture"></valItem>
-      <valItem ident="rubbing"></valItem>
-      <valItem ident="smoke"></valItem>
-      <valItem ident="tear"></valItem>
-      <valItem ident="water"></valItem>
-      <valItem ident="unknown"></valItem>
+      <valItem ident="fire"/>
+      <valItem ident="moisture"/>
+      <valItem ident="rubbing"/>
+      <valItem ident="smoke"/>
+      <valItem ident="tear"/>
+      <valItem ident="water"/>
+      <valItem ident="unknown"/>
     </valList>
   </attDef>
 ```
@@ -392,10 +395,10 @@ Bientôt remplacé par une déclaration entièrement fournie en ODD
     <attList>
       <attDef ident="mimeType" mode="change">
         <valList type="closed" mode="replace">
-          <valItem ident="image/jpg"></valItem>
-          <valItem ident="application/pdf"></valItem>
-          <valItem ident="application/tei+xml"></valItem>
-          <valItem ident="application/xml"></valItem>
+          <valItem ident="image/jpg"/>
+          <valItem ident="application/pdf"/>
+          <valItem ident="application/tei+xml"/>
+          <valItem ident="application/xml"/>
         </valList>
       </attDef>
     </attList>
@@ -458,12 +461,11 @@ Le processeur ODD, sera un outil logiciel capable
 
 * produire un document XML avec la documentation des composants
 
-
 ---
 
 # TP Utilisation de Roma
 
-Utiliser Roma pour produire un Odd et le modifier
+Utiliser Roma pour produire un ODD et le modifier
 
 
 ---
@@ -483,8 +485,14 @@ Utiliser Roma pour produire un Odd et le modifier
 
 * allez dans le menu "Aide" et sélectionnez "Gérer les add-ons"
 
-* si l’add-on n’est pas présent, l’ajouter : aller dans " préférences", sélectionner "Add-ons" et ajouter http://www.tei-c.org/release/oxygen/updateSite.oxygen dans la liste des "mise à jour URLs Sites"
+* si l’add-on n’est pas présent, l’ajouter :
 
+Installer l’add-on TEI à jour sous <oXygen/>
+  
+  - Dans `Options/Préférences/Association de type de document` :  tout désactiver
+  - Dans `Options/Préférences/Add-ons`, ajouter http://www.tei-c.org/release/oxygen/updateSite.oxygen **appliquer** et accepter
+  - Dans `Aide/Gérer les Add-ons/Installer`, installer
+  - Lorsque l’installation est terminée : `Options/Préférences/Association de type de document` => tout activer, appliquer, accepter
 
 ---
 class: center middle
