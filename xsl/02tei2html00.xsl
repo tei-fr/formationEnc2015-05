@@ -24,14 +24,7 @@
         <title>
           <!-- TODO écrire une règle (de type pull) pour créer titre de la page (ex002) -->
           <!-- TODO écrire une règle avec une instruction conditionnelle (xsl:if) pour le sous-titre (ex004) -->
-          <xsl:value-of select="normalize-space(//titleStmt/title[1])"/>
-          <xsl:if test="//titleStmt/title[@type = 'complement']">
-            <xsl:value-of
-              select="concat(' : ', //titleStmt/title[@type = 'complement'])"/>
-          </xsl:if>
         </title>
-        <meta name="description" content="{description}"/>
-        <meta name="author" content="{author}"/>
         <meta name="keywords" content="{keywords}"/>
         <link rel="copyright" href="{copyright}"/>
         <link href="css/main.css" rel="stylesheet"/>

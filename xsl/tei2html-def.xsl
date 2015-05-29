@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
 Titre      : Programme XSLT pour la transformation en XHTML simple de fichier TEI réalisé à partir de manuscrits
-Auteur     : Florence Clavaud (Ecole nationale des chartes), modifié par Emmanuel Château
+Auteur     : Florence Clavaud (Ecole nationale des chartes), Augmenté par Emmanuel Chateau
 Audience     : participants à la formation sur TEI donnée an mars 2011 à l'Ecole des chartes
 Conditions d'utilisation : licence Creative Commons paternité-pas d'utilisation commerciale-modification autorisée dans les mêmes conditions etc.
-Date      : 10 mars 2011, relecture 12 avril 2011, mai 2015
+Date      : 10 mars 2011, relecture 12 avril 2011, adaptation xslt2 mai 2015
 -->
+
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
   exclude-result-prefixes="xs" xpath-default-namespace="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml">
 
   <xsl:output omit-xml-declaration="no" indent="yes" method="html" version="5.0" encoding="UTF-8"/>
-  <!-- <xsl:output omit-xml-declaration="no" indent="yes" method="xml" encoding="UTF-8"/> -->
-  <!-- <xsl:output method="xml" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes" /> -->
-  
-  <xsl:variable name="commentaires"/>
+  <!--<xsl:output omit-xml-declaration="no" indent="yes" method="xml" encoding="UTF-8"/>-->
+  <!--<xsl:output method="xml" doctype-system="about:legacy-compat" encoding="UTF-8" indent="yes" />-->
 
   <xsl:strip-space elements="*"/>
 
+  <xsl:param name="commentaires"/>
   <xsl:template match="comment() | processing-instruction()"/>
-
-  <!-- générer le squelette de la page (ex001) -->
   <xsl:template match="/TEI">
+    <!-- on génère le squelette de la page HTML -->
     <html>
       <!-- métadonnées simples. Pourraient être complétées pour générer des balises meta en établissant une correspondance avec le modèle Dublin Core -->
       <head>
@@ -30,8 +29,12 @@ Date      : 10 mars 2011, relecture 12 avril 2011, mai 2015
             <xsl:value-of select="concat(' : ', //titleStmt/title[@type = 'complement'])"/>
           </xsl:if>
         </title>
-        <link rel="stylesheet" type="text/css" href="css/acteRoyal.css"/>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="acteRoyal.css"/>
+        <meta name="keywords" content="{keywords}"/>
+        <link rel="copyright" href="{copyright}"/>
+        <link href="css/main.css" rel="stylesheet"/>
+        <script src="//code.jquery.com/jquery-2.1.4.min.js"/>
+        <!-- ajouter js pour lt IE 9 -->
       </head>
       <!-- le corps de la page -->
       <body>
