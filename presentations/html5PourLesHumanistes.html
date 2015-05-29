@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="themes/remark-dark-em.css" rel="stylesheet" media="all" type="text/css"/>
+  </head>
+  <body>
+    <textarea id="source">
+title: html5PourLesHumanistes.html
+description: emchateau, ENC 27-30 octobre 2014
+theme: theme/remark-dark.css
+name: inverse
+layout: true
+class: inverse
+
+---
+
+class: center middle
+
+# HTML5 pour les Humanistes
+Formation TEI | ENC 26-29 mai 2015
+
+.footnote[[Répertoire GitHub](https://github.com/tei-fr/formationEnc2015-05) | [Programme](00-programme.html)]
+
+---
+
+name: introduction
+class: center middle
+
+# Introduction
+
+???
+
+HTML est le langage unificateur du World Wide Web. C'est au moyen des simples balises qu'il contient que l'on crée un réseau de documents hyperliés englobant tout à la fois Amazon, eBay et Wikipédia ou de simples blogs.
+
+La dernière itération de ce langage est HTML5, elle encore en partie en cours de normalisation mais est déjà très largement utilisée.
+
+---
+
+name: historique
+layout: false
+
+# Historique (en bref) de HTML5
+
+- .red[H]yper.red[T]ext Markup .red[L]anguage inventé par Tim Berners-Lee en 1991 à partir de SGML
+
+- première spécification officielle HTML 2.0 par l'IETF
+
+- plusieurs vagues de révision jusqu'à la publication de HTML 4.01 en 1999
+
+- nouvelle révision XHTML 1.0 (identique à HTML4 mais syntaxe plus contraignante) // CSS
+
+- XHMTL 1.1 (pur XML)
+
+- XHTM2 : schisme WHATWG TF (Web Hypertext Application Technology Working Group) vs W3C
+
+- HTML5 octobre 2006 réunification
+
+???
+
+Guerre des navigateurs
+Fonctionnalités propres
+
+Réouverture de la guerre
+
+Au passage, bien saisir que ces standard, comme la TEI, sont le produits de convention et de consensus. En l'espèce potentiellement fragiles.
+
+HTML5 un langage moins contraignant
+Pas du XML, néanmoins peut être écrit sen XML.
+
+---
+
+# Composants d'un fichier HTML5
+
+- un prologue
+
+- `html` élément racine
+
+- `head` sous-élement d'en-tête du fichier
+
+- `body` sous-élément du contenu de la page
+
+---
+
+# .red[Composants] d'un fichier HTML5
+
+(document polyglote minimal)
+
+```xml
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+  <head>
+    <title>Exemple</title>
+  </head>
+  <body>
+    <!-- contenu de la page respectant la syntaxe XML --></body>
+</html>
+```
+
+---
+
+# Le .red[header] HTML
+
+### `title` titre
+
+### `meta` métadonnées de la page
+
+### `link` liens (p. ex. vers une feuille de style)
+
+### `script` script JavaScript
+
+
+---
+
+# Le .red[Header] HTML (exemple)
+
+```html
+<head>
+  <meta charset="utf-8">
+  <title>Exemple</title>
+  <meta name="description" content="description de la page"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="app.js" />
+  <!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+</head>
+```
+
+
+---
+
+# La .red[sémantique] de HTML5
+
+### structures
+
+- `header` pour l'en-tête de la page
+
+- `nav` pour la navigation
+
+- `main` contenu principal
+
+- `footer` pour le pied de page
+
+- `section` section d'une page
+
+- `article` article
+
+- `aside` contenu accessoire ou encadré
+
+- `div` division
+
+- `p` paragraphe
+
+- `h1`, `h2`, `h3`, `h4` titraisons
+
+- `blockquote` citation
+
+# La sémantique de HTML5
+
+### .red[structures, exemple]
+
+```html
+<body>
+  <header>
+    <h1>Titre de la page</h1>
+  </header>
+  <nav>
+    <!-- navigation -->
+  <nav>
+  <div type="main">
+    <section>
+      <h1>Titre section</h1>
+      <article>
+        <h2>Titre article 1</h2>
+      </article>
+      <aside></aside>
+      <article>
+        <h2>Titre article 2</h2>
+      </article>
+      <aside></aside>
+    </section>
+    <section><!-- ... --></section>
+  </div>
+</body>
+```
+
+---
+
+# La .red[sémantique] de HTML5
+
+### micro-structures (éléments in-line)
+
+- `ul` et `li` pour les listes
+
+- `emph` et `strong` pour les emphases et les mise en valeur
+
+- `mark` marquage
+
+
+
+- ...
+
+
+---
+
+# Liens hypertextes `a`
+
+### lien hypertexte
+
+```html
+<a href="http://www.monsite.fr">Visitez mon site !</a>
+```
+
+```html
+<a href="#ancre2">lien interne</a>
+```
+
+### cible
+
+```html
+<div id="ancre1">
+  <p>Du texte</p>
+</div>
+<div id="ancre2">
+  <p>Du texte</p>
+</div>
+```
+
+---
+
+# Contenus multimédias
+
+### `img` pour insérer une image
+
+```html
+<img src="chemin/vers/image.png" alt="à propos de cette image" />
+```
+
+```html
+<figure>
+  <img src="chemin/vers/image.png" alt="à propos de cette image" />
+  <figcaption>Légende de l'image</figcaption>
+</figure>
+```
+
+### `video` pour insérer un contenu vidéo
+
+```html
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  votre navigateur ne supporte pas le tag vidéo
+</video>
+```
+
+
+---
+
+# Exemple de navigation
+
+```html
+<header>
+  <h1>Mon super site HTML5</h1>
+  <nav>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#aPropos">À propos</a></li>
+      <li><a href="#actualites">Actualités</a></li>
+      <li><a href="#contacts">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+```
+
+
+---
+
+template: inverse
+class: center middle
+
+# Sources et bibliographie
+
+---
+
+name: biblio
+layout: false
+
+# Orientations bibliographiques
+
+- Can I use ?  http://caniuse.com
+
+- html5 Doctor, Helping you implement HTML5 today http://html5doctor.com
+
+- Alsacréations, Apprendre les standards du web http://www.alsacreations.com/apprendre/
+
+- [HTML5 A vocabulary and associated APIs for HTML and XHTML, W3C Last Call Working Draft, 17 june 2014](http://www.w3.org/TR/html5/) et en particulier http://www.w3.org/TR/html5/introduction.html#html-vs-xhtml et
+http://www.w3.org/TR/html5/the-xhtml-syntax.html
+
+- [Polyglot Markup: A robust profile of the HTML5 vocabulary, W3C Editor's Draft, 07 may  2014](http://dev.w3.org/html5/html-polyglot/html-polyglot.html)
+
+- Jeremy Keith, HTML5 pour les Web Designer, Paris, Eyrolles, 2010.
+
+---
+
+template: inverse
+class: center middle
+
+# Mise [en pratique](xslt01.html) avec XSLT
+
+.footnote[[revenir au début](#index) | [programme](00-programme.html)]
+
+
+</textarea>
+<!--<script src="http://gnab.github.com/remark/downloads/remark-0.6.5.min.js" type="text/javascript"></script>-->
+    <script src="js/remark-0.6.5.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var hljs = remark.highlighter.engine;
+</script>
+<script src="remark.language.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var slideshow = remark.create({
+      highlightStyle: 'monokai',
+      highlightLanguage: 'remark'
+    }) ;
+</script>
+
+</body>
+</html>
