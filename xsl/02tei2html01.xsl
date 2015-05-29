@@ -115,7 +115,7 @@
         <!-- (pour la décoration) -->
     </xsl:template>
     
-    <!-- section pour l'ensemble du document -->
+    <!-- section pour l’ensemble du document -->
     <xsl:template match="body">
         <section class="text">
             <xsl:apply-templates />
