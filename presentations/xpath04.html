@@ -11,110 +11,11 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-# 04-XPath [TP explorer un document XML-TEI avec XPath]
+# 04-XPath TP explorer un document XML-TEI avec XPath
 
 Formation TEI | ENC 26-29 mai 2015
 
 .footnote[[Répertoire GitHub](https://github.com/tei-fr/formationEnc2015-05) | [Programme](00-programme.html)]
-
-
----
-template: inverse
-
-## Les fonctions XPath
-
----
-layout: false
-## Fonctions dans des expressions XPath
-
-Voici quelques unes des fonctions XPath communes :
-
-- `concat()` concaténation
-```xpath
-concat('ligneN', l/@n)
-```
-
-- ``normalize-space()` normaliser les espaces
-```xpath
-normalize-space(//lg/l)
-```
-
-- ``string()` valeur textuelle du nœud
-```xpath
-string(/l[@n="2"])
-```
-
-Liste complète des fonctions XPath dans la spécification XPath (http://www.w3.org/TR/xpath)
-
-???
-### Fonctions dans des expressions XPath
-
-XPath propose également un certain nombre de fonctions prédéfinies qui permettent de manipuler des données à partir de noeuds ou de fournir des prédicats.
-
-Ces fonctions peuvent s'avérer très utiles pour manipuler des chaînes textuelles, vérifier la valeur d'une clef de travail ou son type, ou encore réaliser des calculs.
-
-Voici quelques unes des fonctions XPath communes :
-
-`concat()`
-Cette fonction permet de combiner un nombre quelconque de chaînes de caractères avec des données extraites de noeuds en respectant l'ordre dans lequel les paramètres sont spécifiés.
-On peut indiquer des chemins XPath en tant que paramètres.
-Les chaînes de caractères littérales sont fournies entre apostrophes.
-Par exemple :
-concat('chaîneDeCaractères', {expressionXPath})
-
-
-`normalize-space()`
-Permet d'enlever tous les espaces de début et de fin du paramètre d'entrée et de normaliser l'ensemble de l'espace dans l'entrée en caractères espace et sauts de ligne uniques. Par exemple :
-normalize-space(/Job/Address/Line1)
-
-`string()`
-Permet de convertir le paramètre en type de données chaîne. Cette fonction permet de s'assurer que des noeuds numériques ou de date sont traités en tant que chaînes. Par exemple :
-string(/PurchaseOrder/VendorID)
-
-`translate()`
-Permet de remplacer des caractères par d'autres caractères dans le premier paramètre que vous spécifiez. Le deuxième paramètre est le ou les caractères à remplacer et le troisième paramètre correspond aux caractères de remplacement. Cette fonction peut s'avérer utile pour vous assurer que des clés de travail sont toutes en majuscules, par exemple.
-translate(/Issue/ShortDescr,
-
-'abcdefghijklmnopqrstuvwxyz',
-
-'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
-
-Vous trouverez la liste complète des fonctions XPath dans la spécification XPath (http://www.w3.org/TR/xpath).
-
----
-## Autres fonction utiles
-
-Voici d'autres fonctions XPath très utiles :
-
-- `false()`, `true()`, `not(arg)` booléennes
-
-```xpath
-//l[not(@n="5")]
-```
-- `number(arg)`, `count(sequence)`, sum(sequence),...
-```xpath
-count(//l)
-```
-- `position()`
-```xpath
-position(//l[@n="6"])
-```
-
-Les .red[opérateurs] `=`, `!=`, `<`, `>`, `<=`, `>=` peuvent être employées pour les types numériques, chaînes et boooléens.
-
-On dispose également des .red[connecteurs logiques] `and`et `or`.
-
-Liste complète des fonctions XPath dans la spécification XPath (http://www.w3.org/TR/xpath)
-
-???
-
-## les fonctions booléennes peuvent vous permettre de réaliser des tests sur des arguments
-
-## Les fonctions numériques peuvent vous permettre des réaliser des opérations arithmétiques sur des séquences de nœuds
-
-`count()`
-Vous permet de compter le nombre de noeuds dans le paramètre que vous spécifiez. En règle générale, le paramètre est une expression de chemin XPath qui identifie plusieurs noeuds, par exemple, tous les noeuds Item qui sont des enfants de PODetail. Par exemple :
-count({expressionXPath})
 
 ---
 
@@ -309,9 +210,9 @@ layout: false
 name: last-page
 template: inverse
 
-## À demain!
+## À tout à l’heure !
 
-.left[.footnote[[revenir au début](#index)]]
+.footnote[[revenir au début](#index) | [programme](00-programme.html)]
 
 </textarea>
 <!--<script src="http://gnab.github.com/remark/downloads/remark-0.6.5.min.js" type="text/javascript"></script>-->

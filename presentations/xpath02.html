@@ -11,7 +11,7 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-# 02-XPath [Les expressions XPath]
+# 02-XPath Les expressions XPath
 
 Formation TEI | ENC 26-29 mai 2015
 
@@ -120,24 +120,24 @@ layout: false
 ]
 
 .right-column[
-## Les types d'expressions XPath
+## Les types d’expressions XPath
 
-XPath permet d'écrire des .red[expressions de chemin] (`path expressions`) qui permettent de sélectionner des fragments d'un document XML.
+XPath permet d’écrire des .red[expressions de chemin] (`path expressions`) qui permettent de sélectionner des fragments d’un document XML.
 
 Mais les expressions XPath permettent aussi :
 - d’effectuer des .red[calculs] sur le contenu des nœuds sélectionnés,
-- d'écrire des .red[tests] pour sélectionner des nœuds,
+- d’écrire des .red[tests] pour sélectionner des nœuds,
 - etc.
 ]
 
 ???
-## Types d'expressions XPath
+## Types d’expressions XPath
 
-XPath permet d'écrire des .red[expressions de chemin] (`path expressions`) qui permettent de sélectionner des fragments d'un document XML.
+XPath permet d’écrire des .red[expressions de chemin] (`path expressions`) qui permettent de sélectionner des fragments d’un document XML.
 
 Mais les expressions XPath permettent aussi :
 - d’effectuer des .red[calculs] sur le contenu des nœuds sélectionnés,
-- d'écrire des .red[tests] pour sélectionner des nœuds,
+- d’écrire des .red[tests] pour sélectionner des nœuds,
 - etc.
 
 ---
@@ -147,7 +147,7 @@ Mais les expressions XPath permettent aussi :
 ]
 
 .right-column[
-## Évaluation d'une expression XPath
+## Évaluation d’une expression XPath
 
 - En XPath 2.0, toutes les valeurs manipulées sont des .red[séquences] (`sequences`).
 
@@ -157,7 +157,7 @@ Mais les expressions XPath permettent aussi :
 ]
 
 ???
-## Évaluation d'une expression XPath
+## Évaluation d’une expression XPath
 
 En XPath 2.0, toutes les valeurs manipulées sont des .red[séquences] (`sequences`).
 
@@ -174,21 +174,21 @@ En XPath 2.0, toutes les valeurs manipulées sont des .red[séquences] (`sequen
 .right-column[
 ## types XPath
 
-Une valeur atomique est une valeur appartenant à l'espace de valeur d'un .red[type atomique].
+Une valeur atomique est une valeur appartenant à l’espace de valeur d’un .red[type atomique].
 
 XPath 2.0 reconnaît comme types atomiques les types atomiques primitifs de [XML Schema](http://www.w3.org/TR/xmlschema-2/), ainsi que plusieurs types qui en dérivent.
 
-La valeur d'une expression XPath 2.0 est .red[toute séquence autorisée par le modèle de données].
+La valeur d’une expression XPath 2.0 est .red[toute séquence autorisée par le modèle de données].
 ]
 
 ???
 ## types XPath
 
-Une valeur atomique est une valeur appartenant à l'espace de valeur d'un type atomique.
+Une valeur atomique est une valeur appartenant à l’espace de valeur d’un type atomique.
 
 XPath 2.0 reconnaît comme types atomiques les types atomiques primitifs de XML Schema, ainsi que plusieurs types qui en dérivent.
 
-La valeur d'une expression XPath 2.0 est toute séquence autorisée par le modèle de données.
+La valeur d’une expression XPath 2.0 est toute séquence autorisée par le modèle de données.
 
 ---
 background-image: url(../images/type-hierarchy.png)
@@ -207,7 +207,7 @@ background-image: url(../images/type-hierarchy.png)
 ]
 
 .right-column[
-## Exemple d'expressions XPath
+## Exemple d’expressions XPath
 
 `12` est une .red[expression littérale] dénotant une valeur de type `xs:integer`
 
@@ -218,7 +218,7 @@ background-image: url(../images/type-hierarchy.png)
 auteur = "Dupont" est expression dont la valeur est de type `xs:boolean`
 ]
 ???
-## Exemple d'expressions XPath
+## Exemple d’expressions XPath
 
 `12` est une .red[expression littérale] dénotant une valeur de type `xs:integer`
 
@@ -228,13 +228,13 @@ auteur = "Dupont" est expression dont la valeur est de type `xs:boolean`
 
 auteur = "Dupont" est expression dont la valeur est de type `xs:boolean`
 
-(En programmation informatique, une **valeur littérale** est une valeur donnée explicitement dans le code source d'un programme)
+(En programmation informatique, une **valeur littérale** est une valeur donnée explicitement dans le code source d’un programme)
 
-## L'utilisation par XPath 2.0 d'un système de types rigoureux a de nombreux avantages.
+## L’utilisation par XPath 2.0 d’un système de types rigoureux a de nombreux avantages.
 
-Il offre notamment la possibilité de détecter des erreurs lors d'une phase d'analyse statique.
+Il offre notamment la possibilité de détecter des erreurs lors d’une phase d’analyse statique.
 
-Mais il peut poser des problèmes de compatibilité avec XPath 1.0, bien qu'ayant été conçu pour être compatible, les modèles de données présentent plusieurs différences notables.
+Mais il peut poser des problèmes de compatibilité avec XPath 1.0, bien qu’ayant été conçu pour être compatible, les modèles de données présentent plusieurs différences notables.
 
 ---
 .left-column[
@@ -244,21 +244,21 @@ Mais il peut poser des problèmes de compatibilité avec XPath 1.0, bien qu'aya
 .right-column[
 ## Les expressions de chemins
 
-Comme nous venons de le voir, XPath permet d'écrire différents types d'expressions
+Comme nous venons de le voir, XPath permet d’écrire différents types d’expressions
 
 - arithmétiques ex. `1+2`
 - booléennes ex. `true()`
 - etc.
 
-Parmi ces expressions, celles de chemins (`path expressions`) représentent le cœur de ce langage dans la mesure où elles permettent de .red[sélectionner une séquence de nœuds] en spécifiant un chemin à suivre à partir d'un point de départ.
+Parmi ces expressions, celles de chemins (`path expressions`) représentent le cœur de ce langage dans la mesure où elles permettent de .red[sélectionner une séquence de nœuds] en spécifiant un chemin à suivre à partir d’un point de départ.
 ]
 
 ???
 ## Expressions de chemins
 
-Comme nous venons de le voir, XPath permet d'écrire différents types d'expressions (arithmétiques, booléennes, etc.).
+Comme nous venons de le voir, XPath permet d’écrire différents types d’expressions (arithmétiques, booléennes, etc.).
 
-Parmi ces expressions, les expressions de chemins (`path expressions`) représentent le cœur de ce langage dans la mesure où elles permettent de **sélectionner une séquence de nœuds** en spécifiant un chemin à suivre à partir d'un point de départ (la racine ou un autre nœud de la structure)
+Parmi ces expressions, les expressions de chemins (`path expressions`) représentent le cœur de ce langage dans la mesure où elles permettent de **sélectionner une séquence de nœuds** en spécifiant un chemin à suivre à partir d’un point de départ (la racine ou un autre nœud de la structure)
 
 ---
 .left-column[
@@ -267,7 +267,7 @@ Parmi ces expressions, les expressions de chemins (`path expressions`) représen
 
 .right-column[
 ## Les expressions de chemins
-### L'analogie avec les systèmes de fichier
+### L’analogie avec les systèmes de fichier
 
 Chemin absolu
 
@@ -283,23 +283,23 @@ formENC2014/xpath01.tei.xml
 ```]
 
 ???
-Pour comprendre cette notion de chemin, on peut faire l'analogie avec d'autres structures hiérarchiques comme les systèmes de fichiers Unix où il est nécessaire de pouvoir noter le chemin menant à un fichier ou un groupe de fichiers spécifiques.
+Pour comprendre cette notion de chemin, on peut faire l’analogie avec d’autres structures hiérarchiques comme les systèmes de fichiers Unix où il est nécessaire de pouvoir noter le chemin menant à un fichier ou un groupe de fichiers spécifiques.
 Par exemple, le système de fichiers, dont la racine a pour nom /.
 
-Dans ce système, un fichier est désigné par un nom qui correspond au chemin (`path`) que l'on doit suivre dans la structure pour atteindre ce fichier.
-Le chemin peut partir de la racine, on parle alors d'un chemin absolu. Ou il peut partir d'un autre point du système, on parle dans ce cas d'un chemin relatif, ce chemin est dit relatif car son interprétation dépend de l'endroit où l'on se trouve.
+Dans ce système, un fichier est désigné par un nom qui correspond au chemin (`path`) que l’on doit suivre dans la structure pour atteindre ce fichier.
+Le chemin peut partir de la racine, on parle alors d’un chemin absolu. Ou il peut partir d’un autre point du système, on parle dans ce cas d’un chemin relatif, ce chemin est dit relatif car son interprétation dépend de l’endroit où l’on se trouve.
 
-Dans un chemin Unix, chaque pas (ou étape) est séparé par le caractère / qui permet de passer d'un niveau de la structure à l'autre.
+Dans un chemin Unix, chaque pas (ou étape) est séparé par le caractère / qui permet de passer d’un niveau de la structure à l’autre.
 
-Par exemple, le chemin absolu : /Users/emmanuelchateau/formENC2014/xpath01.tei.xml désigne, le fichier xpath01.tei.xml que l'on peut atteindre en partant de la racine puis en passant successivement par les répertoires Users, emmanuelchateau et formENC2014.
+Par exemple, le chemin absolu : /Users/emmanuelchateau/formENC2014/xpath01.tei.xml désigne, le fichier xpath01.tei.xml que l’on peut atteindre en partant de la racine puis en passant successivement par les répertoires Users, emmanuelchateau et formENC2014.
 
-L'interpréation de formENC2014/xpath01.tei.xml n'est, quant à elle, pas unique. Elle dépend de l'endroit où l'on se trouve quand l'on saisit ce chemin. Si l'on se trouve dans le répertoire /Users/emmanuelchateau, il désigne le même fichier que le chemin absolu précédent. Mais, si l'on se trouve dans le répertoire usr et que ce répertoire contenait aussi des répertoires emmanuelchateau et formENC2014, et un fichier également nommé xpath01.tei.xml, alors ce chemin relatif désignerait un fichier différent.
+L’interpréation de formENC2014/xpath01.tei.xml n’est, quant à elle, pas unique. Elle dépend de l’endroit où l’on se trouve quand l’on saisit ce chemin. Si l’on se trouve dans le répertoire /Users/emmanuelchateau, il désigne le même fichier que le chemin absolu précédent. Mais, si l’on se trouve dans le répertoire usr et que ce répertoire contenait aussi des répertoires emmanuelchateau et formENC2014, et un fichier également nommé xpath01.tei.xml, alors ce chemin relatif désignerait un fichier différent.
 
 Cette analogie avec les systèmes de fichier présente cependant des limites.
-- Tout d'abord, XPath est destiné à manipuler des structures XML composées de types de nœuds (éléments, attributs, commentaires, textes, instruction de traitements, etc.) bien plus variées que les seuls fichiers et répertoires d'un système de fichiers.
-- Enfin, les concepteurs de XPath ont développé des mécanismes de parcours beaucoup plus sophistiqués que la simple navigation père/fils que l'on rencontre dans les systèmes de fichiers. Cette précision dans l'identification repose sur la notion d'axes XPath.
+- Tout d’abord, XPath est destiné à manipuler des structures XML composées de types de nœuds (éléments, attributs, commentaires, textes, instruction de traitements, etc.) bien plus variées que les seuls fichiers et répertoires d’un système de fichiers.
+- Enfin, les concepteurs de XPath ont développé des mécanismes de parcours beaucoup plus sophistiqués que la simple navigation père/fils que l’on rencontre dans les systèmes de fichiers. Cette précision dans l’identification repose sur la notion d’axes XPath.
 
-C'est maintenant ce que nous allons voir !
+C’est maintenant ce que nous allons voir !
 
 ---
 
@@ -315,26 +315,26 @@ template: inverse
 
 
 ???
-Avant tout, il est très important de comprendre que pour qu'une expression XPath puisse opérer sur un document XML, ce dernier doit au préalable être traduit en une instance de ce modèle de donnée.
+Avant tout, il est très important de comprendre que pour qu’une expression XPath puisse opérer sur un document XML, ce dernier doit au préalable être traduit en une instance de ce modèle de donnée.
 
-Plusieurs sérialisation d'un document XML sont possibles. La représentation graphique d'un document XML peut nous permettre de mieux comprendre les axes.
+Plusieurs sérialisation d’un document XML sont possibles. La représentation graphique d’un document XML peut nous permettre de mieux comprendre les axes.
 
-Tout à l'heure nous avons représenté dans cet arbre les éléments du documents sous la forme suivante :
+Tout à l’heure nous avons représenté dans cet arbre les éléments du documents sous la forme suivante :
 - nœud éléments par des carrés
 - nœud attributs par des ovales
 - nœud de type texte sans bordure
 - les relations père/fils entre les nœuds sont notées par un trait en gras
 - les relations entre un élément et son attribut sont notées par un trait pointillé
 
-C'est à partir de cet arbre que l'on va examiner les différents axes spécifiés dans le modèle de données.
+C’est à partir de cet arbre que l’on va examiner les différents axes spécifiés dans le modèle de données.
 
 En XPath, on peut effectuer des déplacements selon des axes variés.
 
 Par exemple, depuis le nœud <lg> au milieu de la diapositive qui nous sert de contexte initial, on pourrait faire un pas vers :
-- le nœud père <div>, on utilise alors l'axe parent
-- le nœud fils <l>, on utilise alors l'axe child
-- le nœud attribut type, on utilise alors l'axe attribut
-- le nœud frère <lg> qui le précède, on utilise alors l'axe preceding-sibling
+- le nœud père <div>, on utilise alors l’axe parent
+- le nœud fils <l>, on utilise alors l’axe child
+- le nœud attribut type, on utilise alors l’axe attribut
+- le nœud frère <lg> qui le précède, on utilise alors l’axe preceding-sibling
 - etc.
 
 ---
@@ -349,36 +349,36 @@ Par exemple, depuis le nœud <lg> au milieu de la diapositive qui nous sert de c
 - `descendant` : nœuds de type `element`, `text`, `comment`, `processing instruction` fils, petits-fils et tous les descendants du nœud contexte
 - `descendant-or-self` : nœuds de type `element`, `text`, `comment`, processing-instruction` qui descendent du nœud contexte ainsi que le nœud contexte lui-même
 - `following-sibling` : tous les nœuds de type `element`, `text`, `comment`, `processing instruction`, frères droits du nœud contexte.
-- `following` : tous les nœuds de type `element`, `texte`, `comment` ou `processing instruction` situés après le nœud contexte (à l'exception des descendants)
+- `following` : tous les nœuds de type `element`, `texte`, `comment` ou `processing instruction` situés après le nœud contexte (à l’exception des descendants)
 - `attribute` : les nœuds de type `attribute` du nœud contexte
 - `namespace` : les nœuds de type `namespace`
 - `processing instruction`, qui descendent du nœud contexte
 ]
 
 ???
-XPath distingue ainsi plusieurs catégories d'axes de déplacement dans l'abre XML.
+XPath distingue ainsi plusieurs catégories d’axes de déplacement dans l’abre XML.
 ## Les axes de type .red[forward axes]
 
-- `child` : sélectionne tous les enfants du nœud contexte, dans l'ordre du document.
-L'axe child ne sélectionne rien pour tous les nœuds qui ne sont ni un nœud document ni un nœud élément.
-Rappel : les enfants d'un nœud élément n'incluent pas ses attributs ou espaces de noms, seulement le nœuds textuels, les nœuds de type élément, instruction de traitement et commentaire.
+- `child` : sélectionne tous les enfants du nœud contexte, dans l’ordre du document.
+L’axe child ne sélectionne rien pour tous les nœuds qui ne sont ni un nœud document ni un nœud élément.
+Rappel : les enfants d’un nœud élément n’incluent pas ses attributs ou espaces de noms, seulement le nœuds textuels, les nœuds de type élément, instruction de traitement et commentaire.
 
-- `descendant` : sélectionne tous les enfants du nœuds contexte et leurs enfants, et ainsi de suite récursivement dans l'ordre du document.
-Si le nœud contexte est un élément, l'axe descendant contient tous les nœuds texte, élément, commentaire, et instruction de traitement qui apparaissent dans le document source à l'intérieur des balises de cet élément.
+- `descendant` : sélectionne tous les enfants du nœuds contexte et leurs enfants, et ainsi de suite récursivement dans l’ordre du document.
+Si le nœud contexte est un élément, l’axe descendant contient tous les nœuds texte, élément, commentaire, et instruction de traitement qui apparaissent dans le document source à l’intérieur des balises de cet élément.
 
 - `descendant-of-self` : idem, à la différence que le premier nœud sélectionné est le nœud contexte.
 
-- following` : sélectionne tous les nœuds qui apparaissent après le nœud contexte dans l'ordre du document, en excluant les descendants du nœuds contexte.
-Si le nœud d'origine est un nœud element, l'axe comporte tous les nœuds texte, élément, commentaire, et instruction de traitement du document qui débute après la balise fermente du nœud contexte.
-L'axe following ne contiendra jamais de nœuds attributs ou d'espace de noms.
+- following` : sélectionne tous les nœuds qui apparaissent après le nœud contexte dans l’ordre du document, en excluant les descendants du nœuds contexte.
+Si le nœud d’origine est un nœud element, l’axe comporte tous les nœuds texte, élément, commentaire, et instruction de traitement du document qui débute après la balise fermente du nœud contexte.
+L’axe following ne contiendra jamais de nœuds attributs ou d’espace de noms.
 
-- `following-sibling` : Sélectionne tous les nœuds qui suivent le nœud contexte dans l'ordre du document et qui sont les enfants du même nœud parent.
-Si le nœud contexte est un nœud racine, un nœud attribut, ou espace de noms, alors l'axe following-sibling sera toujours vide.
+- `following-sibling` : Sélectionne tous les nœuds qui suivent le nœud contexte dans l’ordre du document et qui sont les enfants du même nœud parent.
+Si le nœud contexte est un nœud racine, un nœud attribut, ou espace de noms, alors l’axe following-sibling sera toujours vide.
 
 - `attribute` : si le nœud contexte est un élément, cet axe sélectionne tous ses nœuds attributs, dans un ordre arbitraire.
 Sinon, il ne sélectionne rien.
 
-- `namespace` : si le nœud d'origine est un élément, cet axe sélectionne tous les nœuds d'espace de nom qui sont dans la portée de cet élément dans un ordre arbitraire.
+- `namespace` : si le nœud d’origine est un élément, cet axe sélectionne tous les nœuds d’espace de nom qui sont dans la portée de cet élément dans un ordre arbitraire.
 
 ---
 .left-column[
@@ -386,11 +386,11 @@ Sinon, il ne sélectionne rien.
 ]
 
 .right-column[
-## XPath distingue également une catégorie d'axe .red[reverse axes]
+## XPath distingue également une catégorie d’axe .red[reverse axes]
 - `parent` : nœuds de type `element` ou `document`, père du nœud contexte
 - `ancestor` : nœuds de type `element` ou `document`, ancêtres du nœud contexte (parent du nœud contexte, ou parent du partent, etc.)
 - `ancestor-or-self` : nœuds de type `element` ou `document`, ancêtres du nœud contexte ainsi que le nœud contexte lui-même
-- `preceding` : tous les nœuds de type `element`, `text`, `comment`, `processing instruction` situés avant le nœud contexte (à l'exclusion des nœuds ancêtres)
+- `preceding` : tous les nœuds de type `element`, `text`, `comment`, `processing instruction` situés avant le nœud contexte (à l’exclusion des nœuds ancêtres)
 - `preceding-sibling` : tous les nœuds de type `element`, `text`, `comment`, `processing instruction` frères gauches du nœud contexte
 
 XPath fournit enfin un axe particulier nommé `self` qui permet de sélectionner le nœud servant de contexte lui-même.
@@ -398,24 +398,24 @@ XPath fournit enfin un axe particulier nommé `self` qui permet de sélectionner
 
 ???
 ## Les axes de type .red[forward axes]
-XPath distingue également une catégorie d'axe .red[reverse axes]
-dont la particularité est de ne pouvoir supporter un déplacement que depuis le nœud qui sert de contexte, ou des nœuds situés avant ce nœud dans l'ordre du document :
-- `parent` : cet axe sélectionne un seul nœud parent du õud contexte. Si le nœud contexte est un nœud document, l'axe parent est vide.
-- `ancestor` : sélectionne tous les nœuds qui sont les ancêtres du nœud contexte, dans l'ordre inverse du document, jusqu'au nœud document.
+XPath distingue également une catégorie d’axe .red[reverse axes]
+dont la particularité est de ne pouvoir supporter un déplacement que depuis le nœud qui sert de contexte, ou des nœuds situés avant ce nœud dans l’ordre du document :
+- `parent` : cet axe sélectionne un seul nœud parent du õud contexte. Si le nœud contexte est un nœud document, l’axe parent est vide.
+- `ancestor` : sélectionne tous les nœuds qui sont les ancêtres du nœud contexte, dans l’ordre inverse du document, jusqu’au nœud document.
 
-- `ancestor-or-self` : sélectionne les mêmes nœuds que l'axe ancestor mais en débutant par le nœud contexte plutôt que par son parent.
+- `ancestor-or-self` : sélectionne les mêmes nœuds que l’axe ancestor mais en débutant par le nœud contexte plutôt que par son parent.
 
-- `preceding` : sélectionne tous les nœuds qui apparaissent avant le nœud contexte en excluant ses ancêtres, dans l'ordre inverse du document.
-Si le nœud contexte est un élément, l'axe contient tous les nœuds texte, élément, commentaires et instruction de traitement qui se terminent avant la balise ouvrante de l'élement contexte dans le document.
-L'axe ne contiendra jamais d'attribut ou de nœud espace de nom.
+- `preceding` : sélectionne tous les nœuds qui apparaissent avant le nœud contexte en excluant ses ancêtres, dans l’ordre inverse du document.
+Si le nœud contexte est un élément, l’axe contient tous les nœuds texte, élément, commentaires et instruction de traitement qui se terminent avant la balise ouvrante de l’élement contexte dans le document.
+L’axe ne contiendra jamais d’attribut ou de nœud espace de nom.
 
-- `preceding-sibling` : tous les nœuds qui précèdent le nœud origine et qui sont les enfants du même parent dans l'ordre inverse du document.
+- `preceding-sibling` : tous les nœuds qui précèdent le nœud origine et qui sont les enfants du même parent dans l’ordre inverse du document.
 Toujours vide depuis un nœud attribut ou espace de nom.
 
 XPath fournit enfin un axe particulier nommé `self`
-- `self` : sélectionne un nœud unique, le nœud contexte lui-même. Cet axe n'est jamais vide.
+- `self` : sélectionne un nœud unique, le nœud contexte lui-même. Cet axe n’est jamais vide.
 
-## Nota : un attribut n'est pas le fils d'un élément ! même si dans XPath on peut atteindre l'élément depuis l'attribut en suivant l'axe parent, etc.
+## Nota : un attribut n’est pas le fils d’un élément ! même si dans XPath on peut atteindre l’élément depuis l’attribut en suivant l’axe parent, etc.
 
 ---
 
@@ -453,7 +453,7 @@ template: inverse
 ]
 
 .right-column[
-## Notation des étapes d'un chemin XPath
+## Notation des étapes d’un chemin XPath
 
 Un chemin peut se composer de plusieurs étapes, ou pas (.red[location steps]).
 
@@ -477,7 +477,7 @@ pour un chemin relatif
 ]
 
 ???
-## Notation des étapes d'un chemin XPath
+## Notation des étapes d’un chemin XPath
 
 Un chemin peut se composer de plusieurs étapes, ou pas (.red[location steps]).
 
@@ -505,7 +505,7 @@ pour un chemin relatif
 ]
 
 .right-column[
-## Structure d'une étape de chemin XPath
+## Structure d’une étape de chemin XPath
 
 Pour chaque étape, on peut préciser :
 
@@ -513,16 +513,16 @@ Pour chaque étape, on peut préciser :
 
 - quels nœuds ou types de nœuds particuliers (éléments, attributs, commentaires, etc.) on souhaite identifier sur cet axe (.red[test node])
 
-- éventuellement, un ou plusieurs .red[prédicats] qui permettent de filtrer l'ensemble de nœud désigné par les indications précédentes
+- éventuellement, un ou plusieurs .red[prédicats] qui permettent de filtrer l’ensemble de nœud désigné par les indications précédentes
 
-### Forme d'une expression XPath :
+### Forme d’une expression XPath :
 
 ```xpath
 axe::testNode[prédicat]/.../axe::testNode[prédicat][...]
 ```]
 
 ???
-## Structure d'une étape de chemin XPath
+## Structure d’une étape de chemin XPath
 
 Pour chaque étape, on peut préciser :
 
@@ -530,11 +530,11 @@ Pour chaque étape, on peut préciser :
 
 - quels nœuds ou types de nœuds particuliers (éléments, attributs, commentaires, etc.) on souhaite identifier sur cet axe (.red[test node])
 
-- éventuellement, un ou plusieurs .red[prédicats] qui permettent de filtrer l'ensemble de nœud désigné par les indications précédentes
+- éventuellement, un ou plusieurs .red[prédicats] qui permettent de filtrer l’ensemble de nœud désigné par les indications précédentes
 
-Ces prédicats prennent la forme d'une expression booléenne
+Ces prédicats prennent la forme d’une expression booléenne
 
-### Forme d'une expression XPath :
+### Forme d’une expression XPath :
 
 ```xpath
 axe::testNode[prédicat]/.../axe::testNode[prédicat][...]
@@ -549,32 +549,32 @@ axe::testNode[prédicat]/.../axe::testNode[prédicat][...]
 .right-column[
 ## Notation des axes (.red[axis specifier])
 
-Ces axes sont introduits en écrivant le nom de l'axe suivi du délimiteur `::`
+Ces axes sont introduits en écrivant le nom de l’axe suivi du délimiteur `::`
 ```xpath
 child::
 ```
-sert par exemple à noter l'axe fils
+sert par exemple à noter l’axe fils
 
 ```xpath
 ancestor::
 ```
-sert par exemple à noter l'axe des ancêtres
+sert par exemple à noter l’axe des ancêtres
 
 ]
 
 ???
 ## Notation des axes (.red[axis specifier])
 
-Ces axes sont introduits en écrivant le nom de l'axe suivi du délimiteur `::`
+Ces axes sont introduits en écrivant le nom de l’axe suivi du délimiteur `::`
 ```xpath
 child::
 ```
-sert par exemple à noter l'axe fils
+sert par exemple à noter l’axe fils
 
 ```xpath
 ancestor::
 ```
-sert par exemple à noter l'axe des ancêtres
+sert par exemple à noter l’axe des ancêtres
 
 ---
 
@@ -591,23 +591,23 @@ Composante qui précise quels nœuds ou type de nœuds on veut sélectionner :
 
 Ou être plus générique au moyen des expressions suivantes :
 
-- `text()` sélectionne n'importe quel nœud de type texte
-- `node()` sélectionne n'importe quel nœud de type quelconque
-- `comment()` sélectionne n'importe quel nœud de type commentaire
-- `processing-instruction()` sélectionne n'importe quel nœud de type instruction de traitement
+- `text()` sélectionne n’importe quel nœud de type texte
+- `node()` sélectionne n’importe quel nœud de type quelconque
+- `comment()` sélectionne n’importe quel nœud de type commentaire
+- `processing-instruction()` sélectionne n’importe quel nœud de type instruction de traitement
 
-- `*` sélectionne un nœud de nom quelconque de type `element` sur un axe permettant de sélectionner des éléments, ou de type attribut sur l'axe attribute, ou de type espace de nom sur l'axe namespace
+- `*` sélectionne un nœud de nom quelconque de type `element` sur un axe permettant de sélectionner des éléments, ou de type attribut sur l’axe attribute, ou de type espace de nom sur l’axe namespace
 ]
 
 ???
-Cette composante d'une étape sert à préciser quels nœuds ou types de nœuds particuliers on souhaite identifier sur un axe.
+Cette composante d’une étape sert à préciser quels nœuds ou types de nœuds particuliers on souhaite identifier sur un axe.
 - On peut soit indiquer un nom précis (`lg`, `div`), soit être plus générique et utiliser une des expressions suivantes :
-- `text()` sélectionne n'importe quel nœud de type texte
-- `node()` sélectionne n'importe quel nœud de type quelconque
-- `comment()` sélectionne n'importe quel nœud de type commentaire
-- `processing-instruction()` sélectionne n'importe quel nœud de type instruction de traitement
+- `text()` sélectionne n’importe quel nœud de type texte
+- `node()` sélectionne n’importe quel nœud de type quelconque
+- `comment()` sélectionne n’importe quel nœud de type commentaire
+- `processing-instruction()` sélectionne n’importe quel nœud de type instruction de traitement
 
-- `*` sélectionne un nœud de nom quelconque de type `element` sur un axe permettant de sélectionner des éléments, ou de type attribut sur l'axe `attribute`, ou de type espace de nom sur l'axe `namespace
+- `*` sélectionne un nœud de nom quelconque de type `element` sur un axe permettant de sélectionner des éléments, ou de type attribut sur l’axe `attribute`, ou de type espace de nom sur l’axe `namespace
 
 ---
 
@@ -647,31 +647,31 @@ div/attribute::type
 .right-column[
 ### Raccourcis
 
-En pratique, on peut utiliser une notation abrégée qui permet d'alléger l'écriture des chemins.
+En pratique, on peut utiliser une notation abrégée qui permet d’alléger l’écriture des chemins.
 
-- Comme l'axe fils, est l'axe par défaut, on peut écrire indifféremment `child::lg` ou `lg`
+- Comme l’axe fils, est l’axe par défaut, on peut écrire indifféremment `child::lg` ou `lg`
 - `//` équivaut à `/descendant-or-self::node()/`
 - `.` désigne le nœud contexte ou `self::node()`
-- l'axe des attributs peut être abrégé en `@` on écrit indifféremment `attribute::type` ou `@type`
+- l’axe des attributs peut être abrégé en `@` on écrit indifféremment `attribute::type` ou `@type`
 
 ### Rappels :
--`/`, désigne le nœud document au début d'une expression
-- `*` sélectionne un nœud de nom quelconque de type `element` sur un axe permettant de sélectionner des éléments, ou de type `attribut` sur l'axe `attribute`, ou de type espace de nom sur l'axe `namespace`
+-`/`, désigne le nœud document au début d’une expression
+- `*` sélectionne un nœud de nom quelconque de type `element` sur un axe permettant de sélectionner des éléments, ou de type `attribut` sur l’axe `attribute`, ou de type espace de nom sur l’axe `namespace`
 
 ]
 ???
 ### Raccourcis
 
-En pratique, on peut utiliser une notation abrégée qui permet d'alléger l'écriture des chemins.
+En pratique, on peut utiliser une notation abrégée qui permet d’alléger l’écriture des chemins.
 
-- Comme l'axe fils, est l'axe par défaut, on peut écrire indifféremment `child::lg` ou `lg`
+- Comme l’axe fils, est l’axe par défaut, on peut écrire indifféremment `child::lg` ou `lg`
 - `//` équivaut à `/descendant-or-self::node()/`
 - `.` désigne le nœud contexte ou `self::node()`
-- l'axe des attributs peut être abrégé en `@` on écrit indifféremment `attribute::type` ou `@type`
+- l’axe des attributs peut être abrégé en `@` on écrit indifféremment `attribute::type` ou `@type`
 
 ### Rappels :
--`/`, désigne le nœud document au début d'une expression
-- `*` sélectionne un nœud de nom quelconque de type `element` sur un axe permettant de sélectionner des éléments, ou de type `attribut` sur l'axe `attribute`, ou de type `espace de nom` sur l'axe `namespace`
+-`/`, désigne le nœud document au début d’une expression
+- `*` sélectionne un nœud de nom quelconque de type `element` sur un axe permettant de sélectionner des éléments, ou de type `attribut` sur l’axe `attribute`, ou de type `espace de nom` sur l’axe `namespace`
 
 ---
 .left-column[
@@ -693,6 +693,105 @@ div/*/@*
 //*
 ```
 ]
+
+---
+template: inverse
+
+## Les fonctions XPath
+
+---
+layout: false
+## Fonctions dans des expressions XPath
+
+Voici quelques unes des fonctions XPath communes :
+
+- `concat()` concaténation
+```xpath
+concat('ligneN', l/@n)
+```
+
+- ``normalize-space()` normaliser les espaces
+```xpath
+normalize-space(//lg/l)
+```
+
+- ``string()` valeur textuelle du nœud
+```xpath
+string(/l[@n="2"])
+```
+
+Liste complète des fonctions XPath dans la spécification XPath (http://www.w3.org/TR/xpath)
+
+???
+### Fonctions dans des expressions XPath
+
+XPath propose également un certain nombre de fonctions prédéfinies qui permettent de manipuler des données à partir de noeuds ou de fournir des prédicats.
+
+Ces fonctions peuvent s'avérer très utiles pour manipuler des chaînes textuelles, vérifier la valeur d'une clef de travail ou son type, ou encore réaliser des calculs.
+
+Voici quelques unes des fonctions XPath communes :
+
+`concat()`
+Cette fonction permet de combiner un nombre quelconque de chaînes de caractères avec des données extraites de noeuds en respectant l'ordre dans lequel les paramètres sont spécifiés.
+On peut indiquer des chemins XPath en tant que paramètres.
+Les chaînes de caractères littérales sont fournies entre apostrophes.
+Par exemple :
+concat('chaîneDeCaractères', {expressionXPath})
+
+
+`normalize-space()`
+Permet d'enlever tous les espaces de début et de fin du paramètre d'entrée et de normaliser l'ensemble de l'espace dans l'entrée en caractères espace et sauts de ligne uniques. Par exemple :
+normalize-space(/Job/Address/Line1)
+
+`string()`
+Permet de convertir le paramètre en type de données chaîne. Cette fonction permet de s'assurer que des noeuds numériques ou de date sont traités en tant que chaînes. Par exemple :
+string(/PurchaseOrder/VendorID)
+
+`translate()`
+Permet de remplacer des caractères par d'autres caractères dans le premier paramètre que vous spécifiez. Le deuxième paramètre est le ou les caractères à remplacer et le troisième paramètre correspond aux caractères de remplacement. Cette fonction peut s'avérer utile pour vous assurer que des clés de travail sont toutes en majuscules, par exemple.
+translate(/Issue/ShortDescr,
+
+'abcdefghijklmnopqrstuvwxyz',
+
+'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+
+Vous trouverez la liste complète des fonctions XPath dans la spécification XPath (http://www.w3.org/TR/xpath).
+
+---
+## Autres fonction utiles
+
+Voici d'autres fonctions XPath très utiles :
+
+- `false()`, `true()`, `not(arg)` booléennes
+
+```xpath
+//l[not(@n="5")]
+```
+- `number(arg)`, `count(sequence)`, sum(sequence),...
+```xpath
+count(//l)
+```
+- `position()`
+```xpath
+position(//l[@n="6"])
+```
+
+Les .red[opérateurs] `=`, `!=`, `<`, `>`, `<=`, `>=` peuvent être employées pour les types numériques, chaînes et boooléens.
+
+On dispose également des .red[connecteurs logiques] `and`et `or`.
+
+Liste complète des fonctions XPath dans la spécification XPath (http://www.w3.org/TR/xpath)
+
+???
+
+## les fonctions booléennes peuvent vous permettre de réaliser des tests sur des arguments
+
+## Les fonctions numériques peuvent vous permettre des réaliser des opérations arithmétiques sur des séquences de nœuds
+
+`count()`
+Vous permet de compter le nombre de noeuds dans le paramètre que vous spécifiez. En règle générale, le paramètre est une expression de chemin XPath qui identifie plusieurs noeuds, par exemple, tous les noeuds Item qui sont des enfants de PODetail. Par exemple :
+count({expressionXPath})
+
 
 ---
 name: last-page
