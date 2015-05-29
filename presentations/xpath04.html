@@ -41,30 +41,6 @@ layout: false
 - Combien y a-t-il de notes dans le document ?
 
 ---
-## Explorer le document XML-TEI (corrigé)
-
-
-- Quel est l’élément racine du fichier XML ?
-`/` nœud document
-`/*` élément racine
-`name(/*)` nom local de l'élément racine
-
-- Quel est le titre donné à ce fichier ?
-`//titleStmt/title` sélectionne les éléments title fils de titleStmt
-
-- Qui est le responsable de la création du fichier ?
-`//titleStmt/principal` ramène la mention de responsabilité principale
-
-- Quel est la source de la version encodée ?
-`//titleStmt/sourceDesc`
-
-- Quel est la date de la révision la plus récente du fichier ?
-`/TEI/teiHeader/revisionDesc/*[1]`
-
-- Combien y a-t-il de notes dans le document ?
-`count(//note)`
-
----
 
 ## Explorer le document XML-TEI [exercice-TEI.xml](exemplesTEI/exercice-TEI.xml) et déterminez :
 
@@ -94,39 +70,6 @@ template: inverse
 - contrôler la composition des clefs des témoins
 
 ---
-## Utiliser XPath sur le document XML-TEI (corrigé)
-
-- lister les éléments
-Réponse `//*`
-
-- lister les noms d'éléments
-Réponse `//*/name()`
-
-- Lister les noms d'éléments en supprimant les doublons
-`distinct-values(//*/name())`
-
-- Contrôler les éléments date
-Réponse : on doit vérifier que les éléments date disposent d'une valeur d'attribut when
-`//date`
-`//date/@when`
-`//date[not(@when)]`
-Avec des expressions régulières
-`//date[matches(@when, "^(\d{4})-(\d{2})-(\d{2})$")]`
-`//date[not(matches(@when, "^(\d{4})-(\d{2})-(\d{2})$"))]`
-
-- contrôler la composition des clefs des témoins
-Réponse `//rdg[not(@wit)]`
-C'est bon signe !
-- Véfifier que tous commencent par #
-`//rdg[not(starts-with(@wit, '#' ))]`
-`//rdg[not(matches(@wit, "^#(\w{1})-(\d{1})-(\w{1})$"))]`
-`//rdg[not(matches(@wit, "(#(\w{1})-(\d{1})-(\w{1}))\s*"))]`
-- Compter le nombre textes
-`//text`
-Ramène trois résultats
-En effet, le modèle de contenu de la TEI définit un élément text fils de TEI qui peut contenir un élément group
-
----
 
 ## Utiliser XPath sur le document XML-TEI (suite)
 
@@ -138,42 +81,6 @@ En effet, le modèle de contenu de la TEI définit un élément text fils de TEI
 - Sélectionner tous les readings du témoin "l-1-a"
 - Compter les apparats critiques
 - Compter les readings du témoin "l-1-a" dans le deuxième élément text
-- Afficher le nombre de témoins par élément text
-
----
-
-## Utiliser XPath sur le document XML-TEI (corrigé 1/2)
-
-- lister les textes compris dans l'élément group
-`//group/text`
-- Il est possible d'être plus sélectif
-`/TEI/*/group/text`
-- Sélectionner le deuxième élément text
-`/TEI/*/group/text[2]`
-- lister les témoins
-Pour commencer gentil
-`//listWit/witness`
-- Lister la valeur textuelle des nœuds witness
-`//listWit/witness/text()`
-- Listes les id des témoins
-`//listWit/witness/@xml:id`
-`string(//listWit/witness/@xml:id)`
-
----
-
-## Utiliser XPath sur le document XML-TEI (corrigé 1/2)
-
-- Sélectionner tous les readings du témoin "l-1-a"
-`//app/rdg[@wit="#l-1-a"]`
-ne permet pas d'accéder à tous les éléments rdg, une même lecture pouvant être attestée par différents témoins
-`//app/rdg[contains(@wit,"#l-1-a")]`
-- Compter les apparats critiques
-`count(//app)`
-- Compter les readings du témoin "l-1-a"
-`count(//app/rdg[@wit="#l-1-a"])`
-- Compter les readings du témoin "l-1-a" dans le deuxième élément text
-`/TEI/*/group/text[2]//app/rdg[@wit="#l-1-a"]`
-`count(/TEI/*/group/text[2]//app/rdg[@wit="#l-1-a"])`
 - Afficher le nombre de témoins par élément text
 
 ---
