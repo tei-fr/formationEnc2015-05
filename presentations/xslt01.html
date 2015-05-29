@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>Title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link href="themes/remark-dark-em.css" rel="stylesheet" media="all" type="text/css"/>
+      </head>
+      <body>
+        <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+
+---
+# 01-XSLT, Introduction
+
+Formation TEI | ENC 26-29 mai 2015
+
+.footnote[[Programme](00-programme.html)]
+
+
+---
+template: inverse
+
+## Introduction
+
+???
+Lorsque l’on encode ses documents en XML-TEI, on est souvent confronté au problème de l’exploitation des documents produits. Après avoir passé beaucoup de temps à structurer ses documents, il serait regrettable de ne rien pouvoir en faire par la suite...
+
+Comme nous l’avons vu hier, plusieurs langages de manipulation de documents XSLT sont destinés à cet effet : XSLT, XSL-FO, XQuery.
+
+Nous allons aujourd’hui plus précisément nous attacher au langage XSLT qui est un langage de transformation de document XML.
+
+---
+layout: false
+.left-column[
+## Objectifs
+]
+
+.right-column[
+## faire de vous des experts en .red[XSLT] ?
+En une journée, se contenter
+- de vous donner un aperçu des possibilités de ce langage
+- de vous faire apprécier certaines caractéristiques propres au langage (notamment sa dimension fonctionnelle)
+- de vous rendre capables d’évaluer la qualité d’un programme
+- d’éventuellement le modifier
+
+.red[Surtout de vous donner envie d’aller plus loin]
+]
+
+???
+Bien évidement, en moins d’une journée (et si tant est que j’en étais capable), il ne s’agit pas de faire de vous des programmeurs experts en XSLT !
+
+On se contentera d’objectifs plus modestes, en espérant vous transmettre le goût de ce langage, charge à vous d’approfondir vos connaissances si tel était le cas.
+
+Il s’agit donc simplement :
+- de vous donner un aperçu des possibilités de ce langage
+- de vous faire apprécier certaines caractéristiques propres au langage (notamment sa dimension fonctionnelle)
+- de vous rendre capable d’évaluer la qualité d’un programme
+- d’éventuellement le modifier
+
+--> C’est-à-dire, de vous donner un avant-goût et surtout de vous donner envie d’aller plus loin
+
+---
+.left-column[
+## qqs Conseils
+]
+
+.right-column[
+## Pour que tout se passe sans encombre :
+#### un cadre de travail progressif
+#### des exercices pratiques avec des étapes
+#### ne pas hésitez à m’interrompre si vous êtes perdus
+]
+
+???
+Autant vous prévenir d’emblée, si XSLT est un langage extrêmement puissant, c’est aussi un langage difficile. Il nécessite un important investissement pour le maîtriser, mais cet effort est payé de retours.
+
+## Un programme progressif
+Le programme de travail prévu est un progressif. On abordera successivement les fonctionnalités du langage par degré de difficulté.
+
+## parvenir à produire une page XHTML
+En tous les cas, l’objectif, c’est de parvenir ensemble à la fin de la journée à produire une page XHTML fonctionnelle à partir des documents que vous avez produits au cours de ce stage.
+
+Nous travaillerons ensemble sur des exercices pratiques. Plusieurs points d’étape sont prévus avec du codes de sorte que tout le monde puisse être au même niveau.
+
+--> Décrire la structure du répertoire de travail
+
+## Ne pas hésiter à m’interrompre
+Comme toujours, l’apprentissage d’un langage informatique nécessite un effort conceptuel important. Sans vous en rendre vraiment compte, vous avez déjà fait le plus gros du chemin avec XPath.
+
+Toutefois, n’hésitez pas à m’interrompre en cas d’incompréhension ou de problème. Il est probable que votre question intéresse aussi d’autres de vos camarades.
+
+---
+name: part2
+template: inverse
+
+## Qu’est-ce que XSLT ?
+
+---
+layout: false
+.left-column[
+## Qu’est-ce que XSLT ?
+]
+
+.right-column[
+## un langage informatique, certes !
+- XSL e.red[X]tensible .red[S]tylesheet .red[L]anguage
+- un langage informatique dont les spécifications ont été publiées par le W3C en novembre 1999, en même temps que celles du langage XPath (XML Path) pour sa première version
+- XSL se compose de deux parties XSL.red[T] pour .red[Transformations] et XSL.red[-FO] pour .red[Formating Object]
+- la [seconde version du langage XSLT](http://www.w3.org/TR/xslt20/) a été publiée en 2007 en même temps que [XPath 2.0](http://www.w3.org/TR/xpath20/)
+- une version 3.0 est en préparation
+]
+???
+## un langage informatique, certes !
+- XSLT e.blue[X]tensible .blue[S]tylesheet .blue[L]anguage
+- un langage informatique dont les spécifications ont été publiées par le W3C en novembre 1999, en même temps que celles du langage XPath (XML Path) pour sa première version
+- XSL se compose de deux parties XSL.blue[T] pour .blue[Transformations] et XSL.blue[-FO] pour .blue[Formating Object]
+- la [seconde version du langage XSLT](http://www.w3.org/TR/xslt20/) a été publiée en 2007 en même temps que [XPath 2.0](http://www.w3.org/TR/xpath20/) dont il utilise la syntaxe pour identifier les éléments
+- une version 3.0 est en préparation
+
+---
+.left-column[
+## Qu’est-ce que XSLT ?
+]
+
+.right-column[
+## Historique
+
+### Le cahier des charges
+- langage de transformation de XML
+- capable de générer d’autres formats à partir du document source
+- écrit en XML
+- qui permet la réutilisation d’instructions
+- sans ordre de traitement
+- extensible
+
+### = un .red[langage déclaratif], basé sur des instructions (ou règles) non ordonnées
+
+### = XSLT 2.0 est .red[langage fonctionnel], Turing complet
+]
+
+???
+## Historique
+
+### Le cahier des charges
+- langage de transformation de XML
+- capable de générer d’autres formats à partir du document source
+- écrit en XML
+- qui permet la réutilisation d’instructions
+- sans ordre de traitement
+- extensible
+
+### = un langage déclaratif, basé sur des instructions (ou règles) non ordonnées
+(comme CSS) mais dont les fonctionnalités sont bien plus avancées.
+
+Cela donne un langage déclaratif basé sur des instructions (on dit des règles) non ordonnées, comme CSS, mais dont les fonctionnalités sont beaucoup plus puissantes.
+
+### = XSLT 2.0 est langage fonctionnel, turing complet
+
+On peut dire que c’est un langage fonctionnel car il est sans effets de bords (il n’y a pas de modifications de l’environnement ou du document source au cours du traitement)
+
+
+---
+.left-column[
+## Processus de transformation .red[XSLT]
+]
+
+.right-column[
+
+![xsltProcessing](../images/xsltProcessing.svg)
+]
+???
+
+Ce schéma présente le processus à l’œuvre lorsque l’on associe une feuille de style et un document source.
+
+Un programme XSLT spécifie une sortie à produire à partir d’un segment ou d’un fichier XML, si ce segment existe dans le document fourni en entrée et répond à certains critères.
+
+XSLT n’est pas un langage procédural, car un programme XSLT se compose d’une collection de règles modèles qui définissent la sortie à produire lorsque des motifs particuliers concordent dans l’entrée.
+
+Le résultat est une fonction de l’entrée.
+[TODO revoir]
+
+---
+.left-column[
+## Qu’est-ce que XSLT ?
+]
+
+.right-column[
+## processus de traitement (en bref)
+XSLT est .red[une application XML pour la spécification de règles permettant de transformer un document XML en un autre document XML]
+
+- un document XSLT contient des règles modèles
+- chaque règle possède un motif ainsi qu’un modèle
+- un processeur XSLT compare ces motifs avec les nœuds d’un document XSLT donné en entrée
+- lorsqu’il y a correspondance il écrit le modèle de cette règle dans l’arbre de destination
+- une fois le processus terminé, il sérialise l’arbre de sortie en un autre document XML ou dans un autre format comme du texte brut, un fichier CSV, ou du HTML
+]
+???
+## Le processus de traitement (en bref)
+"XSLT est .red[une application XML pour la spécification de règles permettant de transformer un document XML en un autre document XML].
+
+Un document XSLT – c’est-à-dire une feuille de style XSLT – contient des règles modèles.
+
+Chaque règle possède un motif ainsi qu’un modèle. **On utilise XPath pour identifier les éléments à traiter**.
+
+Un processeur XSLT compare les nœuds d’un document XML fourni en entrée avec les règles modèles présentes dans une feuille de style.
+
+Lorsqu’il y a correspondance, il écrit le modèle de cette règle dans l’arbre de destination.
+
+Une fois le processus terminé, il sérialise l’arbre de sortie en un autre document XML ou dans un autre format comme du texte brut, un fichier CSV, ou du HTML
+(XML en concentré, p. 157)
+
+---
+.left-column[
+## Qu’est-ce que XSLT ?
+]
+
+.right-column[
+## le point sur les versions
+- à qqs différences près, on peut considérer XPath et XSLT 1.0 comme des sous-ensembles de XPath 2.0 et XSLT 2.0
+- problèmes de compatibilité de XSLT 2.0 avec l’environnement PHP5 (en passe d’être résolus)
+- de nombreuses choses plus simples à traiter en XSLT 2.0, mais une plus grande complexité du langage
+]
+
+???
+À quelques différences près, on peut considérer XPath et XSLT1 comme des sous-ensembles de XSLT2 et XPath 2
+Abordera aujourd’hui XPath 2.0 et XSLT 2.0 pour plus de facilité
+
+Pendant longtemps problème de compatibilité XPath 2.0 avec environnement PHP
+En passe d’être réglé par le portage du processeur Saxon en C++
+
+Certaines choses plus simples à faire en XPath 2.0 qu’avec XPath 1.0
+Mais plus grande complexité du langage.
+
+---
+
+background-image: url(../images/whatXSLTCanDo.png)
+
+---
+
+name: last-page
+template: inverse
+
+## [On y va](xslt02.html) !
+
+.left[.footnote[revenir au début](#index) | [programme](00-programme.html)]
+
+</textarea>
+<!--<script src="http://gnab.github.com/remark/downloads/remark-0.6.5.min.js" type="text/javascript"></script>-->
+    <script src="js/remark-0.6.5.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var hljs = remark.highlighter.engine;
+</script>
+<script src="remark.language.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var slideshow = remark.create({
+      highlightStyle: 'monokai',
+      highlightLanguage: 'remark'
+    }) ;
+</script>
+
+</body>
+</html>

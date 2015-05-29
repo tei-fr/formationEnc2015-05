@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+        <html>
+          <head>
+            <title>Title</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <link href="themes/remark-dark-em.css" rel="stylesheet" media="all" type="text/css"/>
+          </head>
+          <body>
+            <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+
+---
+#XSLT, 2-TP premières transformations]
+
+### Formation TEI | ENC 26-29 mai 2015
+
+.footnote[[Répertoire GitHub](https://github.com/tei-fr/formationEnc2015-05) | [Programme](00-programme.html)]
+
+---
+template: inverse
+
+## Cas d’utilisation
+
+???
+## Cas d’utilisation
+- passage d’un modèle à l’autre
+- transformation pour un site statique
+- transformation dynamique (framework XML)
+- base de données XML-native
+
+#### Besoin
+- d’un document bien formé
+- un programme XSLT
+- un processeur
+
+### démonstration
+
+---
+layout: false
+.left-column[
+## Associer un document à une XSLT avec Oxygen
+]
+
+.right-column[
+
+### faire une transformation avec Oxygen
+Pour mémoire, cf. le guide suivant :
+http://dh.obdurodon.org/transformation-scenario.html]
+
+### transformation
+- document XML en entrée : [../exemples/exercice-Angouleme.xml](../exemples/)
+- programme XSLT [../xslt/tei2html.xsl](../xsl/)
+
+---
+layout: false
+## Que s’est-il passé ?
+
+- parsing du document source et création en mémoire d’une représentation arborescente
+- recherche dans le programme XSLT d’une règle s’appliquant à la racine du document XML, si elle existe : exécution de l’instruction et création d’un morceau de l’arbre résultat
+- sauf si la règle commande de sélectionner un autre nœud, retour à l’arbre source et parcours de cet arbre dans l’ordre du document (du haut vers le bas, de gauche à droite) en cherchant à chaque fois une règle dédiée
+- s’il y a plusieurs règles applicables à un même nœud des règles de priorité s’appliquent ; s’il n’y a pas de règle applicable pour un nœud à traiter, alors le processeur applique les instructions par défaut
+- à la fin du processus sérialisation de l’arbre résultat pour produire en sortie un flux textuel selon les instructions spécifiées en tête de programme (en HTML, en XML, etc.)
+
+???
+## Que s’est-il passé ?
+
+- parsing du document source et création en mémoire d’une représentation arborescente
+- recherche dans le programme XSLT d’une règle s’appliquant à la racine du document XML, si elle existe : exécution de l’instruction et création d’un morceau de l’arbre résultat
+- sauf si la règle commande de sélectionner un autre nœud, retour à l’arbre source et parcours de cet arbre dans l’ordre du document (du haut vers le bas, de gauche à droite) en cherchant à chaque fois une règle dédiée
+- s’il y a plusieurs règles applicables à un même nœud des règles de priorité s’appliquent ; s’il n’y a pas de règle applicable pour un nœud à traiter, alors le processeur applique les instructions par défaut
+- à la fin du processus sérialisation de l’arbre résultat pour produire en sortie un flux textuel selon les instructions spécifiées en tête de programme (en HTML, en XML, etc.)
+(explications Florence Clavaud)
+
+## bien comprendre la notion d’arbre
+Vous comprenez maintenant sans doute mieux pour quelle raison il était si important de bien comprendre la notion d’arbre se fondant sur le modèle abstrait de XML.
+
+Celui-ci est mobilisé par le processeur dans l’ordre de parcours du document et appliqué au produit de la transformation. Ce modèle abstrait a l’avantage de décrire de façon non ambiguë la structure et le contenu d’un document XML.
+cf. DOM
+
+---
+layout: false
+.left-column[
+## Généralités sur XSLT
+]
+
+.right-column[
+## Structure d’un programme XSLT
+
+- Un programme XSLT est un fichier XML
+
+- L’.red[élément racine] est `xsl:stylesheet` (ou `xsl:transform`) qui a deux attributs obligatoires `version` pour spécifier la version du langage et `xmlns` pour déclarer l’espace de nom
+
+- Un des .red[éléments de haut niveau], `xsl:output` spécifie un format de sortie.
+]
+
+???
+## Structure d’un programme XSLT
+
+- Un programme XSLT est un fichier XML
+
+- L’.red[élément racine] est `xsl:stylesheet` (ou `xsl:transform`) qui a deux attributs obligatoires `version` pour spécifier la version du langage et `xmlns` pour déclarer l’espace de nom
+
+- Un des .red[éléments de haut niveau], `xsl:output` spécifie un format de sortie.
+
+---
+### Structure d’un programme
+
+```xslt
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  exclude-result-prefixes="xs"
+  xpath-default-namespace="http://www.tei-c.org/ns/1.0"
+  xmlns="http://www.w3.org/1999/xhtml"
+  version="2.0">
+  <xsl:output method="xml" omit-xml-declaration="no"
+     encoding="UTF-8" indent="yes" />
+</xsl:stylesheet>
+```
+
+---
+### Les règles
+
+Les instructions de transformation sont englobées dans des éléments `xsl:template` qui constituent des .red[règles]
+
+Chaque règle a obligatoirement :
+- soit un attribut `match` qui indique au moyen d’une expression XPath le motif ou pattern auquel un nœud XML doit répondre pour que la transformation soit réalisée
+
+- soit un attribut `name` qui fait appel à une règle nommée qui peut être utilisée en l’appelant par son nom
+
+???
+### Les règles
+
+Les instructions de transformation sont englobées dans des éléments `xsl:template` qui constituent des .red[règles]
+
+Chaque règle a obligatoirement :
+- soit un attribut `match` qui indique au moyen d’une expression XPath le .red[motif] ou pattern auquel un nœud XML doit répondre pour que la transformation soit réalisée
+C’est le cas le plus fréquent
+- soit un attribut `name` qui fait appel à une .red[règle nommée] qui peut être utilisée en l’appelant par son nom. Dispositif similaire à une macro.
+
+---
+### Corps des règles
+
+Le .red[corps d’une règle] contenue dans `xsl:template` comporte les instructions qui s’appliquent aux nœuds correspondant au motif indiqué dans l’attribut `match`
+
+Ces instructions sont exprimées à l’aide des éléments XML définis par le langage XSLT.
+- `xsl:value-of` évalue la contenu textuel d’un nœud
+- `xsl:apply-templates` applique les règles en descendant en profondeur
+- `xsl:element` génère un nœud élément
+- `xsl:attribute` génère un nœud attribut
+- `xsl:text` génère un nœud textuel
+- `xsl:if` instruction conditionnelle
+- `xsl:for-each` exécution d’instructions en bouclant sur chacun des nœuds désignés par l’attribut `select`
+
+???
+### Corps des règles
+
+Le .red[corps d’une règle] contenue dans `xsl:template` comporte les instructions qui s’appliquent aux nœuds correspondant au motif indiqué dans l’attribut `match`
+
+Ces instructions sont exprimées à l’aide des éléments XML définis par le langage XSLT.
+- `xsl:value-of` évalue la contenu textuel d’un nœud
+- `xsl:apply-templates` applique les règles en descendant en profondeur
+- `xsl:copy` copie du nœud courant
+- `xsl:element` génère un nœud élément
+- `xsl:attribute` génère un nœud attribut
+- `xsl:text` génère un nœud textuel
+- `xsl:for-each` exécution d’instructions en bouclant sur chacun des nœuds désignés par l’attribut `select`
+
+---
+### Corps des règles (suite)
+
+Éléments XML définis par le langage XSLT (suite) :
+- `xsl:if` instruction conditionnelle
+- `xsl:choose` exécution d’une série de tests exprimés par une série de sous éléments `xsl:when`
+- `xsl:sort` tri de la séquence de nœuds sélectionnés par `xsl:for-each` ou `xsl:apply-templates`
+- `xsl:foreach-group` avec les attributs `select` et `group-by`
+- `xsl:variable` déclaration d’une variable
+- `xsl:param` déclaration d’un paramètre
+
+???
+### Corps des règles (suite)
+
+Éléments XML définis par le langage XSLT (suite) :
+- `xsl:if` instruction conditionnelle
+- `xsl:choose` exécution d’une série de tests exprimés par une série de sous éléments `xsl:when`
+- `xsl:sort` tri de la séquence de nœuds sélectionnés par `xsl:for-each` ou `xsl:apply-templates`
+- `xsl:foreach-group` avec les attributs `select` et `group-by`
+- `xsl:variable` déclaration d’une variable
+- `xsl:param` déclaration d’un paramètre
+
+---
+template: inverse
+
+## Ex 01 : règle vide
+
+---
+### Règles internes ou par défaut
+Lorsque le processeur trouve un nœud qui ne correspond à aucun motif, il applique les instructions de transformation par défaut suivantes :
+- pour un nœud élément ou pour le nœud document : il passe aux nœuds enfants
+- pour un nœud texte : il sort la valeur textuelle
+- pour un nœud attribut : il sort la valeur textuelle
+
+voir les [../xsl/instructionsParDefaut.xsl](../xsl/)
+
+???
+### Règles internes ou par défaut
+
+Lorsque le processeur trouve un nœud qui ne correspond à aucun motif, il applique les instructions de transformation par défaut suivantes :
+- pour un nœud élément ou pour le nœud document : il passe aux nœuds enfants
+- pour un nœud texte : il sort la valeur textuelle
+- pour un nœud attribut : il sort la valeur textuelle
+
+### Que faut-il faire
+On a donc toujours besoin d’écrire ce genre de choses
+`<xsl:template match="div"/>` pour sortir un élément du flux textuel.
+
+---
+template: inverse
+
+## Ex 02 : copie à l’identique
+
+---
+
+### Comment fonctionne cette règle de recopie ?
+
+```xslt
+    <xsl:template match="node() | @*">
+        <xsl:copy>
+            <xsl:apply-templates select="@*"/>
+            <xsl:apply-templates/>
+        </xsl:copy>
+    </xsl:template>
+```
+voir le fichier  [../xsl/01CopieIdentique.xsl](../xsl/)
+
+
+???
+### Copie à l’identique
+Lorsque l’on transforme un document, on a souvent besoin de recopier le contenu initial d’un document.
+Une telle règle s’avère très utile dans deux cas de figures :
+- lorsque l’on démarre un travail d’écriture de programme et que l’on n’a pas écrit toutes les instructions
+- dans le cas où l’on voudrait agir précisément sur certains nœuds, ou en ajouter, tout en gardant l’essentiel du document initial
+
+Cette règle est instanciée pour tous les nœuds, et pour les nœud attributs quels que soient leur nom.
+Elle copie le nœud courant, puis applique les règles en descendant dans l’ordre de parcours du document en sélectionnant les nœud attributs.
+Ou bien elle se contente d’indiquer au processeur de descendre dans l’ordre de parcours du document en appliquant les règles.
+
+Comme vous l’aurez compris, cette règle est récursive. S’il y a un attribut, la même règle s’applique et copie le nœud attribut.
+S’il n’y a pas d’attribut la règle copie les nœuds.
+
+Conjointement avec l’instruction par défaut, cette règle créée donc une copie à l’identique du document.
+
+---
+template: inverse
+
+## Ex 03, modifier un fichier
+
+- supprimer les commentaires dans le fichier résultat ;
+- supprimer les attributs `xml-id` de `p` ;
+
+
+---
+name: last-page
+template: inverse
+
+## [Puisque vous rêvez d’en savoir plus](xslt03.html) !
+
+
+.left[.footnote[[revenir au début](#index)]]
+
+</textarea>
+<!--<script src="http://gnab.github.com/remark/downloads/remark-0.6.5.min.js" type="text/javascript"></script>-->
+    <script src="js/remark-0.6.5.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var hljs = remark.highlighter.engine;
+</script>
+<script src="remark.language.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var slideshow = remark.create({
+      highlightStyle: 'monokai',
+      highlightLanguage: 'remark'
+    }) ;
+</script>
+
+</body>
+</html>

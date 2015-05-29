@@ -1,23 +1,114 @@
 <!DOCTYPE html>
-    <html>
-      <head>
-        <title>Title</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <link href="themes/remark-dark-em.css" rel="stylesheet" media="all" type="text/css"/>
-      </head>
-      <body>
-        <textarea id="source">
+<html>
+  <head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="themes/remark-dark-em.css" rel="stylesheet" media="all" type="text/css"/>
+  </head>
+  <body>
+    <textarea id="source">
+
 name: inverse
 layout: true
 class: center, middle, inverse
----
-#XPath, partie 01
 
-[XDM Le modèle de données XML]
+---
+
+# 01-XPath, Introduction
+
 Formation TEI | ENC 26-29 mai 2015
 
 .footnote[[Répertoire GitHub](https://github.com/tei-fr/formationEnc2015-05) | [Programme](00-programme.html)]
 
+---
+template: inverse
+
+## Introduction
+
+???
+Lorsque l’on veut appliquer des traitements à des documents XML (transformation de documents p.e. pour produire une page web, création de liens hypertextes, extraction sélective d’informations p.e. dans une base de données XML native), il est souvent nécessaire de pouvoir localiser des fragments précis au sein de documents XML.
+
+---
+layout: false
+
+### "XPath is a language for addressing parts of an XML document, designed to be used by both XSLT and XPointer"
+
+### "The primary purpose of XPath is to address parts of an XML document."
+.footnote[[XML Path Language 2.0, 2003](http://www.w3.org/TR/xpath20/)]
+
+???
+
+C’est précisément la vocation du langage XPath développé par le W3C :
+- "XPath is a language for addressing parts of an XML document, designed to be used by both XSLT and XPointer"
+- "The primary purpose of XPath is to address parts of an XML document."
+
+Comme le suggère cette première citation, XPath a d’abord été conçu pour être utilisé au sein de langages dits hôtes ayant besoin d’identifier des portions précises dans un document. On utilise ainsi XPath avec XSLT pour sélectionner des nœuds, extraire des informations, ou encore effectuer des tests.
+
+Les expressions XPath peuvent aussi être utiles pour naviguer précisément dans des documents XML en créant des pointeurs hypertextes sophistiqués dans le contexte du langage XPointer.
+
+Plusieurs utilisations de XPath sont donc possibles
+- pour désigner des ensembles de nœuds dans une transformation XSLT
+- pour contrôler la qualité d’un document XML (exploration, analyse, vérification)
+- pour paralléliser des textes
+
+---
+
+layout: false
+.left-column[
+  ## Historique
+]
+.right-column[
+
+- première version du langage publiée en 1999
+
+- immédiatement utilisée par **XSLT 1.0**
+
+- premier langage de la famille XML à opérer sur un modèle de données
+
+- seconde version du langage spécifiée en 2007
+
+- support aux langages **XSLT 2.0** et **XQuery 1.0**
+
+- s’appuie sur **XML Data Model** publié la même année[*]
+
+
+.footnote[.red[**] [XML Path Language (XPath) 2.0](http://www.w3.org/TR/xpath20/), [XQuery 1.0 and XPath 2.0 Data Model (XDM)](http://www.w3.org/TR/xpath-datamodel/), [XSL Transformations (XSLT) Version 2.0](http://www.w3.org/TR/xslt20/)]
+]
+
+???
+
+### Historique
+La première version du langage a été publiée en 1999 et fut immédiatement utilisée par XSLT 1.0.
+
+XPath est le premier langage de la famille XML à avoir opéré sur un **modèle de données** au sens d’un cadre formel permettant la représentation et la manipulation de données. La description de la version 1.0 de ce langage, publiée en 1999, contient en effet la description d’un modèle de données très simple où un document XML est représenté comme un arbre pouvant être composé de **sept types de nœuds**.
+
+La seconde version du langage, XPath 2.0, a été spécifiée en 2007 et a servi de support aux langages XSLT 2.0 et XQuery 1.0.
+
+La seconde version de XPath, s’appuie sur XML Data Model publié en même temps que la spécification XPath 2.0.
+
+---
+layout: false
+.left-column[
+  ## Programme
+]
+.right-column[
+
+### [le modèle de données XML](xpath01.html)
+
+### [les expressions XPath](xpath02.html)
+
+### [évaluation des expressions](xpath03.html)
+
+### [fonctions XPath](xpath03.html)
+]
+
+???
+### Programme de l’après-midi
+Une des caractéristiques essentielles du langage XPath, est qu’il s’appuie sur un modèle de données (XPath/XQuery pour la version 2.0) dont la connaissance est essentielle pour une bonne compréhension du langage.
+
+Il s’agit d’un véritable langage fonctionnel typé. Ainsi, l’utilisateur manipule des expressions et non des instructions, et l’évaluation de ces expressions produit des valeurs appartenant à des types définis dans un système de types. La version 2.0 langage intègre le riche système de types de XML Schema.
+
+Au cours de cette première présentation, nous commencerons par examiner le modèle de données XML, puis nous aborderons les diverses expressions XPath et de leur types, avant de nous concentrer sur des expressions servant à décrire des chemins pour sélectionner des ensembles de nœuds dans un arbre XML.
 
 ---
 template: inverse
@@ -32,7 +123,7 @@ layout: false
 ]
 
 .right-column[
-XDM considère un document XML comme une structure d'arbre pouvant être composée de sept types de nœuds.
+XDM considère un document XML comme une structure d’arbre pouvant être composée de sept types de nœuds.
 
 - `document node` (nœud document)
 - `element node` (nœud élément)
@@ -46,11 +137,11 @@ XDM considère un document XML comme une structure d'arbre pouvant être compos�
 ???
 ## les nœuds dans le modèle XDM
 
-XDM considère un document XML comme une structure d'arbre pouvant être composée de sept types de nœuds.
+XDM considère un document XML comme une structure d’arbre pouvant être composée de sept types de nœuds.
 
 Ici, on monte en abstraction par rapport à ce que vous savez déjà peut-être de XML.
 
-Ces **nœud** sont les sept types de nœuds définis dans le modèle de données XPath 1.0, à l'exception du nœud racine rebaptisé `document node` au lieu de `root node` :
+Ces **nœud** sont les sept types de nœuds définis dans le modèle de données XPath 1.0, à l’exception du nœud racine rebaptisé `document node` au lieu de `root node` :
 
 - `document node` (nœud document)
 
@@ -76,7 +167,7 @@ layout: false
 
 ## Contraintes des nœuds
 
-Les éléments d'un document XML bien formé répondent à plusieurs contraintes
+Les éléments d’un document XML bien formé répondent à plusieurs contraintes
 
 ![diagramme UML](../images/contraintes.png)
 
@@ -85,13 +176,13 @@ Les éléments d'un document XML bien formé répondent à plusieurs contraintes
 ???
 ### Contraintes des nœuds (rappel)
 
-Les éléments d'un document XML bien formé répondent à plusieurs contraintes :
+Les éléments d’un document XML bien formé répondent à plusieurs contraintes :
 
 - un nœud document ne doit pas avoir de nœud père et peut avoir des nœuds fils qui peuvent être des nœuds élément, texte, commentaire, ou instruction de traitement
 - un nœud élément peut avoir un nœud père qui doit être un nœud document ou élément et peut avoir des nœuds fils qui doivent être des nœuds espace de noms, attributs, élément, texte, commentaire ou instruction de traitement
-- les nœuds fils d'un nœud document ou élément qui sont des nœuds élément, texte, commentaire ou instruction de traitement sont appelés les enfants de ce nœud
+- les nœuds fils d’un nœud document ou élément qui sont des nœuds élément, texte, commentaire ou instruction de traitement sont appelés les enfants de ce nœud
 - un nœud document ou élément ne doit pas avoir deux enfants consécutifs qui sont des nœuds textes
-- un nœud document ou élément ne doit pas avoir d'enfants qui sont des nœuds textes dont le contenu est vide
+- un nœud document ou élément ne doit pas avoir d’enfants qui sont des nœuds textes dont le contenu est vide
 - un nœud espace de nom ou attribut peut avoir un nœud père qui doit être un nœud élément
 - un nœud texte, commentaire ou instruction de traitement peut avoir un nœud père qui doit être un nœud élément ou document
 
@@ -107,33 +198,33 @@ Les éléments d'un document XML bien formé répondent à plusieurs contraintes
 
 - les nœuds `element` précèdent leurs nœuds fils
 
-- l'ordre relatif des nœuds frères entre eux est déterminé par leur ordre d'apparition dans la représentation balisée
+- l’ordre relatif des nœuds frères entre eux est déterminé par leur ordre d’apparition dans la représentation balisée
 
 - les nœuds `attribute` et `namespace` précèdent les nœuds fils de cet élément
 
 - les nœuds `namespace` précèdent les nœuds `attribute`
 
-- l'ordre des nœuds `namespace` et `attributs` dépend de l'implantation
+- l’ordre des nœuds `namespace` et `attributs` dépend de l’implantation
 ]
 
 ???
 ###Ordre du document
 
-Un document XML (ou un fragment de document) est composé d'une hiérarchie de nœuds.
+Un document XML (ou un fragment de document) est composé d’une hiérarchie de nœuds.
 
-Autrement dit, les nœuds qui sont accessibles lors d'une session de travail sont munis d'un ordre, qu'on appelle **ordre du document**. Cet ordre est défini tel que correspondant à l'ordre dans lequel le premier caractère de la représentation XML de chaque nœud apparaît dans le document XML balisé (après expansion des entités générales).
+Autrement dit, les nœuds qui sont accessibles lors d’une session de travail sont munis d’un ordre, qu’on appelle **ordre du document**. Cet ordre est défini tel que correspondant à l’ordre dans lequel le premier caractère de la représentation XML de chaque nœud apparaît dans le document XML balisé (après expansion des entités générales).
 
 - le nœud racine est le premier nœud element après le nœud document, il contient tous les autres éléments
 
 - les nœuds `element` précèdent leurs nœuds fils
 
-- l'ordre relatif des nœuds frères entre eux est déterminé par leur ordre d'apparition dans la représentation balisée **(autrement dit, les nœuds descendants d'un nœud apparaissent avant le nœud frère)**
+- l’ordre relatif des nœuds frères entre eux est déterminé par leur ordre d’apparition dans la représentation balisée **(autrement dit, les nœuds descendants d’un nœud apparaissent avant le nœud frère)**
 
 - les nœuds `attribute` et `namespace` précèdent les nœuds fils de cet élément
 
 - les nœuds namespace précèdent les nœuds `attribute`
 
-- l'ordre des nœuds `namespace` et `attribute` dépend de l'implantation
+- l’ordre des nœuds `namespace` et `attribute` dépend de l’implantation
 
 
 ---
@@ -149,27 +240,27 @@ Produire la représentation arborescente de [phares.tei.xml](./exemplesTEI/phare
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <body xmlns="http://www.tei-c.org/ns/1.0" n="spleenEtIdeal">
-    <div type="longPoem">
-        <head>Les Phares</head>
-        <lg type="stanza">
-            <l n="1">Rubens, fleuve d'oubli, jardin de la paresse,</l>
-            <l n="2">Oreiller de chair fraîche où l'on ne peut aimer,</l>
-            <l n="3">Mais où la vie afflue et s'agite sans cesse,</l>
-            <l n="4">Comme l'air dans le ciel et la mer dans la mer ;</l>
-            <!-- nœud commentaire -->
-        </lg>
-        <lg type="stanza">
-            <l n="5">Léonard de Vinci, miroir profond et sombre,</l>
-            <l n="6">Où des anges charmants, avec un doux souris</l>
-            <l n="7">Tout chargé de mystère, apparaissent à l'ombre</l>
-            <l n="8">Des glaciers et des pins qui ferment leur pays ;</l>
-        </lg>
-        <gap reason="sampling" quantity="9" unit="stanza"/>
-    </div>
-    <div type="shortPoem">
-        <head>La Muse malade</head>
-        <gap reason="sampling" quantity="4" unit="stanza"/>
-    </div>
+  <div type="longPoem">
+    <head>Les Phares</head>
+    <lg type="stanza">
+<l n="1">Rubens, fleuve d’oubli, jardin de la paresse,</l>
+<l n="2">Oreiller de chair fraîche où l’on ne peut aimer,</l>
+<l n="3">Mais où la vie afflue et s’agite sans cesse,</l>
+<l n="4">Comme l’air dans le ciel et la mer dans la mer ;</l>
+<!-- nœud commentaire -->
+    </lg>
+    <lg type="stanza">
+<l n="5">Léonard de Vinci, miroir profond et sombre,</l>
+<l n="6">Où des anges charmants, avec un doux souris</l>
+<l n="7">Tout chargé de mystère, apparaissent à l’ombre</l>
+<l n="8">Des glaciers et des pins qui ferment leur pays ;</l>
+    </lg>
+    <gap reason="sampling" quantity="9" unit="stanza"/>
+  </div>
+  <div type="shortPoem">
+    <head>La Muse malade</head>
+    <gap reason="sampling" quantity="4" unit="stanza"/>
+  </div>
 </body>
 ```
 
@@ -179,15 +270,15 @@ Produire la représentation arborescente de [phares.tei.xml](./exemplesTEI/phare
 ![solution](../images/diagram01.svg)
 
 ???
-On peut décrire la relation hiérarchique entre les nœuds d'un document XML en faisant l'analogie avec une famille.
+On peut décrire la relation hiérarchique entre les nœuds d’un document XML en faisant l’analogie avec une famille.
 
 ### Enfant
 - Un élément peut avoir zéro, un ou plusieurs autres éléments enfants. Il peut également avoir des enfants texte, commentaire, et instruction de traitement.
-- Les attributs ne sont pas considérés comme les enfants d'un élément
+- Les attributs ne sont pas considérés comme les enfants d’un élément
 - Un nœud document peut avoir un élément fils (celui qui contiendra tous les autres) mais aussi des fils commentaire, ou instruction de traitement.
 
 ### Parent
-Le parent d'un élément est soit un autre élément soit un nœud document. Le parent d'un attribut est l'élément qui le porte.
+Le parent d’un élément est soit un autre élément soit un nœud document. Le parent d’un attribut est l’élément qui le porte.
 
 Attention ! Même si les attributs ne sont pas considérés comme fils des éléments, les éléments sont les parents des attributs !
 
@@ -195,10 +286,10 @@ Attention ! Même si les attributs ne sont pas considérés comme fils des él�
 Les ancêtres sont les nœuds parents, les parents des parents, etc.
 
 ### Descendants
-Les descendants sont les enfants, petits-enfants, et tous les descendants d'un nœud.
+Les descendants sont les enfants, petits-enfants, et tous les descendants d’un nœud.
 
 ### Sibling
-Les siblings d'un nœuds sont les autres enfants de son parent. Les attributs ne sont pas considéré comme des siblings.
+Les siblings d’un nœuds sont les autres enfants de son parent. Les attributs ne sont pas considéré comme des siblings.
 
 ---
 
@@ -221,16 +312,16 @@ template: inverse
 ???
 Une autre manière possible de visualiser les différentes composantes définies par le modèle de données XML.
 
-### identité d'un nœud
-Chaque nœud possède une identité unique. On peut avoir deux nœuds avec le même nom et le même contenu dans le document source, mais cela ne signifie pas qu'ils auront la même identité. L'identité est unique pour chaque nœud, elle est affectée par le processeur.
+### identité d’un nœud
+Chaque nœud possède une identité unique. On peut avoir deux nœuds avec le même nom et le même contenu dans le document source, mais cela ne signifie pas qu’ils auront la même identité. L’identité est unique pour chaque nœud, elle est affectée par le processeur.
 
 ### nom
-En outre, les éléments et les attributs possèdent un nom. Ces noms sont accessibles à l'aide des fonctions `node-name()`, `name()`, `local-name()`
+En outre, les éléments et les attributs possèdent un nom. Ces noms sont accessibles à l’aide des fonctions `node-name()`, `name()`, `local-name()`
 
 ### Valeur textuelle
-Les nœuds peuvent avoir deux types de valeur, une valeur de chaîne et une valeur typée. Tous les nœuds ont un contenu textuel (string value). La valeur textuelle d'un élément est la concaténation des données caractères de cet élément et de ses descendants.
+Les nœuds peuvent avoir deux types de valeur, une valeur de chaîne et une valeur typée. Tous les nœuds ont un contenu textuel (string value). La valeur textuelle d’un élément est la concaténation des données caractères de cet élément et de ses descendants.
 
-On peut accéder à la valeur textuelle d'un élément avec la fonction `string()`
+On peut accéder à la valeur textuelle d’un élément avec la fonction `string()`
 
 ---
 .left-column[
@@ -241,25 +332,25 @@ On peut accéder à la valeur textuelle d'un élément avec la fonction `string(
 .right-column[
 ## Les nœuds ont une .red[identité] :
 
-Deux nœuds créés par deux expressions différentes sont distincts même s'ils ont le même nom, les mêmes fils, etc.
+Deux nœuds créés par deux expressions différentes sont distincts même s’ils ont le même nom, les mêmes fils, etc.
 
 ## Aux nœuds sont attachées différentes propriétés :
 
-Par exemple, pour chaque type de nœud, il est possible de déterminer ce que l'on appelle sa .red[valeur de chaîne] (`string value`) qui correspond schématiquement à son contenu textuel.
+Par exemple, pour chaque type de nœud, il est possible de déterminer ce que l’on appelle sa .red[valeur de chaîne] (`string value`) qui correspond schématiquement à son contenu textuel.
 
-On peut encore extraire d'un nœud sa .red[valeur typée] (`typed value`), son nom qualifié, etc.
+On peut encore extraire d’un nœud sa .red[valeur typée] (`typed value`), son nom qualifié, etc.
 ]
 
 ???
-Les nœuds ont une identité. Deux nœuds créés par deux expressions différentes sont distincts même s'ils ont le même nom, les mêmes fils, etc.
+Les nœuds ont une identité. Deux nœuds créés par deux expressions différentes sont distincts même s’ils ont le même nom, les mêmes fils, etc.
 
 Aux nœuds sont attachées différentes propriétés :
 
-Par exemple, pour chaque type de nœud, il est possible de déterminer ce que l'on appelle sa valeur de chaîne (`string value`) qui correspond schématiquement à son contenu textuel.
+Par exemple, pour chaque type de nœud, il est possible de déterminer ce que l’on appelle sa valeur de chaîne (`string value`) qui correspond schématiquement à son contenu textuel.
 
-On peut encore extraire d'un nœud sa valeur typée (`typed value`), son nom qualifié, etc.
+On peut encore extraire d’un nœud sa valeur typée (`typed value`), son nom qualifié, etc.
 
-Globalement : se souvenir qu'un nœud possède un nom, et une valeur textuelle à laquelle on pourra accéder à l'aide d'une expression XPath
+Globalement : se souvenir qu’un nœud possède un nom, et une valeur textuelle à laquelle on pourra accéder à l’aide d’une expression XPath
 
 ---
 name: last-page
@@ -270,6 +361,15 @@ template: inverse
 
 .left[.footnote[[revenir au début](#index)]]
 
+---
+name: last-page
+template: inverse
+
+## [la suite en pratique](xpath03.html) ?!
+
+
+.left[.footnote[[revenir au début](#index) | [programme](02-programme.html)]]
+
 </textarea>
 <!--<script src="http://gnab.github.com/remark/downloads/remark-0.6.5.min.js" type="text/javascript"></script>-->
     <script src="js/remark-0.6.5.min.js" type="text/javascript"></script>
@@ -279,8 +379,8 @@ template: inverse
 <script src="remark.language.js" type="text/javascript"></script>
 <script type="text/javascript">
   var slideshow = remark.create({
-      highlightStyle: 'monokai',
-      highlightLanguage: 'remark'
+highlightStyle: 'monokai',
+highlightLanguage: 'remark'
     }) ;
 </script>
 

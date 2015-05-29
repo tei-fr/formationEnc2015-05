@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?oxygen RNGSchema="../schemas/schemaMs.rng" type="xml"?>
+<?oxygen RNGSchema="../schemas/schemaGdp.rng" type="xml"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -151,7 +151,7 @@
         </div>
         <anchor xml:id="anchor001"/>
         <div ana="#req">
-          <p>Le S. <persName>Luthier</persName> demande si l’on éclairera 
+          <p>Le S. <persName>Luthier</persName><ref type="note" target="#note001"/> demande si l’on éclairera 
             <lb/>et chauffera le <placeName>château de Marly</placeName> le 
             <lb/>voyage prochain comme dans les voyages 
             <lb/>ordinaires.</p>
@@ -230,5 +230,32 @@
         </div>
       </div>
     </body>
+    <back>
+      <div type="notes">
+        <note xml:id="note001"><p>Louis-François Luthier était employé pour le bois et la bougie du château de Marly avec 1 000 l. de gages en 1759 (Arch. nat., O1 3913 bis, n° 2, état pour servir de certificat de service).</p></note>
+        <note xml:id="note002"><p>Le château de Marly (aujourd’hui Marly-le-Roi) a été bâti sur les plan de Jules Hardouin-Mansart pour Louis XIV entre 1679 et 1685. Au xviiie siècle, il fait partie du domaine royal de Versailles.</p></note>
+        <note xml:id="note003"><p>Le garde-meuble de la couronne est une administration chargée de la gestion du mobilier et des objets d'art destinés à l'ornement des appartements royaux</p></note>
+        <note xml:id="note004"><p>Louis-Marie de Boucheman, valet de chambre ordinaire du roi depuis 1727 à la suite de son père et concierge du château de Versailles à partir d’octobre 1768.</p></note>
+        <note xml:id="note005"><p>Probablement de Louis-Henry Lemoine, valet de chambre ordinaire (Arch. nat., Z1a 481, état de la maison du roi pour 1759).</p></note>
+        <note><p>Le roi disposait à Marly même d’un chenil particulier depuis 1702.</p></note>
+        <note><p>Les gardes de la Porte : compagnie de cinquante hommes d’armes chargée de veiller de jour sur les portes intérieures du palais royal. </p></note>
+        <note><p>Les Cent Suisses : compagnie de cent militaires venus de cantons suisses créée en 1496 pour assurer la garde personnel du roi dans les palais royaux</p></note>
+        <note><p>Un couvent de religieux franciscains (cordeliers) est fondé à Noisy en 1599. Parmi les aumônes royales versées aux paroisses et religieux des environs du domaine apparaissent les écoles paroissiales de Noisy (aujourd’hui Noisy-le-Roi). Les cordeliers desservent régulièrement le château (Arch. nat., O1 3913A, liasse 1, certificat attestant qu’ils ont rempli leur service au château de Marly en 1761 suivant les intentions du roi).</p></note>
+        <note><p>La chapelle du commun du château, prévue pour les domestiques, par opposition à la chapelle du château lui-même. Le curé de la paroisse de Marly dit normalement la messe dans cette dernière qui compte néanmoins un chapelain en titre. C’est sans doute son vicaire qui la célèbre dans celle du commun.</p></note>
+        <note><p>Philippe de Noailles (1715-1794) comte de Noailles puis maréchal et duc de Mouchy, intendant et gouverneur du château et domaine de Versailles en survivance (1720-1729) puis en titre (1729-1778).</p></note>
+      </div>
+      <div>
+        <listPerson>
+          <person>
+            <persName>Luthier, Louis-François</persName>
+            <birth when="1766-08-01">1<hi rend="superscript">er</hi> août 1766</birth>
+            <!-- Louis-François Luthier était employé pour le bois et la bougie du château de Marly avec 1 000 l. de gages en 1759 (Arch. nat., O1 3913 bis, n° 2, état pour servir de certificat de service). -->
+          </person>
+          <person>
+            ...
+          </person>
+        </listPerson>
+      </div>
+    </back>
   </text>
 </TEI>
