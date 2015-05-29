@@ -168,7 +168,7 @@
   </teiHeader>
   <text>
     <body>
-      <div type="transcription" xml:lang="fre" facs="acteRoyal.jpg">
+      <div type="transcription" xml:lang="fre" facs="../images/acteRoyal.jpg">
         <div>
           <p ana="#date">
             <add hand="#anonyme" place="top">Mai 1763</add>

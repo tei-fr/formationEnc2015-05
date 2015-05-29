@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 03acteRoyal00.xsl -->
-<!-- une feuille de style simpliste -->
+<!-- une feuille de style simpliste CC Florence Clavaud, augmenté par Emmanuel Chateau -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
   xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs"
@@ -16,17 +16,19 @@
   
   <xsl:template match="comment() | processing-instruction()"/>
   
-  <!-- générer le squelette de la page -->
+  <!-- générer le squelette de la page (ex001) -->
   <xsl:template match="/TEI">
     <xsl:element name="html">
       <xsl:element name="head">
         <xsl:element name="title">
+          <!-- écrire une règle (de type pull) pour créer titre de la page (ex002) -->
+          <!-- écrire une règle avec une instruction conditionnelle (xsl:if) pour le sous-titre (ex004) -->
           <xsl:value-of select="normalize-space(//titleStmt/title[1])"/>
           <xsl:if test="//titleStmt/title[@type = 'complement']">
             <xsl:value-of select="concat(' : ', //titleStmt/title[@type = 'complement'])"/>
           </xsl:if>
         </xsl:element>
-        <link rel="stylesheet" type="text/css" href="acteRoyal.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
       </xsl:element>
       <!-- le corps de la page -->
@@ -36,11 +38,13 @@
           <div id="header">
             <!-- cette colonne ne contiendra que les informations bibliographiques -->
             <xsl:apply-templates select="teiHeader/fileDesc/titleStmt"/>
-            <xsl:apply-templates select="teiHeader/fileDesc/publicationStmt"/>
+            <xsl:apply-templates select="teiHeader/fileDesc/publicationStmt"
+            />
           </div>
           <!-- on va placer les images numériques ici, ce n'est pt-être pas l'idéal, mais il y a de la place à cet endroit et on veut rester simple -->
           <div id="images">
-            <img src="{descendant::div[@type='transcription']/@facs}" alt="O/1/284 n° 525, page 1" width="90%"/>
+            <img src="{descendant::div[@type='transcription']/@facs}"
+              alt="O/1/284 n° 525, page 1" width="90%"/>
           </div>
         </div>
         <!-- une autre colonne, elle-même scindée en plusieurs parties, pour la table des matières, les métas du document, la transcription, etc. -->
@@ -61,12 +65,14 @@
             <div id="metadonnees">
               <hr/>
               <xsl:apply-templates select="teiHeader/fileDesc/sourceDesc"/>
-              <xsl:apply-templates select="teiHeader/encodingDesc/classDecl"/>
+              <xsl:apply-templates
+                select="teiHeader/encodingDesc/classDecl"/>
             </div>
             <div id="transcription">
               <hr/>
               <h2>Transcription</h2>
-              <xsl:apply-templates select="text/body/div[@type = 'transcription']"/>
+              <xsl:apply-templates
+                select="text/body/div[@type='transcription']"/>
               <p>
                 <a href="#tdm">Retour au début</a>
               </p>
@@ -113,8 +119,10 @@
   <!-- dans le div spécifié ci-dessus, un paragraphe pour le titre, un autre pour l'auteur principal, un autre pour les responsabilités secondaires -->
   <xsl:template match="title[1]">
     <xsl:apply-templates/>
-    <xsl:if test="following-sibling::title[@type = 'complement']">
-      <xsl:value-of select="concat(' : ', normalize-space(following-sibling::title[@type = 'complement']))"/>
+    <xsl:if test="following-sibling::title[@type='complement']">
+      <xsl:value-of
+        select="concat(' : ', normalize-space(following-sibling::title[@type='complement']))"
+      />
     </xsl:if>
   </xsl:template>
   <xsl:template match="principal | author"> Par <!-- <xsl:text>Par </xsl:text> -->
@@ -184,33 +192,33 @@
     <xsl:apply-templates/>
   </xsl:template>
   <!-- Suggestion : dans la sortie HTML il manque l’information sur la langue du texte dans la page Web (dans le fichier TEI
- source, il y a un élément textLang-->
+	source, il y a un élément textLang-->
   <!-- <xsl:template match="textLang">
-  <p>
-   <xsl:text>Langue du document : </xsl:text>
-   <xsl:apply-templates/>
-    
-   
-   
-   
-   
-  </p>
-  
-  
- </xsl:template>-->
+		<p>
+			<xsl:text>Langue du document : </xsl:text>
+			<xsl:apply-templates/>
+				
+			
+			
+			
+			
+		</p>
+		
+		
+	</xsl:template>-->
   <xsl:template match="classDecl">
     <!-- todo -->
   </xsl:template>
   <!-- TRANSCRIPTION -->
-  <xsl:template match="div[@type = 'transcription']">
+  <xsl:template match="div[@type='transcription']">
     <xsl:apply-templates/>
   </xsl:template>
-  <xsl:template match="div[@type = 'transcription']/div">
+  <xsl:template match="div[@type='transcription']/div">
     <div>
       <xsl:apply-templates/>
     </div>
   </xsl:template>
-  <xsl:template match="div[@type = 'transcription']/div/p">
+  <xsl:template match="div[@type='transcription']/div/p">
     <p>
       <xsl:apply-templates/>
     </p>
@@ -222,8 +230,8 @@
   </xsl:template>
   <xsl:template match="del">
     <!--  <span class="del">
-   <xsl:apply-templates/>
-   </span>-->
+			<xsl:apply-templates/>
+			</span>-->
     <xsl:element name="span">
       <xsl:attribute name="class">
         <!-- ici on utilise la fonction XPath local-name qui renvoie le nom de l'élément courant sans son préfixe -->
@@ -258,12 +266,12 @@
   <xsl:template match="abbr"/>
   <xsl:template match="hi">
     <xsl:choose>
-      <xsl:when test="@rend = 'super'">
+      <xsl:when test="@rend='super'">
         <sup>
           <xsl:apply-templates/>
         </sup>
       </xsl:when>
-      <xsl:when test="@rend = 'bigger'">
+      <xsl:when test="@rend='bigger'">
         <xsl:apply-templates/>
       </xsl:when>
     </xsl:choose>
@@ -281,13 +289,13 @@
   </xsl:template>
   <!-- retours à la ligne dans la page Web, chaque fois qu'il y a un changement de ligne dans le manuscrit -->
   <!-- <xsl:template match="lb">
-  <br/>
- </xsl:template>-->
+		<br/>
+	</xsl:template>-->
   <!-- Une règle qui s'appliquera à un élément si aucune autre instruction spécifique ne le concerne ; elle permet donc de voir ce qui reste à traiter ; pratique !! -->
   <xsl:template match="*">
     <!-- Attention, du CSS dans un attribut style est une
-   mauvaise pratique, ne surtout pas imiter <span style="margin:0 0 0 1em">
-  -->
+			mauvaise pratique, ne surtout pas imiter <span style="margin:0 0 0 1em">
+		-->
     <span>
       <code style="color:red">
         <xsl:text>&lt;</xsl:text>
